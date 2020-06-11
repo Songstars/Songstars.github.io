@@ -107,7 +107,7 @@
 
 
 
-  <link rel="alternate" href="https://bestzuo.cn/atom.xml" title="Sunshineのblog" type="application/atom+xml" />
+  <link rel="alternate" href="https://bestzuo.cn/atom.xml" title="Sunshine の blog" type="application/atom+xml" />
 
 
 
@@ -116,9 +116,9 @@
 
 <meta name="description" content="一个平庸的人">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Sunshineのblog">
+<meta property="og:title" content="Sunshine の blog">
 <meta property="og:url" content="http://songstars.github.io/tags/linux/index.html">
-<meta property="og:site_name" content="Sunshineのblog">
+<meta property="og:site_name" content="Sunshine の blog">
 <meta property="og:description" content="一个平庸的人">
 <meta property="article:author" content="Sunshine">
 <meta property="article:tag" content="一个平庸的人">
@@ -209,7 +209,7 @@
       <a href="/"  class="brand" rel="start">
         <!-- <span class="logo-line-before"><i></i></span> -->
         <!-- <img width="150px" height="auto" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/logo-bestzuo.png"/> -->
-        <span class="site-title">Sunshineのblog</span>
+        <span class="site-title">Sunshine の blog</span>
 	     <!-- <img width="150px" height="auto" src="/images/site-logo.png" /> -->
         <!-- <span class="logo-line-after"><i></i></span> -->
       </a>
@@ -705,7 +705,7 @@
   <script type="text/javascript">
     new Valine({
         lang: 'zh-cn',
-        admin_email: 'zuoxiang@whut.edu.cn',
+        admin_email: 'song.shuai@outlook.com',
         el: '#comments' ,
         appId: 'O9P2sOopMfrmnoFodfNVGl3j-gzGzoHsz',
         appKey: 'VStG3Dh9DNu0XfIG0bSuIHhj',
@@ -1080,6 +1080,39 @@
       ta.style.top = yPosition + 'px'; // Prevent page scroll
       ta.style.position = 'absolute';
       ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/src/linkcard.js"></script>
+  <script type="text/javascript" src="/js/src/love.js"></script>
+  <script src="/dist/js/social-share.min.js"></script>
+</body>
+</html>
+city = '0';
       ta.readOnly = true;
       ta.value = code;
       document.body.appendChild(ta);
