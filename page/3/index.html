@@ -116,7 +116,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="sunshineのblog">
-<meta property="og:url" content="http://songstars.github.io/archives/2020/index.html">
+<meta property="og:url" content="http://songstars.github.io/page/3/index.html">
 <meta property="og:site_name" content="sunshineのblog">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="sunshine">
@@ -151,13 +151,13 @@
 
 
 
-  <link rel="canonical" href="http://Songstars.github.io/archives/2020/"/>
+  <link rel="canonical" href="http://Songstars.github.io/page/3/"/>
 
 
 
 
 
-  <title>Archive - sunshine的博客</title>
+  <title>sunshineのblog</title>
   
 
 
@@ -194,7 +194,8 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left 
+  page-home">
 
     <div class="headband"></div>
     
@@ -336,400 +337,981 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        Um..! 23 posts in total. Keep on posting.
-      </span>
+<style type="text/css">
 
-      
+.glyphicon-chevron-left:before{
+	/*content: "<"*/
+	/*background: url(https://site-1258928558.cos.ap-guangzhou.myqcloud.com/left-icon-slides.png);*/
+}
+.glyphicon-chevron-right:before{
+	/*content: ">"*/
+}
 
-        
-        
-        
+@media (max-width: 767px){
+	.rights{
+		display: none;
+	}
+	.carousel{
+		display: none;
+	}
+	.slide{
+		width: 100% !important;
+		height: 100% !important;
+	}
+	.tag-cloud{
+		display: none;
+	}
+}
 
-        
-          
-          <div class="collection-title">
-            <h2 class="archive-year" id="archive-year-2020">2020</h2>
-          </div>
-        
-        
+.carousel{
+	width: 65%;
+	height: 100%;
+	position: relative;
+}
 
-        
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
 
-  <article class="my-post" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  line-height: 1;
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel-inner > .item {
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    -moz-transition: -moz-transform 0.6s ease-in-out;
+    -o-transition: -o-transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+  }
+  .carousel-inner > .item.next,
+  .carousel-inner > .item.active.right {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    left: 0;
+  }
+  .carousel-inner > .item.prev,
+  .carousel-inner > .item.active.left {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    left: 0;
+  }
+  .carousel-inner > .item.next.left,
+  .carousel-inner > .item.prev.right,
+  .carousel-inner > .item.active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    left: 0;
+  }
+}
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  display: block;
+}
+.carousel-inner > .active {
+  left: 0;
+}
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.carousel-inner > .next {
+  left: 100%;
+}
+.carousel-inner > .prev {
+  left: -100%;
+}
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+  left: 0;
+}
+.carousel-inner > .active.left {
+  left: -100%;
+}
+.carousel-inner > .active.right {
+  left: 100%;
+}
+.carousel-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  /*width: 15%;*/
+  /*opacity: 0.5;*/
+  /*filter: alpha(opacity=50);*/
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0);
+}
+.carousel-control.left {
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+}
+.carousel-control.right {
+  left: auto;
+  right: 0px;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+}
+.carousel-control:hover,
+.carousel-control:focus {
+  outline: 0;
+  color: #fff;
+  text-decoration: none;
+}
+.carousel-control .icon-prev,
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  z-index: 5;
+  display: inline-block;
+}
+/*.carousel-control .icon-prev,
+.carousel-control .glyphicon-chevron-left {
+  background: url('https://site-1258928558.cos.ap-guangzhou.myqcloud.com/icon-slides.png');
+  background-position-x: -83px; 
+  left: 9px;
+}*/
+
+.carousel-control .icon-prev,
+.carousel-control .glyphicon-chevron-left:hover {
+  background: url('https://site-1258928558.cos.ap-guangzhou.myqcloud.com/icon-slides.png');
+  left: 9px;
+}
+/*.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-right {
+  background: url('https://site-1258928558.cos.ap-guangzhou.myqcloud.com/icon-slides.png');
+  background-position-x: -125px; 
+  right: 0px;
+}*/
+
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-right:hover {
+  background: url('https://site-1258928558.cos.ap-guangzhou.myqcloud.com/icon-slides.png');
+  background-position-x: -41px; 
+  right: 0px;
+}
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+  width: 20px;
+  height: 20px;
+  line-height: 1;
+  font-family: serif;
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  margin-left: -30%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  margin: 5px;
+  text-indent: -999px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  background-color: rgba(0,0,0,.24);
+}
+.carousel-indicators .active {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+}
+.carousel-caption {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: 20px;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+.carousel-caption .btn {
+  text-shadow: none;
+}
+@media screen and (min-width: 768px) {
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .glyphicon-chevron-right,
+  .carousel-control .icon-prev,
+  .carousel-control .icon-next {
+    width: 30px;
+    height: 60px;
+    margin-top: -10px;
+    font-size: 30px;
+  }
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .icon-prev {
+    margin-left: -10px;
+  }
+  .carousel-control .glyphicon-chevron-right,
+  .carousel-control .icon-next {
+    /*margin-right: -10px;*/
+  }
+  .carousel-caption {
+    left: 20%;
+    right: 20%;
+    padding-bottom: 30px;
+  }
+  .carousel-indicators {
+    bottom: 0px;
+  }
+}
+</style>
+<div height="320px" width="100%" style="border: 0px; overflow: hidden; border-radius: 10px;" scrolling="no">
+			
+	<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3500" style="float:left">
+		<!-- 轮播（Carousel）指标 -->
+		<ol class="carousel-indicators">
+		
+		
+
+			<li data-target="#myCarousel" data-slide-to="0"></li>
+			
+
+		
+
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			
+
+		
+
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			
+
+		
+
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+			
+
+		
+
+			<li data-target="#myCarousel" data-slide-to="4"></li>
+			
+
+		
+
+			<li data-target="#myCarousel" data-slide-to="5"></li>
+			
+
+		
+
+			<li data-target="#myCarousel" data-slide-to="6"></li>
+			
+
+		
+		</ol>
+		<!-- 轮播（Carousel）项目 -->
+		<div class="carousel-inner" style="height: 280px; border-radius: 10px; width: 100%;">
+
+		
+		 
+		
+	    	
+				<a class="item active" href="/messageboard/" target="_blank" style="height: 100%;">
+					<img class="nofancybox" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/blog/blog-welcome.png"   style="width: 100%; height: 100%" >
+				</a>
+				
+				
+
+		
+		
+	    	
+					<a class="item" href="https://bestzuo.cn/posts/blog-establish.html" target="_blank" style="height: 100%;">
+						<img class="nofancybox" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/blog/blog-polish.png"  style="width: 100%; height: 100%;" >
+					</a>
+			
+
+		
+		
+	    	
+					<a class="item" href="https://github.com/996icu/996.ICU" target="_blank" style="height: 100%;">
+						<img class="nofancybox" src="https://blogimage-1258928558.cos.ap-guangzhou.myqcloud.com/%E8%BD%AE%E6%92%AD%E5%9B%BE/996.png"  style="width: 100%; height: 100%;" >
+					</a>
+			
+
+		
+		
+	    	
+					<a class="item" href="/tags/JVM/" target="_blank" style="height: 100%;">
+						<img class="nofancybox" src="https://blogimage-1258928558.cos.ap-guangzhou.myqcloud.com/%E8%BD%AE%E6%92%AD%E5%9B%BE/JVM.png"  style="width: 100%; height: 100%;" >
+					</a>
+			
+
+		
+		
+	    	
+					<a class="item" href="/posts/258aee07.html" target="_blank" style="height: 100%;">
+						<img class="nofancybox" src="https://blogimage-1258928558.cos.ap-guangzhou.myqcloud.com/%E8%BD%AE%E6%92%AD%E5%9B%BE/%E5%A4%9A%E7%BA%BF%E7%A8%8B.png"  style="width: 100%; height: 100%;" >
+					</a>
+			
+
+		
+		
+	    	
+					<a class="item" href="/tags/%E5%8D%9A%E5%AE%A2/" target="_blank" style="height: 100%;">
+						<img class="nofancybox" src="https://blogimage-1258928558.cos.ap-guangzhou.myqcloud.com/%E8%BD%AE%E6%92%AD%E5%9B%BE/hexo.png"  style="width: 100%; height: 100%;" >
+					</a>
+			
+
+		
+		
+	    	
+					<a class="item" href="https://promotion.aliyun.com/ntms/act/campus2018.html" target="_blank" style="height: 100%;">
+						<img class="nofancybox" src="https://blogimage-1258928558.cos.ap-guangzhou.myqcloud.com/%E8%BD%AE%E6%92%AD%E5%9B%BE/19010107.jpg"  style="width: 100%; height: 100%;" >
+					</a>
+			
+
+		
+
+		</div>
+		<!-- 轮播（Carousel）导航 -->
+		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		    
+		</a>
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 
+		</a>
+	</div>
+
+	<div  class="rights" style="width: 30%; height: 300px; margin-right: 0px;margin-left: 20px;float: left;">
 	
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2020-06-11T20:25:32+08:00"
-              content="2020-06-11" >
-          06-11
-        </time>
-      </div>
-      <h3 class="my-post-title">
-        
-            <a class="my-post-title-link" href="/2020/06/11/%E7%A7%BB%E5%8A%A8web%E5%BC%80%E5%8F%91_flex%E5%B8%83%E5%B1%80/" itemprop="url">
-              
-                <span itemprop="name">&nbsp;移动web开发_flex布局</span>
-              
-            </a>
-        
-      </h3>
+	   <!-- 天气插件 -->
+       <iframe class="blog-weather" width="420" scrolling="no" height="15%" frameborder="0" allowtransparency="true" src="https://i.tianqi.com/index.php?c=code&id=12&icon=1&py=wuhan&num=2&site=12"></iframe>
 
-    </header>
-  </article>
+	   <!-- 关于博主 -->
+	   <a href="/about/"  target="_blank" style="text-align: right; width: 100%;"><img class="blog-about nofancybox" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/about.png" width="100%"/></a>
+	   <div style="height: 9px;"></div>
 
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="my-post" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
+	   <!-- 推荐阅读 -->
+	   <a href="/books/" target="_blank" style="width: 100%; text-align: right;"><img  class="blog-read nofancybox" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/read.png" width="100%"/></a>
+	   <div style="height: 9px;"></div>
 	
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2020-06-10T19:56:38+08:00"
-              content="2020-06-10" >
-          06-10
-        </time>
-      </div>
-      <h3 class="my-post-title">
-        
-            <a class="my-post-title-link" href="/2020/06/10/jsx%E5%8E%9F%E7%90%86%E5%92%8C%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95-%E4%B8%80/" itemprop="url">
-              
-                <span itemprop="name">&nbsp;jsx原理和基本语法(一)</span>
-              
-            </a>
-        
-      </h3>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="my-post" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-	
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2020-06-09T23:17:28+08:00"
-              content="2020-06-09" >
-          06-09
-        </time>
-      </div>
-      <h3 class="my-post-title">
-        
-            <a class="my-post-title-link" href="/2020/06/09/%E7%86%9F%E6%82%89Linux%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/" itemprop="url">
-              
-                <span itemprop="name">&nbsp;熟悉Linux的目录结构</span>
-              
-            </a>
-        
-      </h3>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="my-post" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-	
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2020-06-09T22:57:59+08:00"
-              content="2020-06-09" >
-          06-09
-        </time>
-      </div>
-      <h3 class="my-post-title">
-        
-            <a class="my-post-title-link" href="/2020/06/09/VM%E5%92%8CLinux%EF%BC%88CentOS%EF%BC%89%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/" itemprop="url">
-              
-                <span itemprop="name">&nbsp;VM和Linux（CentOS）系统安装</span>
-              
-            </a>
-        
-      </h3>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="my-post" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-	
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2020-06-09T22:40:21+08:00"
-              content="2020-06-09" >
-          06-09
-        </time>
-      </div>
-      <h3 class="my-post-title">
-        
-            <a class="my-post-title-link" href="/2020/06/09/%E9%82%82%E9%80%85linux/" itemprop="url">
-              
-                <span itemprop="name">&nbsp;邂逅linux</span>
-              
-            </a>
-        
-      </h3>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="my-post" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-	
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2020-06-09T22:11:22+08:00"
-              content="2020-06-09" >
-          06-09
-        </time>
-      </div>
-      <h3 class="my-post-title">
-        
-            <a class="my-post-title-link" href="/2020/06/09/%E8%AE%A4%E8%AF%86Photoshop-%E5%9B%BE%E5%B1%82%E5%A4%84%E7%90%86/" itemprop="url">
-              
-                <span itemprop="name">&nbsp;认识Photoshop:图层处理</span>
-              
-            </a>
-        
-      </h3>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="my-post" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-	
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2020-06-09T10:15:01+08:00"
-              content="2020-06-09" >
-          06-09
-        </time>
-      </div>
-      <h3 class="my-post-title">
-        
-            <a class="my-post-title-link" href="/2020/06/09/%E9%82%82%E9%80%85React%E5%92%8CReact%E5%BC%80%E5%8F%91%E4%BD%93%E9%AA%8C/" itemprop="url">
-              
-                <span itemprop="name">&nbsp;邂逅React和React开发体验</span>
-              
-            </a>
-        
-      </h3>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="my-post" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-	
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2020-06-05T17:10:24+08:00"
-              content="2020-06-05" >
-          06-05
-        </time>
-      </div>
-      <h3 class="my-post-title">
-        
-            <a class="my-post-title-link" href="/2020/06/05/%E8%AE%A4%E8%AF%86Photoshop/" itemprop="url">
-              
-                <span itemprop="name">&nbsp;认识Photoshop</span>
-              
-            </a>
-        
-      </h3>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="my-post" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-	
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2020-05-16T23:19:55+08:00"
-              content="2020-05-16" >
-          05-16
-        </time>
-      </div>
-      <h3 class="my-post-title">
-        
-            <a class="my-post-title-link" href="/2020/05/16/%E6%91%98%E6%8A%84/" itemprop="url">
-              
-                <span itemprop="name">&nbsp;摘抄【1】</span>
-              
-            </a>
-        
-      </h3>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="my-post" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-	
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2020-03-23T20:50:15+08:00"
-              content="2020-03-23" >
-          03-23
-        </time>
-      </div>
-      <h3 class="my-post-title">
-        
-            <a class="my-post-title-link" href="/2020/03/23/hexo%E5%8F%91%E8%A1%A8%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" itemprop="url">
-              
-                <span itemprop="name">&nbsp;hexo发表博客常用命令</span>
-              
-            </a>
-        
-      </h3>
-
-    </header>
-  </article>
-
-
-
-      
-
+	   <!-- 光影留念 -->
+	  <a href="/photos/" target="_blank" style="width: 100%; text-align: right;"><img class="blog-photo nofancybox" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/photo.png" width="100%"/></a>
+	  <div style="height: 9px;"></div>
+
+	  <!-- 留下脚印 -->
+	  <a href="/messageboard/"><img class="blog-messageboard nofancybox" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7_meitu_5.png"/></a>
     </div>
+
+<div class="tag-cloud">
+  <div class="tag-cloud-tags" id="tags">
+    <a href="/tags/HTML/" style="font-size: 14px; color: #fff">HTML</a> <a href="/tags/HTMl/" style="font-size: 14px; color: #fff">HTMl</a> <a href="/tags/JavaScript/" style="font-size: 14px; color: #fff">JavaScript</a> <a href="/tags/Linux/" style="font-size: 14px; color: #fff">Linux</a> <a href="/tags/Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98/" style="font-size: 14px; color: #fff">Live2D看板娘</a> <a href="/tags/Markdown%E8%AF%AD%E6%B3%95/" style="font-size: 14px; color: #fff">Markdown语法</a> <a href="/tags/Photoshop/" style="font-size: 14px; color: #fff">Photoshop</a> <a href="/tags/React/" style="font-size: 14px; color: #fff">React</a> <a href="/tags/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" style="font-size: 14px; color: #fff">hexo常用命令</a> <a href="/tags/linux/" style="font-size: 14px; color: #fff">linux</a> <a href="/tags/mysql/" style="font-size: 14px; color: #fff">mysql</a> <a href="/tags/sql/" style="font-size: 14px; color: #fff">sql</a> <a href="/tags/vscode-open-in-browser%E6%89%93%E4%B8%8D%E5%BC%80%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 14px; color: #fff">vscode open-in-browser打不开浏览器</a> <a href="/tags/%E5%85%BB%E6%88%90%E5%A5%BD%E4%B9%A0%E6%83%AF/" style="font-size: 14px; color: #fff">养成好习惯</a> <a href="/tags/%E6%91%98%E6%8A%84/" style="font-size: 14px; color: #fff">摘抄</a> <a href="/tags/%E6%96%87%E7%AB%A0/" style="font-size: 14px; color: #fff">文章</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" style="font-size: 14px; color: #fff">环境变量</a>
+  </div>
+</div>
+<br>
+
+<script type="text/javascript">
+   var alltags=document.getElementById('tags');
+   var tags=alltags.getElementsByTagName('a');
+
+   for (var i = tags.length - 1; i >= 0; i--) {
+     var r=Math.floor(Math.random()*75+130);
+     var g=Math.floor(Math.random()*75+100);
+     var b=Math.floor(Math.random()*75+80);
+     tags[i].style.background = "rgb("+r+","+g+","+b+")";
+   }
+</script>
+
+<style type="text/css">
+	div#posts.posts-expand .tag-cloud a{
+   		background-color: #f5f7f1;
+   		border-radius: 6px;
+   		padding-left: 10px;
+   		padding-right: 10px;
+   		margin-top: 18px;
+ 	}
+
+ 	.tag-cloud a{
+   		background-color: #f5f7f1;
+   		border-radius: 4px;
+   		padding-right: 5px;
+   		padding-left: 5px;
+   		margin-right: 5px;
+   		margin-left: 0px;
+   		margin-top: 8px;
+   		margin-bottom: 0px;
+ 	}
+
+ 	.tag-cloud a:before{
+       content: "🔖";
+ 	}
+
+ 	.tag-cloud-tags{
+   	   text-align: left;
+   	   counter-reset: tags;
+ 	}
+</style>
+
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Songstars.github.io/2019/06/09/%E7%90%86%E8%A7%A3JS%E9%97%AD%E5%8C%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sunshine">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="sunshineのblog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/09/%E7%90%86%E8%A7%A3JS%E9%97%AD%E5%8C%85/" itemprop="url">理解JS闭包</a></h2>
+        
+
+        <div class="post-meta">
+      <!-- 增加置顶功能 -->
+	    
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <!-- 创建时间图标颜色 -->
+                <font color="blue"><i class="fa fa-calendar"></i></font>
+              </span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-09T20:13:20+08:00">
+                <font color="blue">2019-06-09</font>
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/06/09/%E7%90%86%E8%A7%A3JS%E9%97%AD%E5%8C%85/" class="leancloud_visitors" data-flag-title="理解JS闭包">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <!-- 阅读量图标颜色 -->
+                 <font color="red"><i class="fa fa-eye"></i></font>
+               </span>
+               
+                 <font color="red"><span class="leancloud-visitors-count"></span>
+                 <span>℃</span></font>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                   <!-- 字数统计图标颜色 -->
+                  <font color="green"><i class="fa fa-file-word-o"></i></font>
+                </span>
+                
+                <font color="green"><span title="Words count in article">
+                  
+                </span></font>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          理解JS闭包一.什么是闭包?闭包指的是：有权访问其他函数作用域的变量的函数
+换句话来说就是:内层作用域可以访问外层作用域的变量
+函数模式的闭包:在一个函数中有一个函数
+12345678910function outside() &#123;  var num&#x3D;99;  &#x2F;&#x2F;函数的声明  function inner() &#123;    console.log(num);  &#125;  &#x2F;&#x2F;函数调用  inner();&#125;outsi
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/06/09/%E7%90%86%E8%A7%A3JS%E9%97%AD%E5%8C%85/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+
+    
+    
+    
+
+    
+
+    
+
+    
+    
+    	<div>
+	   
+        </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
   
   
   
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Songstars.github.io/2019/06/08/HTML%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sunshine">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="sunshineのblog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/08/HTML%E6%80%BB%E7%BB%93/" itemprop="url">HTML总结</a></h2>
+        
+
+        <div class="post-meta">
+      <!-- 增加置顶功能 -->
+	    
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <!-- 创建时间图标颜色 -->
+                <font color="blue"><i class="fa fa-calendar"></i></font>
+              </span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-08T16:18:34+08:00">
+                <font color="blue">2019-06-08</font>
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/06/08/HTML%E6%80%BB%E7%BB%93/" class="leancloud_visitors" data-flag-title="HTML总结">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <!-- 阅读量图标颜色 -->
+                 <font color="red"><i class="fa fa-eye"></i></font>
+               </span>
+               
+                 <font color="red"><span class="leancloud-visitors-count"></span>
+                 <span>℃</span></font>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                   <!-- 字数统计图标颜色 -->
+                  <font color="green"><i class="fa fa-file-word-o"></i></font>
+                </span>
+                
+                <font color="green"><span title="Words count in article">
+                  
+                </span></font>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          HTMLweb 标准Web标准不是某一个标准，而是由W3C和其他标准化组织制定的一系列标准的集合。
+主要包括结构（Structure）、表现（Presentation）和行为（Behavior）三个方面。
+结构标准：结构用于对网页元素进行整理和分类， 最重要表现标准：表现用于设置网页元素的版式、颜色、大小等外观样式，主要指的是CSS。行为标准：行为是指网页模型的定义及交互的编写，主要指的是 Javascript
+他们之间的关系就好像下面的图片
+
+HTML 结构
+常用标签常用双标签&lt;em&g
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/06/08/HTML%E6%80%BB%E7%BB%93/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+
+    
+    
+    
+
+    
+
+    
+
+    
+    
+    	<div>
+	   
+        </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Songstars.github.io/2019/06/07/%E4%B8%BB%E6%B5%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%92%8Chtml%E6%A0%87%E7%AD%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sunshine">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="sunshineのblog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/07/%E4%B8%BB%E6%B5%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%92%8Chtml%E6%A0%87%E7%AD%BE/" itemprop="url">主流浏览器和HTML标签</a></h2>
+        
+
+        <div class="post-meta">
+      <!-- 增加置顶功能 -->
+	    
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <!-- 创建时间图标颜色 -->
+                <font color="blue"><i class="fa fa-calendar"></i></font>
+              </span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-07T15:26:13+08:00">
+                <font color="blue">2019-06-07</font>
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/06/07/%E4%B8%BB%E6%B5%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%92%8Chtml%E6%A0%87%E7%AD%BE/" class="leancloud_visitors" data-flag-title="主流浏览器和HTML标签">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <!-- 阅读量图标颜色 -->
+                 <font color="red"><i class="fa fa-eye"></i></font>
+               </span>
+               
+                 <font color="red"><span class="leancloud-visitors-count"></span>
+                 <span>℃</span></font>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                   <!-- 字数统计图标颜色 -->
+                  <font color="green"><i class="fa fa-file-word-o"></i></font>
+                </span>
+                
+                <font color="green"><span title="Words count in article">
+                  
+                </span></font>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          一.主流游览器
+
+IE: trident 内核
+Firefox：gecko 内核
+Safari:webkit 内核
+Opera:以前是presto 内核，Opera 现已改用Google Chrome 的Blink 内核
+Chrome:Blink(基于webkit，Google 与Opera Software 共同开发)
+
+
+特别说明
+2018年12月5日，微软宣布：放弃浏览器Edge，转而推出一款新的浏览器，而这款新浏览器将会采用谷歌的Chromium 内核
+二.html的基本结构1. 常规标
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/06/07/%E4%B8%BB%E6%B5%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%92%8Chtml%E6%A0%87%E7%AD%BE/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+
+    
+    
+    
+
+    
+
+    
+
+    
+    
+    	<div>
+	   
+        </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2020/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+    <a class="extend prev" rel="prev" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
   </nav>
-
 
 
 
