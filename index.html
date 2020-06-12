@@ -2,24 +2,17 @@
 
 
 
+  
 
-<html class="theme-next mist" lang="zh-Hans">
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
-  <meta name="google-site-verification" content="-YPbgjltFVFljoCm04Ktk0m38A8CkQxpifuKVZXtawA" />
-  <mate name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
 
-
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -52,32 +45,6 @@
 
 
 
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
 
 
 
@@ -86,40 +53,38 @@
 <link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/site-logo.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/site-logo.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/site-logo.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
 
 
-  <link rel="mask-icon" href="/images/site-logo.png?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Java,hexo,next,个人博客,博客,编程,IT,CSS,javascript,前端,后端,web开发" />
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
 
 
 
 
 
-  <link rel="alternate" href="https://bestzuo.cn/atom.xml" title="Sunshine の blog" type="application/atom+xml" />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
 
 
 
-<meta name="description" content="一个平庸的人">
+
+
+
+
+<meta name="description" content="守得云开见月明">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sunshine の blog">
 <meta property="og:url" content="http://songstars.github.io/index.html">
 <meta property="og:site_name" content="Sunshine の blog">
-<meta property="og:description" content="一个平庸的人">
+<meta property="og:description" content="守得云开见月明">
 <meta property="article:author" content="Sunshine">
 <meta property="article:tag" content="一个平庸的人">
 <meta name="twitter:card" content="summary">
@@ -132,10 +97,10 @@
     root: '/',
     scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -158,7 +123,7 @@
 
 
 
-  <title>Sunshine の blog - 一个平庸的人</title>
+  <title>Sunshine の blog</title>
   
 
 
@@ -168,24 +133,6 @@
 
 
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139884627-1"></script>
-  <link rel="stylesheet" href="/dist/css/share.min.css">
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-139884627-1');
-  </script>
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?9d4a3700a4e6444240fe13acb69c87fc";
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 <meta name="generator" content="Hexo 4.2.1"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -197,9 +144,7 @@
 
   <div class="container sidebar-position-left 
   page-home">
-
     <div class="headband"></div>
-    
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
@@ -208,15 +153,13 @@
 
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
-        <!-- <span class="logo-line-before"><i></i></span> -->
-        <!-- <img width="150px" height="auto" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/logo-bestzuo.png"/> -->
+        <span class="logo-line-before"><i></i></span>
         <span class="site-title">Sunshine の blog</span>
-	     <!-- <img width="150px" height="auto" src="/images/site-logo.png" /> -->
-        <!-- <span class="logo-line-after"><i></i></span> -->
+        <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <h1 class="site-subtitle" itemprop="description">一个平庸的人</h1>
+        <p class="site-subtitle">一个平庸的人</p>
       
   </div>
 
@@ -237,7 +180,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/%20" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -246,8 +189,18 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-categories">
-          <a href="/categories/%20" rel="section">
+          <a href="/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -257,7 +210,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/%20" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -265,75 +218,11 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-top">
-          <a href="/top/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-signal"></i> <br />
-            
-            热门
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-links">
-          <a href="/links/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user-plus"></i> <br />
-            
-            友链
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-messageboard">
-          <a href="/messageboard%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-comment"></i> <br />
-            
-            留言
-          </a>
-        </li>
-      
 
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
   
 </nav>
 
@@ -347,457 +236,135 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<style type="text/css">
-
-.glyphicon-chevron-left:before{
-	/*content: "<"*/
-	/*background: url(https://site-1258928558.cos.ap-guangzhou.myqcloud.com/left-icon-slides.png);*/
-}
-.glyphicon-chevron-right:before{
-	/*content: ">"*/
-}
-
-@media (max-width: 767px){
-	.rights{
-		display: none;
-	}
-	.carousel{
-		display: none;
-	}
-	.slide{
-		width: 100% !important;
-		height: 100% !important;
-	}
-	.tag-cloud{
-		display: none;
-	}
-}
-
-.carousel{
-	width: 65%;
-	height: 100%;
-	position: relative;
-}
-
-.carousel-inner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-.carousel-inner > .item {
-  display: none;
-  position: relative;
-  -webkit-transition: 0.6s ease-in-out left;
-  -o-transition: 0.6s ease-in-out left;
-  transition: 0.6s ease-in-out left;
-}
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  line-height: 1;
-}
-@media all and (transform-3d), (-webkit-transform-3d) {
-  .carousel-inner > .item {
-    -webkit-transition: -webkit-transform 0.6s ease-in-out;
-    -moz-transition: -moz-transform 0.6s ease-in-out;
-    -o-transition: -o-transform 0.6s ease-in-out;
-    transition: transform 0.6s ease-in-out;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-perspective: 1000px;
-    -moz-perspective: 1000px;
-    perspective: 1000px;
-  }
-  .carousel-inner > .item.next,
-  .carousel-inner > .item.active.right {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    left: 0;
-  }
-  .carousel-inner > .item.prev,
-  .carousel-inner > .item.active.left {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    left: 0;
-  }
-  .carousel-inner > .item.next.left,
-  .carousel-inner > .item.prev.right,
-  .carousel-inner > .item.active {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    left: 0;
-  }
-}
-.carousel-inner > .active,
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  display: block;
-}
-.carousel-inner > .active {
-  left: 0;
-}
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-.carousel-inner > .next {
-  left: 100%;
-}
-.carousel-inner > .prev {
-  left: -100%;
-}
-.carousel-inner > .next.left,
-.carousel-inner > .prev.right {
-  left: 0;
-}
-.carousel-inner > .active.left {
-  left: -100%;
-}
-.carousel-inner > .active.right {
-  left: 100%;
-}
-.carousel-control {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  /*width: 15%;*/
-  /*opacity: 0.5;*/
-  /*filter: alpha(opacity=50);*/
-  font-size: 20px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  background-color: rgba(0, 0, 0, 0);
-}
-.carousel-control.left {
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
-}
-.carousel-control.right {
-  left: auto;
-  right: 0px;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
-}
-.carousel-control:hover,
-.carousel-control:focus {
-  outline: 0;
-  color: #fff;
-  text-decoration: none;
-}
-.carousel-control .icon-prev,
-.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-left,
-.carousel-control .glyphicon-chevron-right {
-  position: absolute;
-  top: 50%;
-  margin-top: -10px;
-  z-index: 5;
-  display: inline-block;
-}
-/*.carousel-control .icon-prev,
-.carousel-control .glyphicon-chevron-left {
-  background: url('https://site-1258928558.cos.ap-guangzhou.myqcloud.com/icon-slides.png');
-  background-position-x: -83px; 
-  left: 9px;
-}*/
-
-.carousel-control .icon-prev,
-.carousel-control .glyphicon-chevron-left:hover {
-  background: url('https://site-1258928558.cos.ap-guangzhou.myqcloud.com/icon-slides.png');
-  left: 9px;
-}
-/*.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-right {
-  background: url('https://site-1258928558.cos.ap-guangzhou.myqcloud.com/icon-slides.png');
-  background-position-x: -125px; 
-  right: 0px;
-}*/
-
-.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-right:hover {
-  background: url('https://site-1258928558.cos.ap-guangzhou.myqcloud.com/icon-slides.png');
-  background-position-x: -41px; 
-  right: 0px;
-}
-.carousel-control .icon-prev,
-.carousel-control .icon-next {
-  width: 20px;
-  height: 20px;
-  line-height: 1;
-  font-family: serif;
-}
-.carousel-indicators {
-  position: absolute;
-  bottom: 2px;
-  left: 50%;
-  z-index: 15;
-  width: 60%;
-  margin-left: -30%;
-  padding-left: 0;
-  list-style: none;
-  text-align: center;
-}
-.carousel-indicators li {
-  display: inline-block;
-  width: 30px;
-  height: 3px;
-  margin: 5px;
-  text-indent: -999px;
-  border: 1px solid #bbb;
-  cursor: pointer;
-  background-color: rgba(0,0,0,.24);
-}
-.carousel-indicators .active {
-  width: 30px;
-  height: 3px;
-  background-color: #fff;
-}
-.carousel-caption {
-  position: absolute;
-  left: 15%;
-  right: 15%;
-  bottom: 20px;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-.carousel-caption .btn {
-  text-shadow: none;
-}
-@media screen and (min-width: 768px) {
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-prev,
-  .carousel-control .icon-next {
-    width: 30px;
-    height: 60px;
-    margin-top: -10px;
-    font-size: 30px;
-  }
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .icon-prev {
-    margin-left: -10px;
-  }
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-next {
-    /*margin-right: -10px;*/
-  }
-  .carousel-caption {
-    left: 20%;
-    right: 20%;
-    padding-bottom: 30px;
-  }
-  .carousel-indicators {
-    bottom: 0px;
-  }
-}
-</style>
-<div height="320px" width="100%" style="border: 0px; overflow: hidden; border-radius: 10px;" scrolling="no">
-			
-	<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3500" style="float:left">
-		<!-- 轮播（Carousel）指标 -->
-		<ol class="carousel-indicators">
-		
-		
-
-			<li data-target="#myCarousel" data-slide-to="0"></li>
-			
-
-		
-
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			
-
-		
-
-			<li data-target="#myCarousel" data-slide-to="2"></li>
-			
-
-		
-
-			<li data-target="#myCarousel" data-slide-to="3"></li>
-			
-
-		
-
-			<li data-target="#myCarousel" data-slide-to="4"></li>
-			
-
-		
-
-			<li data-target="#myCarousel" data-slide-to="5"></li>
-			
-
-		
-
-			<li data-target="#myCarousel" data-slide-to="6"></li>
-			
-
-		
-		</ol>
-		<!-- 轮播（Carousel）项目 -->
-		<div class="carousel-inner" style="height: 280px; border-radius: 10px; width: 100%;">
-
-		
-		 
-		
-	    	
-				<a class="item active" href="/messageboard/" target="_blank" style="height: 100%;">
-					<img class="nofancybox" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/blog/blog-welcome.png"   style="width: 100%; height: 100%" >
-				</a>
-				
-				
-
-		
-		
-	    	
-					<a class="item" href="https://bestzuo.cn/posts/blog-establish.html" target="_blank" style="height: 100%;">
-						<img class="nofancybox" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/blog/blog-polish.png"  style="width: 100%; height: 100%;" >
-					</a>
-			
-
-		
-		
-	    	
-					<a class="item" href="https://github.com/996icu/996.ICU" target="_blank" style="height: 100%;">
-						<img class="nofancybox" src="https://blogimage-1258928558.cos.ap-guangzhou.myqcloud.com/%E8%BD%AE%E6%92%AD%E5%9B%BE/996.png"  style="width: 100%; height: 100%;" >
-					</a>
-			
-
-		
-		
-	    	
-					<a class="item" href="/tags/JVM/" target="_blank" style="height: 100%;">
-						<img class="nofancybox" src="https://blogimage-1258928558.cos.ap-guangzhou.myqcloud.com/%E8%BD%AE%E6%92%AD%E5%9B%BE/JVM.png"  style="width: 100%; height: 100%;" >
-					</a>
-			
-
-		
-		
-	    	
-					<a class="item" href="/posts/258aee07.html" target="_blank" style="height: 100%;">
-						<img class="nofancybox" src="https://blogimage-1258928558.cos.ap-guangzhou.myqcloud.com/%E8%BD%AE%E6%92%AD%E5%9B%BE/%E5%A4%9A%E7%BA%BF%E7%A8%8B.png"  style="width: 100%; height: 100%;" >
-					</a>
-			
-
-		
-		
-	    	
-					<a class="item" href="/tags/%E5%8D%9A%E5%AE%A2/" target="_blank" style="height: 100%;">
-						<img class="nofancybox" src="https://blogimage-1258928558.cos.ap-guangzhou.myqcloud.com/%E8%BD%AE%E6%92%AD%E5%9B%BE/hexo.png"  style="width: 100%; height: 100%;" >
-					</a>
-			
-
-		
-		
-	    	
-					<a class="item" href="https://promotion.aliyun.com/ntms/act/campus2018.html" target="_blank" style="height: 100%;">
-						<img class="nofancybox" src="https://blogimage-1258928558.cos.ap-guangzhou.myqcloud.com/%E8%BD%AE%E6%92%AD%E5%9B%BE/19010107.jpg"  style="width: 100%; height: 100%;" >
-					</a>
-			
-
-		
-
-		</div>
-		<!-- 轮播（Carousel）导航 -->
-		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-		    
-		</a>
-		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 
-		</a>
-	</div>
-
-	<div  class="rights" style="width: 30%; height: 300px; margin-right: 0px;margin-left: 20px;float: left;">
-	
-	   <!-- 天气插件 -->
-       <iframe class="blog-weather" width="420" scrolling="no" height="15%" frameborder="0" allowtransparency="true" src="https://i.tianqi.com/index.php?c=code&id=12&icon=1&py=wuhan&num=2&site=12"></iframe>
-
-	   <!-- 关于博主 -->
-	   <a href="/about/"  target="_blank" style="text-align: right; width: 100%;"><img class="blog-about nofancybox" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/about.png" width="100%"/></a>
-	   <div style="height: 9px;"></div>
-
-	   <!-- 推荐阅读 -->
-	   <a href="/books/" target="_blank" style="width: 100%; text-align: right;"><img  class="blog-read nofancybox" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/read.png" width="100%"/></a>
-	   <div style="height: 9px;"></div>
-	
-	   <!-- 光影留念 -->
-	  <a href="/photos/" target="_blank" style="width: 100%; text-align: right;"><img class="blog-photo nofancybox" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/photo.png" width="100%"/></a>
-	  <div style="height: 9px;"></div>
-
-	  <!-- 留下脚印 -->
-	  <a href="/messageboard/"><img class="blog-messageboard nofancybox" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7_meitu_5.png"/></a>
-    </div>
-
-<div class="tag-cloud">
-  <div class="tag-cloud-tags" id="tags">
-    <a href="/tags/HTML/" style="font-size: 14px; color: #fff">HTML</a> <a href="/tags/HTMl/" style="font-size: 14px; color: #fff">HTMl</a> <a href="/tags/JavaScript/" style="font-size: 14px; color: #fff">JavaScript</a> <a href="/tags/Linux/" style="font-size: 14px; color: #fff">Linux</a> <a href="/tags/Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98/" style="font-size: 14px; color: #fff">Live2D看板娘</a> <a href="/tags/Markdown%E8%AF%AD%E6%B3%95/" style="font-size: 14px; color: #fff">Markdown语法</a> <a href="/tags/Photoshop/" style="font-size: 14px; color: #fff">Photoshop</a> <a href="/tags/React/" style="font-size: 14px; color: #fff">React</a> <a href="/tags/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" style="font-size: 14px; color: #fff">hexo常用命令</a> <a href="/tags/linux/" style="font-size: 14px; color: #fff">linux</a> <a href="/tags/mysql/" style="font-size: 14px; color: #fff">mysql</a> <a href="/tags/sql/" style="font-size: 14px; color: #fff">sql</a> <a href="/tags/vscode-open-in-browser%E6%89%93%E4%B8%8D%E5%BC%80%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 14px; color: #fff">vscode open-in-browser打不开浏览器</a> <a href="/tags/%E5%85%BB%E6%88%90%E5%A5%BD%E4%B9%A0%E6%83%AF/" style="font-size: 14px; color: #fff">养成好习惯</a> <a href="/tags/%E6%91%98%E6%8A%84/" style="font-size: 14px; color: #fff">摘抄</a> <a href="/tags/%E6%96%87%E7%AB%A0/" style="font-size: 14px; color: #fff">文章</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" style="font-size: 14px; color: #fff">环境变量</a>
-  </div>
-</div>
-<br>
-
-<script type="text/javascript">
-   var alltags=document.getElementById('tags');
-   var tags=alltags.getElementsByTagName('a');
-
-   for (var i = tags.length - 1; i >= 0; i--) {
-     var r=Math.floor(Math.random()*75+130);
-     var g=Math.floor(Math.random()*75+100);
-     var b=Math.floor(Math.random()*75+80);
-     tags[i].style.background = "rgb("+r+","+g+","+b+")";
-   }
-</script>
-
-<style type="text/css">
-	div#posts.posts-expand .tag-cloud a{
-   		background-color: #f5f7f1;
-   		border-radius: 6px;
-   		padding-left: 10px;
-   		padding-right: 10px;
-   		margin-top: 18px;
- 	}
-
- 	.tag-cloud a{
-   		background-color: #f5f7f1;
-   		border-radius: 4px;
-   		padding-right: 5px;
-   		padding-left: 5px;
-   		margin-right: 5px;
-   		margin-left: 0px;
-   		margin-top: 8px;
-   		margin-bottom: 0px;
- 	}
-
- 	.tag-cloud a:before{
-       content: "🔖";
- 	}
-
- 	.tag-cloud-tags{
-   	   text-align: left;
-   	   counter-reset: tags;
- 	}
-</style>
-
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Songstars.github.io/2020/06/12/Next%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%E6%94%B9%E9%80%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sunshine">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sunshine の blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/12/Next%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%E6%94%B9%E9%80%A0/" itemprop="url">Next主题优化改造</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-12T10:33:59+08:00">
+                2020-06-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          Hexo 博客搭建Next主题优化改造1.Next主题启用下载主题，我这里用到是nexT5的版本，如果你想用更高的版本，前往
+把下载好的主题拖进themes目录下，打开站点文件夹的_config.yml,搜索theme，将后面 hexo-theme-next-5.1.4换成你的主题名字
+![imag
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/06/12/Next%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%E6%94%B9%E9%80%A0/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -829,23 +396,22 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/11/%E7%A7%BB%E5%8A%A8web%E5%BC%80%E5%8F%91_flex%E5%B8%83%E5%B1%80/" itemprop="url">移动web开发_flex布局</a></h2>
+                <a class="post-title-link" href="/2020/06/11/%E7%A7%BB%E5%8A%A8web%E5%BC%80%E5%8F%91_flex%E5%B8%83%E5%B1%80/" itemprop="url">移动web开发_flex布局</a></h1>
         
 
         <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
           <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-11T20:25:32+08:00">
-                <font color="blue">2020-06-11</font>
+                2020-06-11
               </time>
             
 
@@ -858,8 +424,6 @@
 
           
             
-
-            
           
 
           
@@ -867,26 +431,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -917,11 +461,7 @@ pc端浏览器支持情况比较差
 IE11或更低版本不支持flex或仅支持部分
 
 1.3 建议
-如果是pc端页面布局，还是采用传统方式
-如果是移动端或者是不考虑兼容的pc则采用flex
-
-2.0 flex布局原理
-flex 是 flexible Box 的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活
+如果是pc端
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -933,10 +473,6 @@ flex 是 flexible Box 的缩写，意为”弹性布局”，用来为盒状模�
         
       
     </div>
-
-    
-
-
     
     
     
@@ -946,10 +482,6 @@ flex 是 flexible Box 的缩写，意为”弹性布局”，用来为盒状模�
     
 
     
-    
-    	<div>
-	   
-        </div>
 
     <footer class="post-footer">
       
@@ -1001,23 +533,22 @@ flex 是 flexible Box 的缩写，意为”弹性布局”，用来为盒状模�
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/10/jsx%E5%8E%9F%E7%90%86%E5%92%8C%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95-%E4%B8%80/" itemprop="url">jsx原理和基本语法(一)</a></h2>
+                <a class="post-title-link" href="/2020/06/10/jsx%E5%8E%9F%E7%90%86%E5%92%8C%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95-%E4%B8%80/" itemprop="url">jsx原理和基本语法(一)</a></h1>
         
 
         <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
           <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-10T19:56:38+08:00">
-                <font color="blue">2020-06-10</font>
+                2020-06-10
               </time>
             
 
@@ -1030,8 +561,6 @@ flex 是 flexible Box 的缩写，意为”弹性布局”，用来为盒状模�
 
           
             
-
-            
           
 
           
@@ -1039,26 +568,6 @@ flex 是 flexible Box 的缩写，意为”弹性布局”，用来为盒状模�
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1086,7 +595,7 @@ flex 是 flexible Box 的缩写，意为”弹性布局”，用来为盒状模�
 ES5如何定义一个类
 
 
-1234567891011121314&lt;script&gt;    &#x2F;&#x2F; ES5定义类    function Person(name,age)&#123;        this.age &#
+1234567891
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1098,10 +607,6 @@ ES5如何定义一个类
         
       
     </div>
-
-    
-
-
     
     
     
@@ -1111,10 +616,6 @@ ES5如何定义一个类
     
 
     
-    
-    	<div>
-	   
-        </div>
 
     <footer class="post-footer">
       
@@ -1166,23 +667,22 @@ ES5如何定义一个类
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/09/%E7%86%9F%E6%82%89Linux%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/" itemprop="url">熟悉Linux的目录结构</a></h2>
+                <a class="post-title-link" href="/2020/06/09/%E7%86%9F%E6%82%89Linux%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/" itemprop="url">熟悉Linux的目录结构</a></h1>
         
 
         <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
           <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-09T23:17:28+08:00">
-                <font color="blue">2020-06-09</font>
+                2020-06-09
               </time>
             
 
@@ -1195,8 +695,6 @@ ES5如何定义一个类
 
           
             
-
-            
           
 
           
@@ -1204,26 +702,6 @@ ES5如何定义一个类
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1244,10 +722,7 @@ ES5如何定义一个类
         
           
           1.Linux的目录结构1.1基本介绍linux的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“/”，然后在此目录下再创建其他的目录。深刻理解linux树状文件目录是非常重要的，这里我给大家说明一下。记住一句经典的话：在Linux世界里，一切皆文件。
-![1591716031302](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591716031302.png)
-1.2 目录结构的具体介绍
-
-/b
+![1591716031302
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1259,10 +734,6 @@ ES5如何定义一个类
         
       
     </div>
-
-    
-
-
     
     
     
@@ -1272,10 +743,6 @@ ES5如何定义一个类
     
 
     
-    
-    	<div>
-	   
-        </div>
 
     <footer class="post-footer">
       
@@ -1327,23 +794,22 @@ ES5如何定义一个类
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/09/VM%E5%92%8CLinux%EF%BC%88CentOS%EF%BC%89%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/" itemprop="url">VM和Linux（CentOS）系统安装</a></h2>
+                <a class="post-title-link" href="/2020/06/09/VM%E5%92%8CLinux%EF%BC%88CentOS%EF%BC%89%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/" itemprop="url">VM和Linux（CentOS）系统安装</a></h1>
         
 
         <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
           <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-09T22:57:59+08:00">
-                <font color="blue">2020-06-09</font>
+                2020-06-09
               </time>
             
 
@@ -1356,8 +822,6 @@ ES5如何定义一个类
 
           
             
-
-            
           
 
           
@@ -1365,26 +829,6 @@ ES5如何定义一个类
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1405,11 +849,7 @@ ES5如何定义一个类
         
           
           1.VM和Linux（CentOS）系统安装1.1安装vm和Centos学习Linux需要一个环境，我们需要创建一个虚拟机，然后在虚拟机上安装一个Centos系统来学习。1）先安装virtual machine，vm12
-2）再安装Linux（CentOS 6.8）3）原理示意图，这里我们画图说明一下VM和CentOS的关系。
-
-1.2 vm软件和CentOS的安装软件CentOS下载地址：
-
-网易镜像：http:/mirrors.163.com/centos/6/isos/搜狐镜像：http:
+2）再安装Linux（CentOS 6.8）3）原理示意图，这里我们画图说明一
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1421,10 +861,6 @@ ES5如何定义一个类
         
       
     </div>
-
-    
-
-
     
     
     
@@ -1434,10 +870,6 @@ ES5如何定义一个类
     
 
     
-    
-    	<div>
-	   
-        </div>
 
     <footer class="post-footer">
       
@@ -1489,23 +921,22 @@ ES5如何定义一个类
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/09/%E9%82%82%E9%80%85linux/" itemprop="url">邂逅linux</a></h2>
+                <a class="post-title-link" href="/2020/06/09/%E9%82%82%E9%80%85linux/" itemprop="url">邂逅linux</a></h1>
         
 
         <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
           <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-09T22:40:21+08:00">
-                <font color="blue">2020-06-09</font>
+                2020-06-09
               </time>
             
 
@@ -1518,8 +949,6 @@ ES5如何定义一个类
 
           
             
-
-            
           
 
           
@@ -1527,26 +956,6 @@ ES5如何定义一个类
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1568,7 +977,7 @@ ES5如何定义一个类
           
           1.Linux开山篇1.11Linux课程的内容介绍
 1.2Linux的学习方向1.2.1Linux运维工程师1.2.2Linux嵌入式开发工程师1.2.3在linux下做各种程序开发1.2.4示意图
-1.3Linux的应用领域1.3.1个人桌面应用领域此领域是传统linux应用最薄弱的环节，传统linux由于界面简单、操作复杂、应用软件少的缺点，一直被windows所压制，但近些年来随着ubuntu、fedora[fi’do:re]等优秀桌面环境的兴起，同时各大硬件厂商对其支持的加大，linu
+1.3Linux的应用领域1.3.1个人桌面应用领域此领域是传统linux应用最薄弱的环节，传统l
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1580,10 +989,6 @@ ES5如何定义一个类
         
       
     </div>
-
-    
-
-
     
     
     
@@ -1593,10 +998,6 @@ ES5如何定义一个类
     
 
     
-    
-    	<div>
-	   
-        </div>
 
     <footer class="post-footer">
       
@@ -1648,23 +1049,22 @@ ES5如何定义一个类
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/09/%E8%AE%A4%E8%AF%86Photoshop-%E5%9B%BE%E5%B1%82%E5%A4%84%E7%90%86/" itemprop="url">认识Photoshop:图层处理</a></h2>
+                <a class="post-title-link" href="/2020/06/09/%E8%AE%A4%E8%AF%86Photoshop-%E5%9B%BE%E5%B1%82%E5%A4%84%E7%90%86/" itemprop="url">认识Photoshop:图层处理</a></h1>
         
 
         <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
           <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-09T22:11:22+08:00">
-                <font color="blue">2020-06-09</font>
+                2020-06-09
               </time>
             
 
@@ -1677,8 +1077,6 @@ ES5如何定义一个类
 
           
             
-
-            
           
 
           
@@ -1686,26 +1084,6 @@ ES5如何定义一个类
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1730,8 +1108,7 @@ ES5如何定义一个类
 色相饱和度  快捷键：ctrl+u 
 ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
 短期非常用：色彩平衡     可选颜色
-2.图像调色功能系统运用2.1图层调整菜单栏图像—&gt;调整—&gt;曝光度对原图层直接进行操作，会造成破坏性的，不可逆的问题后期不可调整
-![1591712548497](C:\Users\Song Shuai\AppD
+2.图像调色功能系统运用
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1743,10 +1120,6 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
         
       
     </div>
-
-    
-
-
     
     
     
@@ -1756,10 +1129,6 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
     
 
     
-    
-    	<div>
-	   
-        </div>
 
     <footer class="post-footer">
       
@@ -1811,23 +1180,22 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/09/%E9%82%82%E9%80%85React%E5%92%8CReact%E5%BC%80%E5%8F%91%E4%BD%93%E9%AA%8C/" itemprop="url">邂逅React和React开发体验</a></h2>
+                <a class="post-title-link" href="/2020/06/09/%E9%82%82%E9%80%85React%E5%92%8CReact%E5%BC%80%E5%8F%91%E4%BD%93%E9%AA%8C/" itemprop="url">邂逅React和React开发体验</a></h1>
         
 
         <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
           <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-09T10:15:01+08:00">
-                <font color="blue">2020-06-09</font>
+                2020-06-09
               </time>
             
 
@@ -1840,8 +1208,6 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
 
           
             
-
-            
           
 
           
@@ -1849,26 +1215,6 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1890,7 +1236,7 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
           
           邂逅React开发1.React是什么？■React是什么呢？相信每个做开发的人对它都或多或少有一些印象。口这里我们来看一下官方对它的解释：用于构建用户界面的JavaScript库。
 
-■我们知道对于前端来说，主要的任务就是构建用于界面，而构建用于界面离不开三个技术：口HTML：构建页面的结构口CSS：构建页面的样式口JavaScript：页面动态内容和交互■那么使用最原生的HTML、CSS、JavaScript可以构建完整的用户界面吗？当然可以，但是会存在很多问题口比如操作DOM兼容性的问题；
+■我们知道对于前端来说，主要的任务就是构建用于界面，而构建用于界面离不开三个技术：口HTML：构建页面的结构口CS
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1902,10 +1248,6 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
         
       
     </div>
-
-    
-
-
     
     
     
@@ -1915,10 +1257,6 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
     
 
     
-    
-    	<div>
-	   
-        </div>
 
     <footer class="post-footer">
       
@@ -1970,23 +1308,22 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/05/%E8%AE%A4%E8%AF%86Photoshop/" itemprop="url">认识Photoshop</a></h2>
+                <a class="post-title-link" href="/2020/06/05/%E8%AE%A4%E8%AF%86Photoshop/" itemprop="url">认识Photoshop</a></h1>
         
 
         <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
           <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-05T17:10:24+08:00">
-                <font color="blue">2020-06-05</font>
+                2020-06-05
               </time>
             
 
@@ -1999,8 +1336,6 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
 
           
             
-
-            
           
 
           
@@ -2008,26 +1343,6 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -2053,12 +1368,7 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
 通用图片格式
 内存小，画质高
 ⑵.png(透明图片格式)通常用于抠图后的素材保存格式
-可以是透明底
-素材最常用的格式
-合成/精修/作图必备
-⑶ .GIF通常为点动图
-主要是为了作品展示
-⑷ .PSD（ps专用格式，分层格式）保存所有信息，预留备份（防止被骗 原创证据，投诉追款必备，防止
+
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -2070,10 +1380,6 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
         
       
     </div>
-
-    
-
-
     
     
     
@@ -2083,10 +1389,6 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
     
 
     
-    
-    	<div>
-	   
-        </div>
 
     <footer class="post-footer">
       
@@ -2138,23 +1440,22 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/05/16/%E6%91%98%E6%8A%84/" itemprop="url">摘抄【1】</a></h2>
+                <a class="post-title-link" href="/2020/05/16/%E6%91%98%E6%8A%84/" itemprop="url">摘抄【1】</a></h1>
         
 
         <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
           <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-16T23:19:55+08:00">
-                <font color="blue">2020-05-16</font>
+                2020-05-16
               </time>
             
 
@@ -2167,8 +1468,6 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
 
           
             
-
-            
           
 
           
@@ -2176,26 +1475,6 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -2222,11 +1501,7 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
 
 
 3.这个世界真的很公平，你想要最好的，就要承受最痛的 
-4.不满现状，向上奋发是赚钱发财的前提
-5.人才都是熬出来的，本事都是逼出来的
-6.贪财有道，好色有品，博学有识，读书有瘾，喝酒有量，玩笑有度
-7.人这一辈子改变命运的机会能有几次？出生，高考，考研
-8.有句
+4.不满
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -2238,10 +1513,6 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
         
       
     </div>
-
-    
-
-
     
     
     
@@ -2251,174 +1522,6 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
     
 
     
-    
-    	<div>
-	   
-        </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Songstars.github.io/2020/03/23/hexo%E5%8F%91%E8%A1%A8%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sunshine">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/touxiang.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sunshine の blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/03/23/hexo%E5%8F%91%E8%A1%A8%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" itemprop="url">hexo发表博客常用命令</a></h2>
-        
-
-        <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-23T20:50:15+08:00">
-                <font color="blue">2020-03-23</font>
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          hexo发表博客常用命令以下命令需要在本地Blog路径下执行###Step1 创建文章
-1$hexo new &quot;hexo发表博客常用命令&quot;
-
-###Step2 编辑文章
-在Blog\source_posts文件夹打开对应markdown文档进行编辑
-编辑md文件建议使用Typora软件 特别推荐！！！
-####关于文章添加图片： 1 把本地Blog文件下的配置文件（非主题下）_config.yml里的post_asset_folder:选项设置为true
- 2 在本地Blog
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/03/23/hexo%E5%8F%91%E8%A1%A8%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-
-    
-    
-    
-
-    
-
-    
-
-    
-    
-    	<div>
-	   
-        </div>
 
     <footer class="post-footer">
       
@@ -2469,8 +1572,6 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
 
   <aside id="sidebar" class="sidebar">
     
-      <div id="sidebar-dimmer"></div>
-    
     <div class="sidebar-inner">
 
       
@@ -2486,7 +1587,7 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
                 alt="Sunshine" />
             
               <p class="site-author-name" itemprop="name">Sunshine</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">守得云开见月明</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -2494,9 +1595,9 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%20%7C%7C%20archive">
+                <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2508,71 +1609,34 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
               
               
               <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">17</span>
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
           </nav>
 
           
-            <div class="feed-link motion-element">
-              <a href="https://bestzuo.cn/atom.xml" target="_blank" rel="alternate noopener">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
 
-          
-            <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/Songstars" target="_blank" title="Github">
-                      
-                        <i class="fa fa-fw fa-github"></i>Github</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:song.shuai@outlook.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://plus.google.com/" target="_blank" title="Google">
-                      
-                        <i class="fa fa-fw fa-google"></i>Google</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://stackoverflow.com/" target="_blank" title="StackOverflow">
-                      
-                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
-                  </span>
-                
-            </div>
           
 
           
           
-            <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
-                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
-              </a>
-            </div>
-          
 
           
           
+
+          
+
         </div>
       </section>
 
       
 
       
+
     </div>
   </aside>
 
@@ -2583,49 +1647,30 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
-    <font color="red"><i class="fa fa-heartbeat" aria-hidden="true"></i></font>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Sunshine</span>
-  &nbsp;<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="noopener"><font size="1px"><font color="#222">鄂ICP备19008535号</font></font></a>
 
   
 </div>
 
 
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
-<div style="width:300px;margin:0 auto; padding:0 0;">
-   <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011102003147" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="https://blogimage-1258928558.cos.ap-guangzhou.myqcloud.com/beian/%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png" style="float:left;width:10%;height:auto;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#555;letter-spacing:0px"><font size="1px"><font color="#222">鄂公网安备 42011102003147号</font></font></p></a>
-</div>
 
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 
 
         
-<div class="busuanzi-count">
-  <!-- <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
-  <script async src="/js/src/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
-    </span>
-  
-
-  
-    <span class="site-pv">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
-    </span>
-  
-</div>
-
 
 
 
@@ -2640,8 +1685,6 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -2668,6 +1711,8 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
 
   
 
+
+  
 
 
 
@@ -2707,6 +1752,11 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -2762,342 +1812,9 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
 
 
 
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="/js/src/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    new Valine({
-        lang: 'zh-cn',
-        admin_email: 'song.shuai@outlook.com',
-        el: '#comments' ,
-        appId: 'O9P2sOopMfrmnoFodfNVGl3j-gzGzoHsz',
-        appKey: 'VStG3Dh9DNu0XfIG0bSuIHhj',
-        emoticon_url: 'https://cloud.panjunwen.com/alu',
-        emoticon_list: ["吐.png","喷血.png","狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","中指.png","尴尬.png","瞅你.png","想一想.png","中枪.png","得意.png","肿包.png","扇耳光.png","亲亲.png","惊喜.png","脸红.png","无所谓.png","便便.png","愤怒.png","蜡烛.png","献黄瓜.png","内伤.png","投降.png","观察.png","看不见.png","击掌.png","抠鼻.png","邪恶.png","看热闹.png","口水.png","抽烟.png","锁眉.png","装大款.png","吐舌.png","无奈.png","长草.png","赞一个.png","呲牙.png","无语.png","阴暗.png","不出所料.png","咽气.png","期待.png","高兴.png","吐血倒地.png","哭泣.png","欢呼.png","黑线.png","喜极而泣.png","喷水.png","深思.png","鼓掌.png","暗地观察.png"],
-        placeholder: '(๑•́ ₃ •̀๑)点击此处填写昵称和邮箱才能留言噢~',
-  });
-  </script>
-
 
 
   
-
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
 
 
 
@@ -3108,21 +1825,6 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
   
 
   
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
 
   
   
@@ -3130,48 +1832,8 @@ ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a
   
 
   
-<script>
-  $('.highlight').each(function(i, e) {
-    var $wrap = $('<div>').addClass('highlight-wrap');
-    $(e).after($wrap);
-    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
-      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
-        return $(e).text();
-      }).toArray().join('\n');
-      var ta = document.createElement('textarea');
-      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
-      ta.style.top = yPosition + 'px'; // Prevent page scroll
-      ta.style.position = 'absolute';
-      ta.style.opacity = '0';
-      ta.readOnly = true;
-      ta.value = code;
-      document.body.appendChild(ta);
-      ta.select();
-      ta.setSelectionRange(0, code.length);
-      ta.readOnly = false;
-      var result = document.execCommand('copy');
-      
-        if (result) $(this).text('复制成功');
-        else $(this).text('复制失败');
-      
-      ta.blur(); // For iOS
-      $(this).blur();
-    })).on('mouseleave', function(e) {
-      var $b = $(this).find('.copy-btn');
-      setTimeout(function() {
-        $b.text('复制');
-      }, 300);
-    }).append(e);
-  })
-</script>
-
 
   
 
-  
-
-  <script type="text/javascript" src="/js/src/linkcard.js"></script>
-  <script type="text/javascript" src="/js/src/love.js"></script>
-  <script src="/dist/js/social-share.min.js"></script>
 </body>
 </html>

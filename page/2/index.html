@@ -2,24 +2,17 @@
 
 
 
+  
 
-<html class="theme-next mist" lang="zh-Hans">
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
-  <meta name="google-site-verification" content="-YPbgjltFVFljoCm04Ktk0m38A8CkQxpifuKVZXtawA" />
-  <mate name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
 
-
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -52,32 +45,6 @@
 
 
 
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
 
 
 
@@ -86,40 +53,38 @@
 <link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/site-logo.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/site-logo.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/site-logo.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
 
 
-  <link rel="mask-icon" href="/images/site-logo.png?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Java,hexo,next,个人博客,博客,编程,IT,CSS,javascript,前端,后端,web开发" />
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
 
 
 
 
 
-  <link rel="alternate" href="https://bestzuo.cn/atom.xml" title="Sunshine の blog" type="application/atom+xml" />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
 
 
 
-<meta name="description" content="一个平庸的人">
+
+
+
+
+<meta name="description" content="守得云开见月明">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sunshine の blog">
 <meta property="og:url" content="http://songstars.github.io/page/2/index.html">
 <meta property="og:site_name" content="Sunshine の blog">
-<meta property="og:description" content="一个平庸的人">
+<meta property="og:description" content="守得云开见月明">
 <meta property="article:author" content="Sunshine">
 <meta property="article:tag" content="一个平庸的人">
 <meta name="twitter:card" content="summary">
@@ -132,10 +97,10 @@
     root: '/',
     scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -158,7 +123,7 @@
 
 
 
-  <title>Sunshine の blog - 一个平庸的人</title>
+  <title>Sunshine の blog</title>
   
 
 
@@ -168,24 +133,6 @@
 
 
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139884627-1"></script>
-  <link rel="stylesheet" href="/dist/css/share.min.css">
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-139884627-1');
-  </script>
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?9d4a3700a4e6444240fe13acb69c87fc";
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 <meta name="generator" content="Hexo 4.2.1"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -197,9 +144,7 @@
 
   <div class="container sidebar-position-left 
   page-home">
-
     <div class="headband"></div>
-    
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
@@ -208,15 +153,13 @@
 
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
-        <!-- <span class="logo-line-before"><i></i></span> -->
-        <!-- <img width="150px" height="auto" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/logo-bestzuo.png"/> -->
+        <span class="logo-line-before"><i></i></span>
         <span class="site-title">Sunshine の blog</span>
-	     <!-- <img width="150px" height="auto" src="/images/site-logo.png" /> -->
-        <!-- <span class="logo-line-after"><i></i></span> -->
+        <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <h1 class="site-subtitle" itemprop="description">一个平庸的人</h1>
+        <p class="site-subtitle">一个平庸的人</p>
       
   </div>
 
@@ -237,7 +180,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/%20" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -246,8 +189,18 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-categories">
-          <a href="/categories/%20" rel="section">
+          <a href="/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -257,7 +210,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/%20" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -265,75 +218,11 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-top">
-          <a href="/top/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-signal"></i> <br />
-            
-            热门
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-links">
-          <a href="/links/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user-plus"></i> <br />
-            
-            友链
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-messageboard">
-          <a href="/messageboard%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-comment"></i> <br />
-            
-            留言
-          </a>
-        </li>
-      
 
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
   
 </nav>
 
@@ -347,457 +236,138 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<style type="text/css">
-
-.glyphicon-chevron-left:before{
-	/*content: "<"*/
-	/*background: url(https://site-1258928558.cos.ap-guangzhou.myqcloud.com/left-icon-slides.png);*/
-}
-.glyphicon-chevron-right:before{
-	/*content: ">"*/
-}
-
-@media (max-width: 767px){
-	.rights{
-		display: none;
-	}
-	.carousel{
-		display: none;
-	}
-	.slide{
-		width: 100% !important;
-		height: 100% !important;
-	}
-	.tag-cloud{
-		display: none;
-	}
-}
-
-.carousel{
-	width: 65%;
-	height: 100%;
-	position: relative;
-}
-
-.carousel-inner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-.carousel-inner > .item {
-  display: none;
-  position: relative;
-  -webkit-transition: 0.6s ease-in-out left;
-  -o-transition: 0.6s ease-in-out left;
-  transition: 0.6s ease-in-out left;
-}
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  line-height: 1;
-}
-@media all and (transform-3d), (-webkit-transform-3d) {
-  .carousel-inner > .item {
-    -webkit-transition: -webkit-transform 0.6s ease-in-out;
-    -moz-transition: -moz-transform 0.6s ease-in-out;
-    -o-transition: -o-transform 0.6s ease-in-out;
-    transition: transform 0.6s ease-in-out;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-perspective: 1000px;
-    -moz-perspective: 1000px;
-    perspective: 1000px;
-  }
-  .carousel-inner > .item.next,
-  .carousel-inner > .item.active.right {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    left: 0;
-  }
-  .carousel-inner > .item.prev,
-  .carousel-inner > .item.active.left {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    left: 0;
-  }
-  .carousel-inner > .item.next.left,
-  .carousel-inner > .item.prev.right,
-  .carousel-inner > .item.active {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    left: 0;
-  }
-}
-.carousel-inner > .active,
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  display: block;
-}
-.carousel-inner > .active {
-  left: 0;
-}
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-.carousel-inner > .next {
-  left: 100%;
-}
-.carousel-inner > .prev {
-  left: -100%;
-}
-.carousel-inner > .next.left,
-.carousel-inner > .prev.right {
-  left: 0;
-}
-.carousel-inner > .active.left {
-  left: -100%;
-}
-.carousel-inner > .active.right {
-  left: 100%;
-}
-.carousel-control {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  /*width: 15%;*/
-  /*opacity: 0.5;*/
-  /*filter: alpha(opacity=50);*/
-  font-size: 20px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  background-color: rgba(0, 0, 0, 0);
-}
-.carousel-control.left {
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
-}
-.carousel-control.right {
-  left: auto;
-  right: 0px;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
-}
-.carousel-control:hover,
-.carousel-control:focus {
-  outline: 0;
-  color: #fff;
-  text-decoration: none;
-}
-.carousel-control .icon-prev,
-.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-left,
-.carousel-control .glyphicon-chevron-right {
-  position: absolute;
-  top: 50%;
-  margin-top: -10px;
-  z-index: 5;
-  display: inline-block;
-}
-/*.carousel-control .icon-prev,
-.carousel-control .glyphicon-chevron-left {
-  background: url('https://site-1258928558.cos.ap-guangzhou.myqcloud.com/icon-slides.png');
-  background-position-x: -83px; 
-  left: 9px;
-}*/
-
-.carousel-control .icon-prev,
-.carousel-control .glyphicon-chevron-left:hover {
-  background: url('https://site-1258928558.cos.ap-guangzhou.myqcloud.com/icon-slides.png');
-  left: 9px;
-}
-/*.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-right {
-  background: url('https://site-1258928558.cos.ap-guangzhou.myqcloud.com/icon-slides.png');
-  background-position-x: -125px; 
-  right: 0px;
-}*/
-
-.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-right:hover {
-  background: url('https://site-1258928558.cos.ap-guangzhou.myqcloud.com/icon-slides.png');
-  background-position-x: -41px; 
-  right: 0px;
-}
-.carousel-control .icon-prev,
-.carousel-control .icon-next {
-  width: 20px;
-  height: 20px;
-  line-height: 1;
-  font-family: serif;
-}
-.carousel-indicators {
-  position: absolute;
-  bottom: 2px;
-  left: 50%;
-  z-index: 15;
-  width: 60%;
-  margin-left: -30%;
-  padding-left: 0;
-  list-style: none;
-  text-align: center;
-}
-.carousel-indicators li {
-  display: inline-block;
-  width: 30px;
-  height: 3px;
-  margin: 5px;
-  text-indent: -999px;
-  border: 1px solid #bbb;
-  cursor: pointer;
-  background-color: rgba(0,0,0,.24);
-}
-.carousel-indicators .active {
-  width: 30px;
-  height: 3px;
-  background-color: #fff;
-}
-.carousel-caption {
-  position: absolute;
-  left: 15%;
-  right: 15%;
-  bottom: 20px;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-.carousel-caption .btn {
-  text-shadow: none;
-}
-@media screen and (min-width: 768px) {
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-prev,
-  .carousel-control .icon-next {
-    width: 30px;
-    height: 60px;
-    margin-top: -10px;
-    font-size: 30px;
-  }
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .icon-prev {
-    margin-left: -10px;
-  }
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-next {
-    /*margin-right: -10px;*/
-  }
-  .carousel-caption {
-    left: 20%;
-    right: 20%;
-    padding-bottom: 30px;
-  }
-  .carousel-indicators {
-    bottom: 0px;
-  }
-}
-</style>
-<div height="320px" width="100%" style="border: 0px; overflow: hidden; border-radius: 10px;" scrolling="no">
-			
-	<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3500" style="float:left">
-		<!-- 轮播（Carousel）指标 -->
-		<ol class="carousel-indicators">
-		
-		
-
-			<li data-target="#myCarousel" data-slide-to="0"></li>
-			
-
-		
-
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			
-
-		
-
-			<li data-target="#myCarousel" data-slide-to="2"></li>
-			
-
-		
-
-			<li data-target="#myCarousel" data-slide-to="3"></li>
-			
-
-		
-
-			<li data-target="#myCarousel" data-slide-to="4"></li>
-			
-
-		
-
-			<li data-target="#myCarousel" data-slide-to="5"></li>
-			
-
-		
-
-			<li data-target="#myCarousel" data-slide-to="6"></li>
-			
-
-		
-		</ol>
-		<!-- 轮播（Carousel）项目 -->
-		<div class="carousel-inner" style="height: 280px; border-radius: 10px; width: 100%;">
-
-		
-		 
-		
-	    	
-				<a class="item active" href="/messageboard/" target="_blank" style="height: 100%;">
-					<img class="nofancybox" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/blog/blog-welcome.png"   style="width: 100%; height: 100%" >
-				</a>
-				
-				
-
-		
-		
-	    	
-					<a class="item" href="https://bestzuo.cn/posts/blog-establish.html" target="_blank" style="height: 100%;">
-						<img class="nofancybox" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/blog/blog-polish.png"  style="width: 100%; height: 100%;" >
-					</a>
-			
-
-		
-		
-	    	
-					<a class="item" href="https://github.com/996icu/996.ICU" target="_blank" style="height: 100%;">
-						<img class="nofancybox" src="https://blogimage-1258928558.cos.ap-guangzhou.myqcloud.com/%E8%BD%AE%E6%92%AD%E5%9B%BE/996.png"  style="width: 100%; height: 100%;" >
-					</a>
-			
-
-		
-		
-	    	
-					<a class="item" href="/tags/JVM/" target="_blank" style="height: 100%;">
-						<img class="nofancybox" src="https://blogimage-1258928558.cos.ap-guangzhou.myqcloud.com/%E8%BD%AE%E6%92%AD%E5%9B%BE/JVM.png"  style="width: 100%; height: 100%;" >
-					</a>
-			
-
-		
-		
-	    	
-					<a class="item" href="/posts/258aee07.html" target="_blank" style="height: 100%;">
-						<img class="nofancybox" src="https://blogimage-1258928558.cos.ap-guangzhou.myqcloud.com/%E8%BD%AE%E6%92%AD%E5%9B%BE/%E5%A4%9A%E7%BA%BF%E7%A8%8B.png"  style="width: 100%; height: 100%;" >
-					</a>
-			
-
-		
-		
-	    	
-					<a class="item" href="/tags/%E5%8D%9A%E5%AE%A2/" target="_blank" style="height: 100%;">
-						<img class="nofancybox" src="https://blogimage-1258928558.cos.ap-guangzhou.myqcloud.com/%E8%BD%AE%E6%92%AD%E5%9B%BE/hexo.png"  style="width: 100%; height: 100%;" >
-					</a>
-			
-
-		
-		
-	    	
-					<a class="item" href="https://promotion.aliyun.com/ntms/act/campus2018.html" target="_blank" style="height: 100%;">
-						<img class="nofancybox" src="https://blogimage-1258928558.cos.ap-guangzhou.myqcloud.com/%E8%BD%AE%E6%92%AD%E5%9B%BE/19010107.jpg"  style="width: 100%; height: 100%;" >
-					</a>
-			
-
-		
-
-		</div>
-		<!-- 轮播（Carousel）导航 -->
-		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-		    
-		</a>
-		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 
-		</a>
-	</div>
-
-	<div  class="rights" style="width: 30%; height: 300px; margin-right: 0px;margin-left: 20px;float: left;">
-	
-	   <!-- 天气插件 -->
-       <iframe class="blog-weather" width="420" scrolling="no" height="15%" frameborder="0" allowtransparency="true" src="https://i.tianqi.com/index.php?c=code&id=12&icon=1&py=wuhan&num=2&site=12"></iframe>
-
-	   <!-- 关于博主 -->
-	   <a href="/about/"  target="_blank" style="text-align: right; width: 100%;"><img class="blog-about nofancybox" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/about.png" width="100%"/></a>
-	   <div style="height: 9px;"></div>
-
-	   <!-- 推荐阅读 -->
-	   <a href="/books/" target="_blank" style="width: 100%; text-align: right;"><img  class="blog-read nofancybox" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/read.png" width="100%"/></a>
-	   <div style="height: 9px;"></div>
-	
-	   <!-- 光影留念 -->
-	  <a href="/photos/" target="_blank" style="width: 100%; text-align: right;"><img class="blog-photo nofancybox" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/photo.png" width="100%"/></a>
-	  <div style="height: 9px;"></div>
-
-	  <!-- 留下脚印 -->
-	  <a href="/messageboard/"><img class="blog-messageboard nofancybox" src="https://site-1258928558.cos.ap-guangzhou.myqcloud.com/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7_meitu_5.png"/></a>
-    </div>
-
-<div class="tag-cloud">
-  <div class="tag-cloud-tags" id="tags">
-    <a href="/tags/HTML/" style="font-size: 14px; color: #fff">HTML</a> <a href="/tags/HTMl/" style="font-size: 14px; color: #fff">HTMl</a> <a href="/tags/JavaScript/" style="font-size: 14px; color: #fff">JavaScript</a> <a href="/tags/Linux/" style="font-size: 14px; color: #fff">Linux</a> <a href="/tags/Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98/" style="font-size: 14px; color: #fff">Live2D看板娘</a> <a href="/tags/Markdown%E8%AF%AD%E6%B3%95/" style="font-size: 14px; color: #fff">Markdown语法</a> <a href="/tags/Photoshop/" style="font-size: 14px; color: #fff">Photoshop</a> <a href="/tags/React/" style="font-size: 14px; color: #fff">React</a> <a href="/tags/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" style="font-size: 14px; color: #fff">hexo常用命令</a> <a href="/tags/linux/" style="font-size: 14px; color: #fff">linux</a> <a href="/tags/mysql/" style="font-size: 14px; color: #fff">mysql</a> <a href="/tags/sql/" style="font-size: 14px; color: #fff">sql</a> <a href="/tags/vscode-open-in-browser%E6%89%93%E4%B8%8D%E5%BC%80%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 14px; color: #fff">vscode open-in-browser打不开浏览器</a> <a href="/tags/%E5%85%BB%E6%88%90%E5%A5%BD%E4%B9%A0%E6%83%AF/" style="font-size: 14px; color: #fff">养成好习惯</a> <a href="/tags/%E6%91%98%E6%8A%84/" style="font-size: 14px; color: #fff">摘抄</a> <a href="/tags/%E6%96%87%E7%AB%A0/" style="font-size: 14px; color: #fff">文章</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" style="font-size: 14px; color: #fff">环境变量</a>
-  </div>
-</div>
-<br>
-
-<script type="text/javascript">
-   var alltags=document.getElementById('tags');
-   var tags=alltags.getElementsByTagName('a');
-
-   for (var i = tags.length - 1; i >= 0; i--) {
-     var r=Math.floor(Math.random()*75+130);
-     var g=Math.floor(Math.random()*75+100);
-     var b=Math.floor(Math.random()*75+80);
-     tags[i].style.background = "rgb("+r+","+g+","+b+")";
-   }
-</script>
-
-<style type="text/css">
-	div#posts.posts-expand .tag-cloud a{
-   		background-color: #f5f7f1;
-   		border-radius: 6px;
-   		padding-left: 10px;
-   		padding-right: 10px;
-   		margin-top: 18px;
- 	}
-
- 	.tag-cloud a{
-   		background-color: #f5f7f1;
-   		border-radius: 4px;
-   		padding-right: 5px;
-   		padding-left: 5px;
-   		margin-right: 5px;
-   		margin-left: 0px;
-   		margin-top: 8px;
-   		margin-bottom: 0px;
- 	}
-
- 	.tag-cloud a:before{
-       content: "🔖";
- 	}
-
- 	.tag-cloud-tags{
-   	   text-align: left;
-   	   counter-reset: tags;
- 	}
-</style>
-
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Songstars.github.io/2020/03/23/hexo%E5%8F%91%E8%A1%A8%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sunshine">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sunshine の blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/03/23/hexo%E5%8F%91%E8%A1%A8%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" itemprop="url">hexo发表博客常用命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-23T20:50:15+08:00">
+                2020-03-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          hexo发表博客常用命令以下命令需要在本地Blog路径下执行###Step1 创建文章
+1$hexo new &quot;hexo发表博客常用命令&quot;
+
+###Step2 编辑文章
+在Blog\source_posts文件夹打开对应markdown文档进行编辑
+编辑md文件建议使用Typor
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/03/23/hexo%E5%8F%91%E8%A1%A8%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -829,23 +399,22 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/23/%E5%AE%9E%E7%94%A8sql%E8%AF%AD%E5%8F%A5/" itemprop="url">实用sql语句</a></h2>
+                <a class="post-title-link" href="/2020/03/23/%E5%AE%9E%E7%94%A8sql%E8%AF%AD%E5%8F%A5/" itemprop="url">实用sql语句</a></h1>
         
 
         <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
           <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-23T20:47:39+08:00">
-                <font color="blue">2020-03-23</font>
+                2020-03-23
               </time>
             
 
@@ -858,8 +427,6 @@
 
           
             
-
-            
           
 
           
@@ -867,26 +434,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -908,9 +455,7 @@
           
           在编写SQL时，灵活运用一些技巧，可以大大简化程序逻辑。
 插入或替换如果我们希望插入一条新记录（INSERT），但如果记录已经存在，就先删除原记录，再插入新记录。此时，可以使用REPLACE语句，这样就不必先查询，再决定是否先删除再插入：
-1REPLACE INTO students (id, class_id, name, gender, score) VALUES (1, 1, &#39;小明&#39;, &#39;F&#39;, 99);
-
-若id=1的记录不存在，REPLACE语句将插入
+1REPLACE INTO students (id, cl
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -922,10 +467,6 @@
         
       
     </div>
-
-    
-
-
     
     
     
@@ -935,10 +476,6 @@
     
 
     
-    
-    	<div>
-	   
-        </div>
 
     <footer class="post-footer">
       
@@ -990,23 +527,22 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/12/13/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8/" itemprop="url">环境变量的作用</a></h2>
+                <a class="post-title-link" href="/2019/12/13/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8/" itemprop="url">环境变量的作用</a></h1>
         
 
         <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
           <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-13T15:29:00+08:00">
-                <font color="blue">2019-12-13</font>
+                2019-12-13
               </time>
             
 
@@ -1019,8 +555,6 @@
 
           
             
-
-            
           
 
           
@@ -1028,26 +562,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1067,9 +581,7 @@
       
         
           
-          一.什么是环境变量环境变量是在操作系统中一个具有特定名字的对象，它包含了一个或者多个应用程序所将使用到的信息，例如Windows和DOS操作系统中的path环境变量，当要求系统运行一个程序而没有告诉它程序所在的完整路径时，系统除了在当前目录下面寻找此程序外，还应到path中指定的路径去找。用户通过设置环境变量，来更好的运行进程。
-简单来说，环境变量就是告诉电脑去哪里找命令。
-eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首先去[当前目录下找javac.exe如果发现没
+          一.什么是环境变量环境变量是在操作系统中一个具有特定名字的对象，它包含了一个或者多个应用程序所将使用到的信息，例如Windows和DOS操作系统中的path环境变量，当要求系统运行一个程序而没有告诉它程序所在的完整路径时，系统除了在当前目录下面寻找此程序外，还应到path中指定的路径去找。用户通过设
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1081,10 +593,6 @@ eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首
         
       
     </div>
-
-    
-
-
     
     
     
@@ -1094,10 +602,6 @@ eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首
     
 
     
-    
-    	<div>
-	   
-        </div>
 
     <footer class="post-footer">
       
@@ -1149,23 +653,22 @@ eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/12/12/%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2/" itemprop="url">写在前面</a></h2>
+                <a class="post-title-link" href="/2019/12/12/%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2/" itemprop="url">写在前面</a></h1>
         
 
         <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
           <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-12T14:26:08+08:00">
-                <font color="blue">2019-12-12</font>
+                2019-12-12
               </time>
             
 
@@ -1178,8 +681,6 @@ eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首
 
           
             
-
-            
           
 
           
@@ -1187,26 +688,6 @@ eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1228,8 +709,7 @@ eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首
           
           写在前面的话
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;半年前我用hexo+github的方式搭建了博客，但是作为一个重度拖延症患者，半年里面文章寥寥无几。
-&nbsp;&nbsp;&nbsp;&nbsp;大学四年时光，整日无所事事，虚度光阴，浪费青春，浑浑噩噩;而今已至大学的尾声，想想自己毫无收获！今吾幡然醒悟，念往日已不可追，来日犹可期，卸下所有的焦躁和不安，珍惜当下，把握时间，做好自己该做的事。
-&nbsp;&nbsp;&nbsp;&nbsp;养成书写博客的习惯，以此来记
+&nbsp;&nbsp;&nbsp;&nbsp;大学四年时光，整日无所事事，虚度光阴，浪费青春，浑浑噩噩;而今已至大学的尾声
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1241,10 +721,6 @@ eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首
         
       
     </div>
-
-    
-
-
     
     
     
@@ -1254,10 +730,6 @@ eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首
     
 
     
-    
-    	<div>
-	   
-        </div>
 
     <footer class="post-footer">
       
@@ -1309,23 +781,22 @@ eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/12/11/21%E5%A4%A9%E5%85%BB%E6%88%90%E4%B8%80%E4%B8%AA%E5%A5%BD%E4%B9%A0%E6%83%AF/" itemprop="url">21天养成一个好习惯</a></h2>
+                <a class="post-title-link" href="/2019/12/11/21%E5%A4%A9%E5%85%BB%E6%88%90%E4%B8%80%E4%B8%AA%E5%A5%BD%E4%B9%A0%E6%83%AF/" itemprop="url">21天养成一个好习惯</a></h1>
         
 
         <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
           <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-11T23:57:19+08:00">
-                <font color="blue">2019-12-11</font>
+                2019-12-11
               </time>
             
 
@@ -1338,8 +809,6 @@ eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首
 
           
             
-
-            
           
 
           
@@ -1347,26 +816,6 @@ eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1398,10 +847,7 @@ eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首
 3.不要熬夜
 4.戒糖、少吃油炸辛冷。每天都要吃蔬菜和水果。
 5.戒糖、少吃油炸辛冷。每天都要吃蔬菜和水果。
-6.多读书。不是死读书，各方面的书都可以去尝试看，只要自己感兴趣。
-7.练字。字好看会给你的形象加分。
-8.保护好头发(非常重要老哥)!!!
-额,为什么发这个呢,主要是这几天天天泡脚感觉biu倍爽,觉得这个
+6.多
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1413,10 +859,6 @@ eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首
         
       
     </div>
-
-    
-
-
     
     
     
@@ -1426,10 +868,6 @@ eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首
     
 
     
-    
-    	<div>
-	   
-        </div>
 
     <footer class="post-footer">
       
@@ -1481,23 +919,22 @@ eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/12/10/vscode-open-in-browser%E6%89%93%E4%B8%8D%E5%BC%80%E6%B5%8F%E8%A7%88%E5%99%A8/" itemprop="url">vscode open-in-browser问题</a></h2>
+                <a class="post-title-link" href="/2019/12/10/vscode-open-in-browser%E6%89%93%E4%B8%8D%E5%BC%80%E6%B5%8F%E8%A7%88%E5%99%A8/" itemprop="url">vscode open-in-browser问题</a></h1>
         
 
         <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
           <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-10T17:17:23+08:00">
-                <font color="blue">2019-12-10</font>
+                2019-12-10
               </time>
             
 
@@ -1510,8 +947,6 @@ eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首
 
           
             
-
-            
           
 
           
@@ -1519,26 +954,6 @@ eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1562,8 +977,7 @@ eg你打开dos窗口输入命令：javac此时windows干了什么事呢？它首
 1Open browser failed!! Please check if you have installed the browser chrome correctly!
 
 
-Open in browser 已经调试默认游览器为谷歌游览器
-尝试了网上很多办法都没有用，后来去了贴吧发现解决办法如下：在插件open in browser下点击设置按钮，右键——安装另一个版本，选择1
+Op
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1575,10 +989,6 @@ Open in browser 已经调试默认游览器为谷歌游览器
         
       
     </div>
-
-    
-
-
     
     
     
@@ -1588,10 +998,6 @@ Open in browser 已经调试默认游览器为谷歌游览器
     
 
     
-    
-    	<div>
-	   
-        </div>
 
     <footer class="post-footer">
       
@@ -1643,23 +1049,22 @@ Open in browser 已经调试默认游览器为谷歌游览器
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/12/09/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98/" itemprop="url">Hexo博客添加Live2D看板娘</a></h2>
+                <a class="post-title-link" href="/2019/12/09/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98/" itemprop="url">Hexo博客添加Live2D看板娘</a></h1>
         
 
         <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
           <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-09T21:55:07+08:00">
-                <font color="blue">2019-12-09</font>
+                2019-12-09
               </time>
             
 
@@ -1672,8 +1077,6 @@ Open in browser 已经调试默认游览器为谷歌游览器
 
           
             
-
-            
           
 
           
@@ -1681,26 +1084,6 @@ Open in browser 已经调试默认游览器为谷歌游览器
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1722,11 +1105,7 @@ Open in browser 已经调试默认游览器为谷歌游览器
           
           网页添加Live2D看板娘简易教程看板娘是一种职业和习惯称呼，也是ACGN次文化中的萌属性之一。简而言之就是小店的女服务生，也有“吸引顾客，招揽生意，提高人气”等作用类似品牌形象代言人的含义。如果想在自己的博客上放一个呆萌的看板娘非常的简单只需要简单的几行代码就能实现。
 官网
-1.根目录下安装live2插件首先进入Hexo博客根目录，执行以下命令
-1$ npm install --save hexo-helper-live2d
-
-接着，修改根目录下的 _config.yml 文件
-添加自定义配置
+1.根目录下安装liv
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1738,10 +1117,6 @@ Open in browser 已经调试默认游览器为谷歌游览器
         
       
     </div>
-
-    
-
-
     
     
     
@@ -1751,10 +1126,6 @@ Open in browser 已经调试默认游览器为谷歌游览器
     
 
     
-    
-    	<div>
-	   
-        </div>
 
     <footer class="post-footer">
       
@@ -1806,23 +1177,22 @@ Open in browser 已经调试默认游览器为谷歌游览器
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/12/07/%E7%94%A8Markdown%E8%AF%AD%E6%B3%95%E7%BC%96%E5%86%99blog/" itemprop="url">用基础Markdown语法编写blog</a></h2>
+                <a class="post-title-link" href="/2019/12/07/%E7%94%A8Markdown%E8%AF%AD%E6%B3%95%E7%BC%96%E5%86%99blog/" itemprop="url">用基础Markdown语法编写blog</a></h1>
         
 
         <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
           <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-07T13:24:37+08:00">
-                <font color="blue">2019-12-07</font>
+                2019-12-07
               </time>
             
 
@@ -1835,8 +1205,6 @@ Open in browser 已经调试默认游览器为谷歌游览器
 
           
             
-
-            
           
 
           
@@ -1844,26 +1212,6 @@ Open in browser 已经调试默认游览器为谷歌游览器
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1886,13 +1234,7 @@ Open in browser 已经调试默认游览器为谷歌游览器
           用Markdown语法编写blog
 一、什么是Markdown语法Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。
 用易于编写的纯文本格式进行编写,然后将其转化为结构有效的HTML或者XHTML
-简单的来说就是它可以帮你编写出自带特效的文字,比如你现在所看到的就是Markdown语法编写的
-
-二、熟悉Markdown常用语法
-拥有Markdown编辑器
-
-1.typora
-2.vs code  需要安装插件 Markdown 
+简单的来说就是它可以帮你编写出自带
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1904,10 +1246,6 @@ Open in browser 已经调试默认游览器为谷歌游览器
         
       
     </div>
-
-    
-
-
     
     
     
@@ -1917,10 +1255,6 @@ Open in browser 已经调试默认游览器为谷歌游览器
     
 
     
-    
-    	<div>
-	   
-        </div>
 
     <footer class="post-footer">
       
@@ -1972,23 +1306,22 @@ Open in browser 已经调试默认游览器为谷歌游览器
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/12/06/mysql/" itemprop="url">连接mysql出现2005错误的原因和解决方法</a></h2>
+                <a class="post-title-link" href="/2019/12/06/mysql/" itemprop="url">连接mysql出现2005错误的原因和解决方法</a></h1>
         
 
         <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
           <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-06T17:53:43+08:00">
-                <font color="blue">2019-12-06</font>
+                2019-12-06
               </time>
             
 
@@ -2001,8 +1334,6 @@ Open in browser 已经调试默认游览器为谷歌游览器
 
           
             
-
-            
           
 
           
@@ -2010,26 +1341,6 @@ Open in browser 已经调试默认游览器为谷歌游览器
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -2051,10 +1362,8 @@ Open in browser 已经调试默认游览器为谷歌游览器
           
           1.今天连接数据库报2005错误,如下图.
 原因: pc端没有联网解决方法: 连上互联网即可!2.今天连接数据库报2003错误,如下图.
-原因：没再服务中打开数据库解决方案：鼠标右击“我的电脑”—–&gt;管理—-&gt;服务和应用程序—-&gt;服务—&gt;找到mysql启动程序就可以了或者在控制面版—–&gt;管理工具—–&gt;服务
-
-
-          
+原因：没再服务中打开数据库解决方案：鼠标右击“我的电脑”—–&gt;管理—-&gt;服务和应用程序—-&gt;服务—&gt;找到mysql启动程序就可以了或者在控
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/12/06/mysql/#more" rel="contents">
@@ -2065,10 +1374,6 @@ Open in browser 已经调试默认游览器为谷歌游览器
         
       
     </div>
-
-    
-
-
     
     
     
@@ -2078,10 +1383,6 @@ Open in browser 已经调试默认游览器为谷歌游览器
     
 
     
-    
-    	<div>
-	   
-        </div>
 
     <footer class="post-footer">
       
@@ -2133,23 +1434,22 @@ Open in browser 已经调试默认游览器为谷歌游览器
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/12/03/%E5%89%8D%E7%AB%AF%E8%A7%86%E9%A2%91%E7%9A%84%E9%93%BE%E6%8E%A5/" itemprop="url">B站视频链接在这!</a></h2>
+                <a class="post-title-link" href="/2019/12/03/%E5%89%8D%E7%AB%AF%E8%A7%86%E9%A2%91%E7%9A%84%E9%93%BE%E6%8E%A5/" itemprop="url">B站视频链接在这!</a></h1>
         
 
         <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
           <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-03T22:38:02+08:00">
-                <font color="blue">2019-12-03</font>
+                2019-12-03
               </time>
             
 
@@ -2162,8 +1462,6 @@ Open in browser 已经调试默认游览器为谷歌游览器
 
           
             
-
-            
           
 
           
@@ -2171,26 +1469,6 @@ Open in browser 已经调试默认游览器为谷歌游览器
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -2226,10 +1504,6 @@ Open in browser 已经调试默认游览器为谷歌游览器
         
       
     </div>
-
-    
-
-
     
     
     
@@ -2239,179 +1513,6 @@ Open in browser 已经调试默认游览器为谷歌游览器
     
 
     
-    
-    	<div>
-	   
-        </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Songstars.github.io/2019/06/09/=%EF%BC%8C==%E5%92%8C===%E7%9A%84%E5%8C%BA%E5%88%AB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sunshine">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/touxiang.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sunshine の blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/06/09/=%EF%BC%8C==%E5%92%8C===%E7%9A%84%E5%8C%BA%E5%88%AB/" itemprop="url">“=”，“==”和“===”的区别</a></h2>
-        
-
-        <div class="post-meta">
-      <!-- 增加置顶功能 -->
-	    
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <!-- 创建时间图标颜色 -->
-                <font color="blue"><i class="fa fa-calendar"></i></font>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-09T23:56:02+08:00">
-                <font color="blue">2019-06-09</font>
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                   <!-- 字数统计图标颜色 -->
-                  <font color="green"><i class="fa fa-file-word-o"></i></font>
-                </span>
-                
-                <font color="green"><span title="字数">
-                  
-                </span></font>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          “=”,”==”和”===”的区别
-=是赋值运算符
-
-12let a &#x3D; 99;&#x2F;&#x2F;把数字字面量99赋值给a
-
-
-==：运算符称作相等用来检测两个操作数是否相等，会自动转换类型123&#x2F;&#x2F;例如：输出数字类型99和字符串类型”99“console.log(99&#x3D;&#x3D;&quot;99&quot;);&#x2F;&#x2F;true
-
-​
-
-
-例如：输出数字类型99和字符串类型”99“
-console.log(99==”99”);//t
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/06/09/=%EF%BC%8C==%E5%92%8C===%E7%9A%84%E5%8C%BA%E5%88%AB/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-
-    
-    
-    
-
-    
-
-    
-
-    
-    
-    	<div>
-	   
-        </div>
 
     <footer class="post-footer">
       
@@ -2462,8 +1563,6 @@ console.log(99==”99”);//t
 
   <aside id="sidebar" class="sidebar">
     
-      <div id="sidebar-dimmer"></div>
-    
     <div class="sidebar-inner">
 
       
@@ -2479,7 +1578,7 @@ console.log(99==”99”);//t
                 alt="Sunshine" />
             
               <p class="site-author-name" itemprop="name">Sunshine</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">守得云开见月明</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -2487,9 +1586,9 @@ console.log(99==”99”);//t
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%20%7C%7C%20archive">
+                <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2501,71 +1600,34 @@ console.log(99==”99”);//t
               
               
               <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">17</span>
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
           </nav>
 
           
-            <div class="feed-link motion-element">
-              <a href="https://bestzuo.cn/atom.xml" target="_blank" rel="alternate noopener">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
 
-          
-            <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/Songstars" target="_blank" title="Github">
-                      
-                        <i class="fa fa-fw fa-github"></i>Github</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:song.shuai@outlook.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://plus.google.com/" target="_blank" title="Google">
-                      
-                        <i class="fa fa-fw fa-google"></i>Google</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://stackoverflow.com/" target="_blank" title="StackOverflow">
-                      
-                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
-                  </span>
-                
-            </div>
           
 
           
           
-            <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
-                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
-              </a>
-            </div>
-          
 
           
           
+
+          
+
         </div>
       </section>
 
       
 
       
+
     </div>
   </aside>
 
@@ -2576,49 +1638,30 @@ console.log(99==”99”);//t
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
-    <font color="red"><i class="fa fa-heartbeat" aria-hidden="true"></i></font>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Sunshine</span>
-  &nbsp;<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="noopener"><font size="1px"><font color="#222">鄂ICP备19008535号</font></font></a>
 
   
 </div>
 
 
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
-<div style="width:300px;margin:0 auto; padding:0 0;">
-   <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011102003147" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="https://blogimage-1258928558.cos.ap-guangzhou.myqcloud.com/beian/%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png" style="float:left;width:10%;height:auto;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#555;letter-spacing:0px"><font size="1px"><font color="#222">鄂公网安备 42011102003147号</font></font></p></a>
-</div>
 
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 
 
         
-<div class="busuanzi-count">
-  <!-- <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
-  <script async src="/js/src/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
-    </span>
-  
-
-  
-    <span class="site-pv">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
-    </span>
-  
-</div>
-
 
 
 
@@ -2633,8 +1676,6 @@ console.log(99==”99”);//t
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -2661,6 +1702,8 @@ console.log(99==”99”);//t
 
   
 
+
+  
 
 
 
@@ -2700,6 +1743,11 @@ console.log(99==”99”);//t
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -2755,342 +1803,9 @@ console.log(99==”99”);//t
 
 
 
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="/js/src/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    new Valine({
-        lang: 'zh-cn',
-        admin_email: 'song.shuai@outlook.com',
-        el: '#comments' ,
-        appId: 'O9P2sOopMfrmnoFodfNVGl3j-gzGzoHsz',
-        appKey: 'VStG3Dh9DNu0XfIG0bSuIHhj',
-        emoticon_url: 'https://cloud.panjunwen.com/alu',
-        emoticon_list: ["吐.png","喷血.png","狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","中指.png","尴尬.png","瞅你.png","想一想.png","中枪.png","得意.png","肿包.png","扇耳光.png","亲亲.png","惊喜.png","脸红.png","无所谓.png","便便.png","愤怒.png","蜡烛.png","献黄瓜.png","内伤.png","投降.png","观察.png","看不见.png","击掌.png","抠鼻.png","邪恶.png","看热闹.png","口水.png","抽烟.png","锁眉.png","装大款.png","吐舌.png","无奈.png","长草.png","赞一个.png","呲牙.png","无语.png","阴暗.png","不出所料.png","咽气.png","期待.png","高兴.png","吐血倒地.png","哭泣.png","欢呼.png","黑线.png","喜极而泣.png","喷水.png","深思.png","鼓掌.png","暗地观察.png"],
-        placeholder: '(๑•́ ₃ •̀๑)点击此处填写昵称和邮箱才能留言噢~',
-  });
-  </script>
-
 
 
   
-
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
 
 
 
@@ -3101,21 +1816,6 @@ console.log(99==”99”);//t
   
 
   
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
 
   
   
@@ -3123,48 +1823,8 @@ console.log(99==”99”);//t
   
 
   
-<script>
-  $('.highlight').each(function(i, e) {
-    var $wrap = $('<div>').addClass('highlight-wrap');
-    $(e).after($wrap);
-    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
-      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
-        return $(e).text();
-      }).toArray().join('\n');
-      var ta = document.createElement('textarea');
-      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
-      ta.style.top = yPosition + 'px'; // Prevent page scroll
-      ta.style.position = 'absolute';
-      ta.style.opacity = '0';
-      ta.readOnly = true;
-      ta.value = code;
-      document.body.appendChild(ta);
-      ta.select();
-      ta.setSelectionRange(0, code.length);
-      ta.readOnly = false;
-      var result = document.execCommand('copy');
-      
-        if (result) $(this).text('复制成功');
-        else $(this).text('复制失败');
-      
-      ta.blur(); // For iOS
-      $(this).blur();
-    })).on('mouseleave', function(e) {
-      var $b = $(this).find('.copy-btn');
-      setTimeout(function() {
-        $b.text('复制');
-      }, 300);
-    }).append(e);
-  })
-</script>
-
 
   
 
-  
-
-  <script type="text/javascript" src="/js/src/linkcard.js"></script>
-  <script type="text/javascript" src="/js/src/love.js"></script>
-  <script src="/dist/js/social-share.min.js"></script>
 </body>
 </html>

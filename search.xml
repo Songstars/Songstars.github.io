@@ -1,438 +1,917 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>移动web开发_flex布局</title>
-      <link href="/2020/06/11/%E7%A7%BB%E5%8A%A8web%E5%BC%80%E5%8F%91_flex%E5%B8%83%E5%B1%80/"/>
-      <url>/2020/06/11/%E7%A7%BB%E5%8A%A8web%E5%BC%80%E5%8F%91_flex%E5%B8%83%E5%B1%80/</url>
-      
-        <content type="html"><![CDATA[<h1 id="移动web开发——flex布局"><a href="#移动web开发——flex布局" class="headerlink" title="移动web开发——flex布局"></a>移动web开发——flex布局</h1><h2 id="1-0传统布局和flex布局对比"><a href="#1-0传统布局和flex布局对比" class="headerlink" title="1.0传统布局和flex布局对比"></a>1.0传统布局和flex布局对比</h2><h3 id="1-1传统布局"><a href="#1-1传统布局" class="headerlink" title="1.1传统布局"></a>1.1传统布局</h3><ul><li>兼容性好</li><li>布局繁琐</li><li>局限性，不能再移动端很好的布局</li></ul><h3 id="1-2-flex布局"><a href="#1-2-flex布局" class="headerlink" title="1.2 flex布局"></a>1.2 flex布局</h3><ul><li>操作方便，布局极其简单，移动端使用比较广泛</li><li>pc端浏览器支持情况比较差</li><li>IE11或更低版本不支持flex或仅支持部分</li></ul><h3 id="1-3-建议"><a href="#1-3-建议" class="headerlink" title="1.3 建议"></a>1.3 建议</h3><ul><li>如果是pc端页面布局，还是采用传统方式</li><li>如果是移动端或者是不考虑兼容的pc则采用flex</li></ul><h2 id="2-0-flex布局原理"><a href="#2-0-flex布局原理" class="headerlink" title="2.0 flex布局原理"></a>2.0 flex布局原理</h2><ul><li>flex 是 flexible Box 的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性，任何一个容器都可以指定为 flex 布局。</li><li>当我们为父盒子设为 flex 布局以后，子元素的 float、clear 和 vertical-align 属性将失效。</li><li>flex布局又叫伸缩布局 、弹性布局 、伸缩盒布局 、弹性盒布局 </li><li>采用 Flex 布局的元素，称为 Flex 容器（flex</li></ul><p>container），简称”容器”。它的所有子元素自动成为容器成员，称为 Flex 项目（flex<br>item），简称”项目”。</p><p><strong>总结</strong>：就是通过给父盒子添加flex属性，来控制子盒子的位置和排列方式</p><h2 id="3-0-父项常见属性"><a href="#3-0-父项常见属性" class="headerlink" title="3.0 父项常见属性"></a>3.0 父项常见属性</h2><ul><li>flex-direction：设置主轴的方向</li><li>justify-content：设置主轴上的子元素排列方式</li><li>flex-wrap：设置子元素是否换行  </li><li>align-content：设置侧轴上的子元素的排列方式（多行）</li><li>align-items：设置侧轴上的子元素排列方式（单行）</li><li>flex-flow：复合属性，相当于同时设置了 flex-direction 和 flex-wrap</li></ul><h3 id="3-1-flex-direction设置主轴的方向"><a href="#3-1-flex-direction设置主轴的方向" class="headerlink" title="3.1 flex-direction设置主轴的方向"></a>3.1 flex-direction设置主轴的方向</h3><ul><li>在 flex 布局中，是分为主轴和侧轴两个方向，同样的叫法有 ： 行和列、x 轴和y 轴</li><li>默认主轴方向就是 x 轴方向，水平向右</li><li>默认侧轴方向就是 y 轴方向，水平向下</li></ul><img src="./images/1.jpg"><ul><li><p>注意： 主轴和侧轴是会变化的，就看 flex-direction 设置谁为主轴，剩下的就是侧轴。而我们的子元素是跟着主轴来排列的</p><img src="./images/2.jpg"><p>​</p></li></ul><h3 id="3-2-justify-content-设置主轴上的子元素排列方式"><a href="#3-2-justify-content-设置主轴上的子元素排列方式" class="headerlink" title="3.2 justify-content 设置主轴上的子元素排列方式"></a>3.2 justify-content 设置主轴上的子元素排列方式</h3><img src="./images/3.jpg"><h3 id="3-3-flex-wrap设置是否换行"><a href="#3-3-flex-wrap设置是否换行" class="headerlink" title="3.3 flex-wrap设置是否换行"></a>3.3 flex-wrap设置是否换行</h3><ul><li>默认情况下，项目都排在一条线（又称”轴线”）上。flex-wrap属性定义，flex布局中默认是不换行的。</li><li>nowrap 不换行</li><li>wrap 换行</li></ul><h3 id="3-4-align-items-设置侧轴上的子元素排列方式（单行-）"><a href="#3-4-align-items-设置侧轴上的子元素排列方式（单行-）" class="headerlink" title="3.4 align-items 设置侧轴上的子元素排列方式（单行 ）"></a>3.4 align-items 设置侧轴上的子元素排列方式（单行 ）</h3><ul><li>该属性是控制子项在侧轴（默认是y轴）上的排列方式  在子项为单项（单行）的时候使用</li><li>flex-start 从头部开始</li><li>flex-end 从尾部开始</li><li>center 居中显示</li><li>stretch 拉伸</li></ul><h3 id="3-5-align-content-设置侧轴上的子元素的排列方式（多行）"><a href="#3-5-align-content-设置侧轴上的子元素的排列方式（多行）" class="headerlink" title="3.5 align-content  设置侧轴上的子元素的排列方式（多行）"></a>3.5 align-content  设置侧轴上的子元素的排列方式（多行）</h3><p>设置子项在侧轴上的排列方式 并且只能用于子项出现 换行 的情况（多行），在单行下是没有效果的。</p><img src="./images/4.jpg"><h3 id="3-6-align-content-和align-items区别"><a href="#3-6-align-content-和align-items区别" class="headerlink" title="3.6 align-content 和align-items区别"></a>3.6 align-content 和align-items区别</h3><ul><li>align-items  适用于单行情况下， 只有上对齐、下对齐、居中和 拉伸</li><li>align-content适应于换行（多行）的情况下（单行情况下无效）， 可以设置 上对齐、下对齐、居中、拉伸以及平均分配剩余空间等属性值。 </li><li>总结就是单行找align-items  多行找 align-content</li></ul><h3 id="3-7-flex-flow-属性是-flex-direction-和-flex-wrap-属性的复合属性"><a href="#3-7-flex-flow-属性是-flex-direction-和-flex-wrap-属性的复合属性" class="headerlink" title="3.7 flex-flow 属性是 flex-direction 和 flex-wrap 属性的复合属性"></a>3.7 flex-flow 属性是 flex-direction 和 flex-wrap 属性的复合属性</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flex-flow:row wrap;</span><br></pre></td></tr></table></figure><h2 id="4-0-flex布局子项常见属性"><a href="#4-0-flex布局子项常见属性" class="headerlink" title="4.0 flex布局子项常见属性"></a>4.0 flex布局子项常见属性</h2><ul><li>flex子项目占的份数</li><li>align-self控制子项自己在侧轴的排列方式</li><li>order属性定义子项的排列顺序（前后顺序）</li></ul><h3 id="4-1-flex-属性"><a href="#4-1-flex-属性" class="headerlink" title="4.1  flex 属性"></a>4.1  flex 属性</h3><p>flex 属性定义子项目分配剩余空间，用flex来表示占多少份数。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item &#123;</span><br><span class="line">    flex: &lt;number&gt;; &#x2F;* 默认值 0 *&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="4-2-align-self控制子项自己在侧轴上的排列方式"><a href="#4-2-align-self控制子项自己在侧轴上的排列方式" class="headerlink" title="4.2 align-self控制子项自己在侧轴上的排列方式"></a>4.2 align-self控制子项自己在侧轴上的排列方式</h3><p>align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。</p><p>默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">span:nth-child(2) &#123;</span><br><span class="line">      &#x2F;* 设置自己在侧轴上的排列方式 *&#x2F;</span><br><span class="line">      align-self: flex-end;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="4-3-order-属性定义项目的排列顺序"><a href="#4-3-order-属性定义项目的排列顺序" class="headerlink" title="4.3 order 属性定义项目的排列顺序"></a>4.3 order 属性定义项目的排列顺序</h3><p>数值越小，排列越靠前，默认为0。</p><p>注意：和 z-index 不一样。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item &#123;</span><br><span class="line">    order: &lt;number&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="5-0-携程网首页案例制作"><a href="#5-0-携程网首页案例制作" class="headerlink" title="5.0 携程网首页案例制作"></a>5.0 携程网首页案例制作</h2><p>携程网链接：<a href="http://m.ctrip.com" target="_blank" rel="noopener">http://m.ctrip.com</a></p><p>1.技术选型</p><p>方案：我们采取单独制作移动页面方案</p><p>技术：布局采取flex布局</p><p>2.搭建相关文件夹</p><img src="./images/5.jpg"><p>3.设置视口标签以及引入初始化样式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, user-scalable&#x3D;no,initial-scale&#x3D;1.0, maximum-scale&#x3D;1.0, minimum-scale&#x3D;1.0&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;css&#x2F;normalize.css&quot;&gt;</span><br><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;css&#x2F;index.css&quot;&gt;</span><br></pre></td></tr></table></figure><p>4.常用初始化样式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  max-width: 540px;</span><br><span class="line">  min-width: 320px;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">  font: normal 14px&#x2F;1.5 Tahoma,&quot;Lucida Grande&quot;,Verdana,&quot;Microsoft Yahei&quot;,STXihei,hei;</span><br><span class="line">  color: #000;</span><br><span class="line">  background: #f2f2f2;</span><br><span class="line">  overflow-x: hidden;</span><br><span class="line">  -webkit-tap-highlight-color: transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>5.模块名字划分</p><img src="./images/6.jpg">]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>jsx原理和基本语法(一)</title>
-      <link href="/2020/06/10/jsx%E5%8E%9F%E7%90%86%E5%92%8C%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95-%E4%B8%80/"/>
-      <url>/2020/06/10/jsx%E5%8E%9F%E7%90%86%E5%92%8C%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95-%E4%B8%80/</url>
-      
-        <content type="html"><![CDATA[<h2 id="1-ES6的class"><a href="#1-ES6的class" class="headerlink" title="1.ES6的class"></a>1.ES6的class</h2><ul><li><p>在ES6之前，我们通过function来定义类，但是这种模式一直被很多从其他编程语言（比如Java、C++、OC等等）转到JavaScript的人所不适应。</p></li><li><p>原因是，大多数面向对象的语言，都是使用class关键字来定义类的。</p></li><li><p>ES5如何定义一个类</p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    &#x2F;&#x2F; ES5定义类</span><br><span class="line">    function Person(name,age)&#123;</span><br><span class="line">        this.age &#x3D; age,</span><br><span class="line">        this.name &#x3D; name;</span><br><span class="line">    &#125;</span><br><span class="line">    Person.prototype.running &#x3D; function()&#123;</span><br><span class="line">        console.log(this.age,this.name,&quot;running&quot;);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    var p &#x3D; new Person(18,&quot;songshu&quot;);</span><br><span class="line">    console.log(p.name,p.age);</span><br><span class="line">    p.running();</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure><ul><li><p>ES6 如何定义一个类</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;ES6创建一个类</span><br><span class="line">        class Person&#123;</span><br><span class="line">            &#x2F;&#x2F;构造方法</span><br><span class="line">            constructor(name,age)&#123;</span><br><span class="line">                this.name &#x3D; name;</span><br><span class="line">                this.age &#x3D; age;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F; 定义方法 相当于ES5定义到原型上的方法</span><br><span class="line">            running() &#123;</span><br><span class="line">                console.log(this.name,this.age,&quot;running&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        const p  &#x3D; new Person(&quot;songshuai&quot;,20);</span><br><span class="line">        console.log(p.name,p.age);</span><br></pre></td></tr></table></figure><ol start="2"><li>JavaScipt类的继承</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    class Person&#123;</span><br><span class="line">  </span><br><span class="line">        constructor(name,age)&#123;</span><br><span class="line">            this.name &#x3D; name;</span><br><span class="line">            this.age &#x3D; age;</span><br><span class="line">        &#125;</span><br><span class="line">  </span><br><span class="line">        running() &#123;</span><br><span class="line">            console.log(&quot;running&quot;);</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    &#x2F;&#x2F;Student继承了Person</span><br><span class="line">    class Student extends Person&#123;</span><br><span class="line">        constructor(name,age,sno)&#123;</span><br><span class="line">            super(name,age);</span><br><span class="line">            this.sno &#x3D; sno;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    const stu &#x3D; new Student(&quot;songshuai&quot;,18,102);</span><br><span class="line">    console.log(stu.name,stu.age,stu.sno);</span><br><span class="line">    </span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure></li></ul><h2 id="2-认识JSX"><a href="#2-认识JSX" class="headerlink" title="2. 认识JSX"></a>2. 认识JSX</h2><p>![1591796780534](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591796780534.png)</p><p>■这段element变量的声明右侧赋值的标签语法是什么呢？<br>口它不是一段字符串（因为没有使用引号包裹），它看起来是一段HTML原生，但是我们能在js中直接给一个变量赋值html吗？<br>口其实是不可以的，如果我们讲type=”text/babel”去除掉，那么就会出现语法错误；口它到底是什么呢？其实它是一段jsx的语法；<br>■JSX是什么？<br>口JSX是一种JavaScript的语法扩展（extension），也在很多地方称之为JavaScriptXML，因为看起就是一段XML语法；口它用于描述我们的UI界面，并且其完成可以和JavaScript融合在一起使用；口它不同于Vue中的模块语法，你不需要专门学习模块语法中的一些指令（比如v-for、v-if、v-else、v-bind）；</p><h2 id="3-为什么React选择了JSX"><a href="#3-为什么React选择了JSX" class="headerlink" title="3.为什么React选择了JSX"></a>3.为什么React选择了JSX</h2><p>React认为渲染逻辑本质上与其他UI逻辑存在内在耦合口比如UI需要绑定事件（button、a原生等等）；口比如UI中需要展示数据状态，在某些状态发生改变时，又需要改变UI；他们之间是密不可分，所以React没有讲标记分离到不同的文件中，而是将它们组合到了一起，这个地方就是组件（Component）；口当然，后面我们还是会继续学习更多组件相关的东西；</p><p>在这里，我们只需要知道，JSX其实是嵌入到JavaScript中的一种结构语法；</p><p>口JSX的书写规范：<br>口JSX的顶层只能有一个根元素，所以我们很多时候会在外层包裹一个div原生（或者使用后面我们学习的Fragment）；口为了方便阅读，我们通常在jsx的外层包裹一个小括号0，这样可以方便阅读，并目jsx可以进行换行书写；口JSX中的标签可以是单标签，也可以是双标签；<br>√注意：如果是单标签，必须以/&gt;结尾；</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> React </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>熟悉Linux的目录结构</title>
-      <link href="/2020/06/09/%E7%86%9F%E6%82%89Linux%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"/>
-      <url>/2020/06/09/%E7%86%9F%E6%82%89Linux%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</url>
-      
-        <content type="html"><![CDATA[<h2 id="1-Linux的目录结构"><a href="#1-Linux的目录结构" class="headerlink" title="1.Linux的目录结构"></a>1.Linux的目录结构</h2><h3 id="1-1基本介绍"><a href="#1-1基本介绍" class="headerlink" title="1.1基本介绍"></a>1.1基本介绍</h3><p>linux的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“/”，然后在此目录下再创建其他的目录。<br>深刻理解linux树状文件目录是非常重要的，这里我给大家说明一下。<br>记住一句经典的话：<strong>在Linux世界里，一切皆文件</strong>。</p><p>![1591716031302](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591716031302.png)</p><p>1.2 目录结构的具体介绍</p><ul><li>/bin[重点]（/usr/bin、/usr/local/bin）<br>是Binary的缩写，这个目录存放着最经常使用的命令</li><li>/sbin（/usr/sbin、/usr/local/sbin）<br>s就是Super User的意思，这里存放的是系统管理员使用的系统管理程序。</li><li>/home[重点]<br>存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的。</li><li>/root[重点]<br>该目录为系统管理员，也称作超级权限者的用户主目录。</li><li>/boot[重点]<br>存放的是启动Linux时使用的一些核心文件，包括一些连接文件以及镜像文件</li><li>/proc<br>这个目录是一个虚拟的目录，它是系统内存的映射，访间这个目录来获取系统信息。</li><li>/srv<br>service缩写，该目录存放一些服务启动之后需要提取的数据。</li><li>/sys<br>这是linux2.6内核的一个很大的变化。该目录下安装了2.6内核中新出现的一个文件系统</li><li>/tmp<br>这个目录是用来存放一些临时文件的。</li><li>/dev<br>类似于winthows的设备管理器，把所有的硬件用文件的形式存储。</li><li>/media[重点]<br>linux系统会自动识别一些设备，例如U盘、光驱等等，当识别后，linux会把识别的设备挂载到这个目录下。</li><li>/mnt[重点]<br>系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以将外部的存储挂载在/mnt/上，然后进入该目录就可以查看里的内容了。比如d:/share</li><li>/opt<br>这是给主机额外安装软件所摆放的目录。如安装ORACLE数据库就可放到该目录下，默认为空。</li><li>/usr/local[重点]<br>这是别一个给主机额外安装软件所安装的目录。一般是通过编译源码方式安装的程序。</li><li>/var[重点]<br>这个目录中存放着在不断扩充着的东西，习惯将经常被修改的目录放在这个目录下。包括各种日志文件。</li><li>/selinux[security-enhanced linux]360<br>SELinux是一种安全子系统，它能控制程序只能访间特定文件。</li></ul><h3 id="4-3Linux目录总结一下"><a href="#4-3Linux目录总结一下" class="headerlink" title="4.3Linux目录总结一下"></a>4.3Linux目录总结一下</h3><p>1）linux的目录中有且只要一个根目录/<br>2）linux的各个目录存放的内容是规划好，不用乱放文件。<br>3）linux是以文件的形式管理我们的设备，因此linux系统，一切皆为文件。</p><p>4）linux的各个文件目录下存放什么内容，大家必须有一个认识。<br>5）学习后，你脑海中应该有一颗linux目录树</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>VM和Linux（CentOS）系统安装</title>
-      <link href="/2020/06/09/VM%E5%92%8CLinux%EF%BC%88CentOS%EF%BC%89%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/"/>
-      <url>/2020/06/09/VM%E5%92%8CLinux%EF%BC%88CentOS%EF%BC%89%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</url>
-      
-        <content type="html"><![CDATA[<h2 id="1-VM和Linux（CentOS）系统安装"><a href="#1-VM和Linux（CentOS）系统安装" class="headerlink" title="1.VM和Linux（CentOS）系统安装"></a>1.VM和Linux（CentOS）系统安装</h2><h3 id="1-1安装vm和Centos"><a href="#1-1安装vm和Centos" class="headerlink" title="1.1安装vm和Centos"></a>1.1安装vm和Centos</h3><p>学习Linux需要一个环境，我们需要创建一个虚拟机，然后在虚拟机上安装一个Centos系统来学习。<br>1）先安装virtual machine，vm12</p><p>2）再安装Linux（CentOS 6.8）<br>3）原理示意图，这里我们画图说明一下VM和CentOS的关系。</p><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152553.png" alt="1591714847875"></p><h3 id="1-2-vm软件和CentOS的安装软件"><a href="#1-2-vm软件和CentOS的安装软件" class="headerlink" title="1.2 vm软件和CentOS的安装软件"></a>1.2 vm软件和CentOS的安装软件</h3><p>CentOS下载地址：</p><blockquote><p>网易镜像：http:/mirrors.163.com/centos/6/isos/<br>搜狐镜像：http:/mirrors.sohu.com/centos/6/isos</p></blockquote><h3 id="1-3-VM安装的步骤"><a href="#1-3-VM安装的步骤" class="headerlink" title="1.3 VM安装的步骤"></a>1.3 VM安装的步骤</h3><p>1）去BIOS里修改设置开启虚拟化设备支持（f2，fl0）<br>2）安装虚拟机软件（vm12）贼简单 不写了</p><h3 id="1-4CentoS-安装的步骤"><a href="#1-4CentoS-安装的步骤" class="headerlink" title="1.4CentoS 安装的步骤"></a>1.4CentoS 安装的步骤</h3><p>1）创建虚拟机（空间）这里在配置网络连接时，有三种形式，需要大家伙注意：</p><p>1.桥连接，Linux可以和其它的系统通信。但是可能造成ip冲突<br>2.NAT：网络地址转换方式：linux可以访问外网，不会造成ip冲突。<br>3.主机模式：你的linux是一个独立的主机，不能访问外网</p><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152546.png" alt="1591715113671"></p><p>安装Linux系统 </p><h3 id="1-5-CentOS的终端使用和联网"><a href="#1-5-CentOS的终端使用和联网" class="headerlink" title="1.5 CentOS的终端使用和联网"></a>1.5 CentOS的终端使用和联网</h3><p>1）终端的使用，点击鼠标右键，即可选择打开终端</p><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152537.png" alt="1591715477908"></p><p>2）配置网络，可以上网。<br>点击上面右侧的；两个计算机图片，选择启用eth0，即可成功连接到网络，就可以上网。</p><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152527.png" alt="1591715542709"></p><h3 id="1-6-vmtools安装"><a href="#1-6-vmtools安装" class="headerlink" title="1.6 vmtools安装"></a>1.6 vmtools安装</h3><h4 id="1-6-1介绍"><a href="#1-6-1介绍" class="headerlink" title="1.6.1介绍"></a>1.6.1介绍</h4><p>1）可以直接粘贴命令在windows和centos系统之间<br>2）可以设置windows和centos的共享文件夹<br>3）示意图</p><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152519.png" alt="1591715307182"></p><h3 id="1-7-vmtools的安装和使用"><a href="#1-7-vmtools的安装和使用" class="headerlink" title="1.7 vmtools的安装和使用"></a>1.7 vmtools的安装和使用</h3><h4 id="1-7-1-安装vmtools的步骤说明"><a href="#1-7-1-安装vmtools的步骤说明" class="headerlink" title="1.7.1 安装vmtools的步骤说明"></a>1.7.1 安装vmtools的步骤说明</h4><p>1.进入centos<br>2.点击vm菜单的-&gt;install vmware tools<br>3.centos会出现一个vm的安装包<br>4.点击右键解压，得到一个安装文件<br>5.进入该vm解压的目录，该文件在/root/桌面/vmware-tools-distrib/下<br>6.安装.//mware-install.pl<br>7.全部使用默认设置即可<br>8.需要reboot重新启动即可生效</p><h4 id="1-7-2-使用vmtools来设置windows和linux的共享文件夹"><a href="#1-7-2-使用vmtools来设置windows和linux的共享文件夹" class="headerlink" title="1.7.2 使用vmtools来设置windows和linux的共享文件夹"></a>1.7.2 使用vmtools来设置windows和linux的共享文件夹</h4><p>1）菜单-&gt;vm-&gt;setting，如图设置即可注意：设置选项为always enable，这样可以读写了</p><p>2）windows和centos可共享d:/share目录可以读写文件了</p><p>3）共享的文件是在centos的/mnt/hgfs/下</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>邂逅linux</title>
-      <link href="/2020/06/09/%E9%82%82%E9%80%85linux/"/>
-      <url>/2020/06/09/%E9%82%82%E9%80%85linux/</url>
-      
-        <content type="html"><![CDATA[<h2 id="1-Linux开山篇"><a href="#1-Linux开山篇" class="headerlink" title="1.Linux开山篇"></a>1.Linux开山篇</h2><h3 id="1-11Linux课程的内容介绍"><a href="#1-11Linux课程的内容介绍" class="headerlink" title="1.11Linux课程的内容介绍"></a>1.11Linux课程的内容介绍</h3><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152744.png" alt="1591713876861"></p><h3 id="1-2Linux的学习方向"><a href="#1-2Linux的学习方向" class="headerlink" title="1.2Linux的学习方向"></a>1.2Linux的学习方向</h3><h4 id="1-2-1Linux运维工程师"><a href="#1-2-1Linux运维工程师" class="headerlink" title="1.2.1Linux运维工程师"></a>1.2.1Linux运维工程师</h4><h4 id="1-2-2Linux嵌入式开发工程师"><a href="#1-2-2Linux嵌入式开发工程师" class="headerlink" title="1.2.2Linux嵌入式开发工程师"></a>1.2.2Linux嵌入式开发工程师</h4><h4 id="1-2-3在linux下做各种程序开发"><a href="#1-2-3在linux下做各种程序开发" class="headerlink" title="1.2.3在linux下做各种程序开发"></a>1.2.3在linux下做各种程序开发</h4><h4 id="1-2-4示意图"><a href="#1-2-4示意图" class="headerlink" title="1.2.4示意图"></a>1.2.4示意图</h4><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152800.png" alt="1591714041599"></p><h3 id="1-3Linux的应用领域"><a href="#1-3Linux的应用领域" class="headerlink" title="1.3Linux的应用领域"></a>1.3Linux的应用领域</h3><h4 id="1-3-1个人桌面应用领域"><a href="#1-3-1个人桌面应用领域" class="headerlink" title="1.3.1个人桌面应用领域"></a>1.3.1个人桌面应用领域</h4><p>此领域是传统linux应用最薄弱的环节，传统linux由于界面简单、操作复杂、应用软件少的缺点，一直被windows所压制，但近些年来随着ubuntu、fedora[fi’do:re]等优秀桌面环境的兴起，同时各大硬件厂商对其支持的加大，linux在个人桌面领域的占有率在逐渐的提高。</p><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152809.png" alt="1591714103920"></p><h4 id="1-3-2服务器应用领域"><a href="#1-3-2服务器应用领域" class="headerlink" title="1.3.2服务器应用领域"></a>1.3.2服务器应用领域</h4><p>linux在服务器领域的应用是最强的。<br>linux免费、稳定、高效等特点在这里得到了很好的体现，近些年来linux服务器市场得到了飞速的提升，尤其在一些高端领域尤为广泛。</p><h4 id="1-3-3嵌入式应用领域"><a href="#1-3-3嵌入式应用领域" class="headerlink" title="1.3.3嵌入式应用领域"></a>1.3.3嵌入式应用领域</h4><p>近些年来linux在嵌入式领域的应用得到了飞速的提高</p><p>linux运行稳定、对网络的良好支持性、低成本，且可以根据需要进行软件裁剪，内核最小可以达到几百KB等特点，使其近些年来在嵌入式领域的应用得到非常大的提高</p><p>主要应用：机顶盒、数字电视、网络电话、程控交换机、手机、PDA、智能家居、智能硬件等都是其应用领域。以后再物联网中应用会更加广泛</p><h3 id="1-4学习Linux的阶段（高手进阶过程）"><a href="#1-4学习Linux的阶段（高手进阶过程）" class="headerlink" title="1.4学习Linux的阶段（高手进阶过程）"></a>1.4学习Linux的阶段（高手进阶过程）</h3><p>linux是一个开源、免费的操作系统，其稳定性、安全性、处理多并发已经得到业界的认可，目前很多中型，大型甚至是集群项目都在使用linux，很多软件公司考虑到开发成本都首选linux，在中国软件公司得到广泛的使用。</p><p>学习linux流程为：<br>第1阶段：linux环境下的基本操作命令，包括文件操作命令（rm mkdir chmod，chown）编辑工具吏用（vivim）linux用户管理（useradd userdel usermod）等</p><p>第2阶段：linux的各种配置（环境变量配置，网络配置，服务配置）</p><p>第3阶段：linux下如何搭建对应语言的开发环境（大数据，JavaEE，Python等）</p><p>第4阶段：能编写shell脚本，对Linux服务器进行维护。</p><p>第5阶段：能进行安全设置，防止攻击，保障服务器正常运行，能对系统调优。</p><p>第6阶段：深入理解Linux系统（对内核有研究），熟练掌握大型网站应用架构组成、并熟悉各个环节的部署和维护方法。</p><h3 id="1-5Linux的学习方法和建议"><a href="#1-5Linux的学习方法和建议" class="headerlink" title="1.5Linux的学习方法和建议"></a>1.5Linux的学习方法和建议</h3><p>1）高效而愉快的学习<br>2）先建立一个整体框架，然后细节<br>3）不需要掌握所有的Linux指令，要学会查询手册和百度</p><p>4）先know how，再know why<br>5）计算机是一门”做中学”的学科，不是会了再做，而是做了才会.<br>6）适当的囫图吞枣</p><p>7）Linux不是编程，重点是实际操作，各种常用指令要玩的溜</p><h2 id="2-基础篇Linux入门"><a href="#2-基础篇Linux入门" class="headerlink" title="2.基础篇Linux入门"></a>2.基础篇Linux入门</h2><h3 id="2-1Linux介绍"><a href="#2-1Linux介绍" class="headerlink" title="2.1Linux介绍"></a>2.1Linux介绍</h3><p>1）Linux怎么读【里纽克斯，利尼克斯，里纳克斯】<br>2）Linux是一款操作系统，免费，开源，安全，高效，稳定，处理高并发非常强悍，现在很多的企业级的项目都部署到Linux/unix服务器运行。<br>3）Linux创始人-linux林纳斯 linux的吉祥物是一只企鹅</p><p>4）linux的发行版本</p><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152816.png" alt="1591714433482"></p><h3 id="2-2-unix是怎么来的"><a href="#2-2-unix是怎么来的" class="headerlink" title="2.2 unix是怎么来的"></a>2.2 unix是怎么来的</h3><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152824.png" alt="1591714469247"></p><h3 id="2-3-Linux是怎么来的"><a href="#2-3-Linux是怎么来的" class="headerlink" title="2.3 Linux是怎么来的"></a>2.3 Linux是怎么来的</h3><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152832.png" alt="1591714516485"></p><h3 id="2-4-linux和unix关系一览图"><a href="#2-4-linux和unix关系一览图" class="headerlink" title="2.4 linux和unix关系一览图"></a>2.4 linux和unix关系一览图</h3><p>![1591714568321](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591714568321.png)</p><h3 id="2-5-linux和Windows比较"><a href="#2-5-linux和Windows比较" class="headerlink" title="2.5 linux和Windows比较"></a>2.5 linux和Windows比较</h3><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611153054.png" alt="1591714596799"></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>认识Photoshop:图层处理</title>
-      <link href="/2020/06/09/%E8%AE%A4%E8%AF%86Photoshop-%E5%9B%BE%E5%B1%82%E5%A4%84%E7%90%86/"/>
-      <url>/2020/06/09/%E8%AE%A4%E8%AF%86Photoshop-%E5%9B%BE%E5%B1%82%E5%A4%84%E7%90%86/</url>
-      
-        <content type="html"><![CDATA[<h2 id="图片调色处理"><a href="#图片调色处理" class="headerlink" title="图片调色处理"></a>图片调色处理</h2><h3 id="1-主要运用的工具功能"><a href="#1-主要运用的工具功能" class="headerlink" title="1.主要运用的工具功能"></a>1.主要运用的工具功能</h3><h4 id="1-1明暗-颜色常用工具"><a href="#1-1明暗-颜色常用工具" class="headerlink" title="1.1明暗,颜色常用工具"></a>1.1明暗,颜色常用工具</h4><p>曲线  快捷键：ctrl+m</p><p>色阶  快捷键：ctrl+L</p><p>色相饱和度  快捷键：ctrl+u </p><p>ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a</p><p>短期非常用：<strong>色彩平衡     可选颜色</strong></p><h3 id="2-图像调色功能系统运用"><a href="#2-图像调色功能系统运用" class="headerlink" title="2.图像调色功能系统运用"></a>2.图像调色功能系统运用</h3><h4 id="2-1图层调整"><a href="#2-1图层调整" class="headerlink" title="2.1图层调整"></a>2.1图层调整</h4><p>菜单栏图像—&gt;调整—&gt;曝光度<br>对原图层直接进行操作，会造成破坏性的，不可逆的问题后期不可调整</p><p>![1591712548497](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591712548497.png)</p><p>独立独特的图层，仅对画面进行调整，对图层不破坏，可逆可修改可开关后期好调整</p><h3 id="3-调色工具"><a href="#3-调色工具" class="headerlink" title="3.调色工具"></a>3.调色工具</h3><h4 id="3-1色彩工具"><a href="#3-1色彩工具" class="headerlink" title="3.1色彩工具"></a>3.1色彩工具</h4><h4 id="3-2曲线工具"><a href="#3-2曲线工具" class="headerlink" title="3.2曲线工具"></a>3.2曲线工具</h4><p>在RGB面板调整中去灰提高对比+不变色</p><p>![1591712684613](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591712684613.png)</p><h4 id="3-3色相饱和度"><a href="#3-3色相饱和度" class="headerlink" title="3.3色相饱和度"></a>3.3色相饱和度</h4><h5 id="3-3-1色彩三要素"><a href="#3-3-1色彩三要素" class="headerlink" title="3.3.1色彩三要素"></a>3.3.1色彩三要素</h5><p>色相：</p><p>![1591712734879](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591712734879.png)</p><p>饱和度：</p><p>![1591712753480](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591712753480.png)</p><p>明度：</p><p>![1591712773899](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591712773899.png)</p><p>可以直接改变颜色相貌 颜色鲜艳度 颜色的亮度</p><h5 id="3-3-2在直接改变-颜色相貌-时最常用"><a href="#3-3-2在直接改变-颜色相貌-时最常用" class="headerlink" title="3.3.2在直接改变-颜色相貌-时最常用"></a>3.3.2在直接改变-颜色相貌-时最常用</h5><p>作用：把一个颜色改变成另外一个颜色    效果：最直观，最快速</p><h3 id="4-照片偏色纠正"><a href="#4-照片偏色纠正" class="headerlink" title="4.照片偏色纠正"></a>4.照片偏色纠正</h3><h4 id="4-1菜单-滤德-Adobe-Camera-Raw"><a href="#4-1菜单-滤德-Adobe-Camera-Raw" class="headerlink" title="4.1菜单-滤德-Adobe-Camera Raw"></a>4.1菜单-滤德-Adobe-Camera Raw</h4><p>专业的调色滤 可操作调色中的70%颜色问题，剩下30%需要PS完成（点睛之笔）</p><p>注意：CS6之前没有此功能</p><p>用法：点击画面中一个点：在现实中是白色的，在当前片子照片中却不是白色的</p><h4 id="4-2什么是中性色"><a href="#4-2什么是中性色" class="headerlink" title="4.2什么是中性色"></a>4.2什么是中性色</h4><p>阴影–中间调-高光<br>光影关系</p><h4 id="4-3核心知识点"><a href="#4-3核心知识点" class="headerlink" title="4.3核心知识点"></a>4.3核心知识点</h4><p>对颜色的认知：色相环</p><p>![1591713191051](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591713191051.png)</p><h3 id="5-经验分享"><a href="#5-经验分享" class="headerlink" title="5.经验分享"></a>5.经验分享</h3><h4 id="5-1线性光高反差"><a href="#5-1线性光高反差" class="headerlink" title="5.1线性光高反差"></a>5.1线性光高反差</h4><p>ctrl+J 复制图层<br>混合模式-线性光<br>菜单栏滤镜其它-高反差（适当数值）<br>ctrl+e合成两个图层<br>实战一增加纹理质感均可如照片变清晰</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Photoshop </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>邂逅React和React开发体验</title>
-      <link href="/2020/06/09/%E9%82%82%E9%80%85React%E5%92%8CReact%E5%BC%80%E5%8F%91%E4%BD%93%E9%AA%8C/"/>
-      <url>/2020/06/09/%E9%82%82%E9%80%85React%E5%92%8CReact%E5%BC%80%E5%8F%91%E4%BD%93%E9%AA%8C/</url>
-      
-        <content type="html"><![CDATA[<h2 id="邂逅React开发"><a href="#邂逅React开发" class="headerlink" title="邂逅React开发"></a>邂逅React开发</h2><h3 id="1-React是什么？"><a href="#1-React是什么？" class="headerlink" title="1.React是什么？"></a>1.React是什么？</h3><p>■React是什么呢？相信每个做开发的人对它都或多或少有一些印象。<br>口这里我们来看一下官方对它的解释：用于构建用户界面的JavaScript库。</p><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152336.png" alt="1591669220149"></p><p>■我们知道对于前端来说，主要的任务就是构建用于界面，而构建用于界面离不开三个技术：<br>口HTML：构建页面的结构<br>口CSS：构建页面的样式<br>口JavaScript：页面动态内容和交互<br>■那么使用最原生的HTML、CSS、JavaScript可以构建完整的用户界面吗？当然可以，但是会存在很多问题口比如操作DOM兼容性的问题；口比如过多兼容性代码的冗余问题；口比如代码组织和规范的问题：</p><h3 id="2-常见的JavaScript库"><a href="#2-常见的JavaScript库" class="headerlink" title="2.常见的JavaScript库"></a>2.常见的JavaScript库</h3><p>所以，一直以来前端开发人员都在需求可以让自己开发更方便的JavaScript库：<br>口在过去的很长时间内，jQuery是被使用最多的JavaScript库；口在过去的一份调查中显示，全球前10，000个访问最高的网站中，有65%使用了jQuery，是当时最受欢迎的JavaScript库；口但是越来越多的公司开始慢慢不再使用jQuery，包括程序员使用最多的GitHub；</p><p>■现在前端领域最为流行的是三大框架：<br>口Vue<br>口React<br>口Angular</p><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152345.png" alt="1591669358323"></p><p>■而Angular在国内并不是特别受欢迎，尤其是Angular目前的版本对TypeScript还有要求的情况下。<br>口Vue和React是国内最为流行的两个框架，而他们都是帮助我们来构建用户界面的JavaScript库。<br>口关于它们的对比，我会另外再写一篇文章</p><h3 id="3-React的起源"><a href="#3-React的起源" class="headerlink" title="3.React的起源"></a>3.React的起源</h3><p>■React是2013年，Facebook开源的JavaScript框架，那么当时为什么Facebook要推出这样一款框架呢？<br>■这个源于一个需求，所产生的bug：<br>口该功能上线之后，总是出现bug；</p><p>口三个消息的数字在发生变化时，过多的操作很容易产生bug；abug是否可以修复呢？当然可以修复，但是Facebook的工程师并不满足于此；口他们开始思考为什么会产生这样的问题；口在传统的开发模式中，我们过多的去操作界面的细节；（前端、iOS、Android）<br>√并且需要掌握和使用大量DOM的API，当然我们可以通过jQuery来简化和适配一些API的使用；口另外关于数据（状态），往往会分散到各个地方，不方便管理和维护；</p><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152352.png" alt="1591669540027"></p><p>■他们就去思考，是否有一种新的模式来解决上面的问题：<br>口1.以组件的方式去划分一个个功能模块<br>口2.组件内以jsx来描述UI的样子，以state来存储组件内的状态口3.当应用的状态发生改变时，通过setState来修改状态，状态发生变化时，UI会自动发生更新</p><h3 id="4-React的特点"><a href="#4-React的特点" class="headerlink" title="4.React的特点"></a>4.React的特点</h3><p>■声明式编程：<br>口声明式编程是目前整个大前端开发的模式：Vue、React、Flutter、SwiftUI；口它允许我们只需要维护自己的状态，当状态改变时，React可以根据最新的状态去渲染我们的UI界面；</p><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152357.png" alt="1591669657519"></p><p>口组件化开发：</p><p>页面目前前端的流行趋势，我们会讲复杂的界面拆分成一个个小的组件；口如何合理的进行组件的划分和设计也是后面我会讲到的一个重点；</p><p>![1591669794398](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591669794398.png)</p><p>■多平台适配：<br>口2013年，React发布之初主要是开发Web页面；口2015年，Facebook推出了ReactNative，用于开发移动端跨平台；（虽然目前Flutter非常火爆，但是还是有很多公司在使用ReactNative）；口2017年，Facebook推出ReactVR，用于开发虚拟现实Web应用程序；（随着5G的普及，VR也会是一个火爆的应用场景）；</p><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152404.png" alt="1591669872384"></p><h3 id="5-掌握最先进的思想和技术"><a href="#5-掌握最先进的思想和技术" class="headerlink" title="5.掌握最先进的思想和技术"></a>5.掌握最先进的思想和技术</h3><p>■React由Facebook来更新和维护，它是大量优秀程序员的思想结晶：<br>口React的流行不仅仅局限于普通开发工程师对它的认可，大量流行的其他框架借鉴React的思想：<br>■Vue.js框架设计之初，有很多的灵感来自Angular和React。<br>■包括Vue3很多新的特性，也是借鉴和学习了React口比如React Hooks是开创性的新功能（也是我们课程的重点）口Vue Function Based API学习了React Hooks的思想</p><p>■Flutter的很多灵感都来自React，来自官网的一段话：（SwiftU呢）口事实上Flutter中的Widget-Element-RenderObject，对应的就是JSX-虚拟DOM-真实DOM Flutter widgets are buit using a modern framework that takes inspiration from React.■所以React可以说是前端的先驱者，它总是会引领整个前端的潮流。</p><p>■所以React可以说是前端的先驱者，它总是会引领整个前端的潮流。</p><h3 id="6-React-现状"><a href="#6-React-现状" class="headerlink" title="6.React 现状"></a>6.React 现状</h3><p>HackerRank调查显示</p><p>在HackerRank中，2020年有一份调查，你更想要学习的framework（框架）：</p><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152418.png" alt="1591670128748"></p><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152431.png" alt="1591670155667"></p><h3 id="7-Hello-React案例"><a href="#7-Hello-React案例" class="headerlink" title="7.Hello React案例"></a>7.Hello React案例</h3><p>■为了演练React，我们可以提出一个小的需求：<br>口在界面显示一个文本：Hello World口点击下方的一个按钮，点击后文本改变为Hello React</p><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152431.png" alt="1591670317295"></p><p>■但是，我们使用React实现之前，先使用原生代码来实现，这样更加方便大家对比React和原生：<br>口当然，你也可以使用jQuery和Vue来实现，对它们分别进行对比学习</p><p>推荐使用VS code编辑器</p><p>vs code 推荐插件</p><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152436.png" alt="1591670418549"></p><h3 id="8-React开发依赖"><a href="#8-React开发依赖" class="headerlink" title="8.React开发依赖"></a>8.React开发依赖</h3><p>开发React必须依赖三个库：口react：包含react所必须的核心代码<br>口 react-dom：react渲染在不同平台所需要的核心代码<br>口 babel：将isx转换成React代码的工具<br>·第一次接触React会被它繁琐的依赖搞蒙，对于Vue来说，我们只是依赖一个vue.js文件即可，但是react居然要依赖三个库。<br>口其实呢，这三个库是各司其职的，目的就是让每一个库只单纯做自己的事情：口在React的0.14版本之前是没有react-dom这个概念的，所有功能都包含在react里口为什么要进行据分呢？原因就是react-native.<br>Dreact包中包含了react和react-native所共同拥有的核心代码。<br>a react-dom针对web和native所完成的事情不同：口web端：react-dom会讲jsx最终渲染成真实的DOM，显示在浏览器中口 native端：react-dom会讲jsx最终渲染成原生的控件（比如Android中的Button，ios中的U1Button）.</p><h3 id="9-认识Babel"><a href="#9-认识Babel" class="headerlink" title="9.认识Babel"></a>9.认识Babel</h3><p>babel是什么呢？<br>口 Babel，又名Babel.js.<br>口是目前前端使用非常广泛的编辑器、转移器。<br>口比如当下很多浏览器并不支持ES6的语法，但是确实ES6的语法非常的简洁和方便，我们开发时希望使用它.<br>口那么编写源码时我们就可以使用ES6来编写，之后通过Babel工具，将ES6转成大多数浏览器都支持的ES5的语法。</p><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152446.png" alt="1591683629800"></p><p>React和Babel的关系：口默认情况下开发React其实可以不使用babel.<br>口但是前提是我们自己使用React.createElement来编写源代码，它编写的代码非常的繁琐和可读性差。<br>口那么我们就可以直接编写jsx（JavaScript XML）的语法，并且让babel帮助我们转换成React.createflement.<br>口后续还会讲到；</p><h3 id="10-引入React依赖"><a href="#10-引入React依赖" class="headerlink" title="10.引入React依赖"></a>10.引入React依赖</h3><p>·所以，我们在编写React代码时，这三个依赖都是必不可少的。<br>·那么，如何添加这三个依赖：</p><p>口方式一：直接CDN引入<br>口方式二：下载后，添加本地依赖<br>口方式三：通过npm管理（后续脚手架再使用）</p><p>暂时我们直接通过CDN引入，来演练下面的示例程序：口这里有一个crossorigin的属性，这个属性的目的是为了拿到跨域脚本的错误信息</p><p>React添加三个依赖</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 加载 React。--&gt;</span><br><span class="line">&lt;!-- 注意: 部署时，将 &quot;development.js&quot; 替换为 &quot;production.min.js&quot;。--&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;react@16&#x2F;umd&#x2F;react.development.js&quot; crossorigin&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;react-dom@16&#x2F;umd&#x2F;react-dom.development.js&quot; crossorigin&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;babel-standalone@6&#x2F;babel.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure><p>1</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> React </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>认识Photoshop</title>
-      <link href="/2020/06/05/%E8%AE%A4%E8%AF%86Photoshop/"/>
-      <url>/2020/06/05/%E8%AE%A4%E8%AF%86Photoshop/</url>
-      
-        <content type="html"><![CDATA[<h3 id="Ps界面工具认知"><a href="#Ps界面工具认知" class="headerlink" title="Ps界面工具认知"></a>Ps界面工具认知</h3><h4 id="区域位置"><a href="#区域位置" class="headerlink" title="区域位置"></a>区域位置</h4><p><img src="D:%5CBlog%5Csource_posts%5C%E8%AE%A4%E8%AF%86Photoshop%5C1591349469383.png" alt="1591349469383"></p><h3 id="一-菜单栏"><a href="#一-菜单栏" class="headerlink" title="一. 菜单栏"></a>一. 菜单栏</h3><h5 id="1-所有功能选项集合，只需了解掌握50-，满足日常操作即可"><a href="#1-所有功能选项集合，只需了解掌握50-，满足日常操作即可" class="headerlink" title="1. 所有功能选项集合，只需了解掌握50%，满足日常操作即可"></a>1. 所有功能选项集合，只需了解掌握50%，满足日常操作即可</h5><h5 id="2-ps常见存储格式："><a href="#2-ps常见存储格式：" class="headerlink" title="2. ps常见存储格式："></a>2. ps常见存储格式：</h5><h6 id="⑴-jpg-最常用图片格式"><a href="#⑴-jpg-最常用图片格式" class="headerlink" title="⑴  jpg(最常用图片格式"></a>⑴  jpg(最常用图片格式</h6><p>日常作图存储格式*  作品展示 * 作业保存格式</p><p>只有单一图层</p><p>通用图片格式</p><p>内存小，画质高</p><h6 id="⑵-png-透明图片格式"><a href="#⑵-png-透明图片格式" class="headerlink" title="⑵.png(透明图片格式)"></a>⑵.png(透明图片格式)</h6><p>通常用于抠图后的素材保存格式</p><p>可以是透明底</p><p>素材最常用的格式</p><p>合成/精修/作图必备</p><h6 id="⑶-GIF"><a href="#⑶-GIF" class="headerlink" title="⑶ .GIF"></a>⑶ .GIF</h6><p>通常为点动图</p><p>主要是为了作品展示</p><h6 id="⑷-PSD（ps专用格式，分层格式）"><a href="#⑷-PSD（ps专用格式，分层格式）" class="headerlink" title="⑷ .PSD（ps专用格式，分层格式）"></a>⑷ .PSD（ps专用格式，分层格式）</h6><p>保存所有信息，预留备份（防止被骗 原创证据，投诉追款必备，防止被骗稿）</p><p>接单方法（兼职接单注意）</p><h4 id="二-工具栏"><a href="#二-工具栏" class="headerlink" title="二 .工具栏"></a>二 .工具栏</h4><h5 id="日常用的所有工具集合"><a href="#日常用的所有工具集合" class="headerlink" title="日常用的所有工具集合"></a>日常用的所有工具集合</h5><h5 id="右键单击某一个工具，可打开扩展工具"><a href="#右键单击某一个工具，可打开扩展工具" class="headerlink" title="右键单击某一个工具，可打开扩展工具"></a>右键单击某一个工具，可打开扩展工具</h5><h5 id="前景色-背景色"><a href="#前景色-背景色" class="headerlink" title="前景色/背景色"></a>前景色/背景色</h5><p>前景色是当前使用的颜色(填充前景色ALT+DEL），背景色是我们准备使用的颜色(填充前景色CTRL+DEL)</p><p>按x键可以切换前景色和背景色位置（注意输入法要在英文的状态下）</p><p>如果有选区，填充选区内，无选区的话就填充到图层</p><h4 id="三-工具属性栏"><a href="#三-工具属性栏" class="headerlink" title="三 .工具属性栏"></a>三 .工具属性栏</h4><h5 id="对工具的详细设置"><a href="#对工具的详细设置" class="headerlink" title="对工具的详细设置"></a>对工具的详细设置</h5><h4 id="四-操作预选区"><a href="#四-操作预选区" class="headerlink" title="四.操作预选区"></a>四.操作预选区</h4><h5 id="日常操作，处理图片区域"><a href="#日常操作，处理图片区域" class="headerlink" title="日常操作，处理图片区域"></a>日常操作，处理图片区域</h5><h5 id="放大图片：ctrl-加-减号-；移动图片：空格＋鼠标左键；放大移动图片：ctrl放大-alt缩小-左键"><a href="#放大图片：ctrl-加-减号-；移动图片：空格＋鼠标左键；放大移动图片：ctrl放大-alt缩小-左键" class="headerlink" title="放大图片：ctrl+(加/减号)；移动图片：空格＋鼠标左键；放大移动图片：ctrl放大/alt缩小=左键"></a>放大图片：ctrl+(加/减号)；移动图片：空格＋鼠标左键；放大移动图片：ctrl放大/alt缩小=左键</h5><h4 id="五-图层"><a href="#五-图层" class="headerlink" title="五 .图层"></a>五 .图层</h4><p>图层是一个很重要的工具，ps所有的操作都是基于图层的，图层就好比一层层物体层叠放在一起，就像汉堡，上层遮盖下层</p><h5 id="多选-连选快捷键"><a href="#多选-连选快捷键" class="headerlink" title="多选/连选快捷键"></a>多选/连选快捷键</h5><p>多选: ctrl+ 鼠标左键单击需要的图层</p><p>连选: shift+左键点选头尾两图层</p><h5 id="自由变换"><a href="#自由变换" class="headerlink" title="自由变换"></a>自由变换</h5><p>快捷方式CTRL+T</p><p>ALT+左键–中心点缩放(非等比例)</p><p>shift+左键- -对角点缩放(等比例)</p><p>alt+shift +左键–中心点缩放(等比例)</p><p>以上快捷键适用于ps2018以下的版本</p><h5 id="果汁旋转重点"><a href="#果汁旋转重点" class="headerlink" title="果汁旋转重点:"></a>果汁旋转重点:</h5><p>移动工具的设置</p><p>图像的旋转，大小变换控制</p><p>移动且复制:按alt+ 鼠标左键拖动</p><h5 id="选区应用"><a href="#选区应用" class="headerlink" title="选区应用"></a>选区应用</h5><p>椭圆选区图层建立</p><p>正圆选区建立按SHIFT +鼠标左键</p><p>特殊选区建</p><h5 id="特殊变换"><a href="#特殊变换" class="headerlink" title="特殊变换"></a>特殊变换</h5><p>菜单栏编辑操控变形</p><p>固定不需要操作的位置 鼠标左键单击即可锁定</p><p>删除锚点日点按选中的锚点按delete.</p><h5 id="遇到问题如何发现问题所在"><a href="#遇到问题如何发现问题所在" class="headerlink" title="遇到问题如何发现问题所在"></a>遇到问题如何发现问题所在</h5><p>1.看工具选的是否正确</p><p>2.看图层选的是否正确</p><p>3.看工具属性是否正确</p><h4 id="六-组合操作"><a href="#六-组合操作" class="headerlink" title="六 .组合操作"></a>六 .组合操作</h4><p>操作三键客CTRL  ALT   SHIFT；取消选区CTRL+D；撤销操作  CTRL+Z撤销一次；CTRL+ALT+Z撤销多次；复制图层CTRL+J 注意当有选区–复制选区，没有选区 的时候是复制图层</p><p>理解：什么是抠图：用合适的工具—做出合适选—-把选区里的图像复制出来。</p><p>1.套索工具：大范围不精确，极小范围</p><p>2.多边形套索：直线选区 特别好用有弧度不太好用</p><p>3.磁性套索：选区边缘清晰自动吸附边缘</p><p>4.选择主体 魔棒 快速选择：背景清晰 边缘清晰 颜色比较单一</p><h5 id="小知识："><a href="#小知识：" class="headerlink" title="小知识："></a>小知识：</h5><p>闪烁的虚线就叫选区  也叫蚂蚁线</p><p>alt+滚轮  放大缩小图片</p><p>任何状态下  按住空格键 会变成抓手工具</p><p>任何状态下 按住ctrl键  会变成选区</p><p>额 <del>~</del>打点鸡血：</p><p>成人的学习不是为了考试，而是为了成为出色的大人</p><p>互联网时代重要的不是学历，而是能力</p><p>作业是快速提升的唯一途径，没有之一</p><p>听课千遍，不如上手练一练</p><h4 id=""><a href="#" class="headerlink" title=""></a></h4>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Photoshop </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>摘抄【1】</title>
-      <link href="/2020/05/16/%E6%91%98%E6%8A%84/"/>
-      <url>/2020/05/16/%E6%91%98%E6%8A%84/</url>
-      
-        <content type="html"><![CDATA[<h2 id="关于摘抄"><a href="#关于摘抄" class="headerlink" title="关于摘抄"></a>关于摘抄</h2><h4 id="初中的时候喜欢看疯狂阅读系列，每当看见美好的句子-其实是毒鸡汤-，都会被其惊艳-打打鸡血-，然后摘抄下来。大学摘抄了好几个本子，再后来我就找不到，呜呜呜……"><a href="#初中的时候喜欢看疯狂阅读系列，每当看见美好的句子-其实是毒鸡汤-，都会被其惊艳-打打鸡血-，然后摘抄下来。大学摘抄了好几个本子，再后来我就找不到，呜呜呜……" class="headerlink" title="初中的时候喜欢看疯狂阅读系列，每当看见美好的句子(其实是毒鸡汤)，都会被其惊艳(打打鸡血)，然后摘抄下来。大学摘抄了好几个本子，再后来我就找不到，呜呜呜……"></a>初中的时候喜欢看疯狂阅读系列，每当看见美好的句子(其实是毒鸡汤)，都会被其惊艳(打打鸡血)，然后摘抄下来。大学摘抄了好几个本子，再后来我就找不到，呜呜呜……</h4><ol><li><p>守得云开见月明（很喜欢的一句）</p></li><li><p>莫听穿林打叶声，何妨吟啸且徐行</p></li></ol><p>3.这个世界真的很公平，你想要最好的，就要承受最痛的 </p><p>4.不满现状，向上奋发是赚钱发财的前提</p><p>5.人才都是熬出来的，本事都是逼出来的</p><p>6.贪财有道，好色有品，博学有识，读书有瘾，喝酒有量，玩笑有度</p><p>7.人这一辈子改变命运的机会能有几次？出生，高考，考研</p><p>8.有句话之前不在意，后来坚信不疑：知识改变命运</p><p>9.真正的读书源于内心的热爱，这份爱纯粹天热，就像向阳花追寻太阳，不为名利，听从的是心的召唤、</p><p>10.留三分贪财好色，以防与世俗格格不入：剩下七分一本正经，以图安守己谋此生</p><p>11.遇见你啊，是晨曦见微光，朝露其芳草，初见心上，瞬间满时光</p><p>12.你要悄悄拔尖，然后惊艳所有人</p><ol start="13"><li><p>当你应该努力的时候，请不要用你的年轻还小这些来做借口了</p></li><li><p>最怕你一生碌碌无为，却自命不凡</p></li><li><p>天无百日雨，人无一世苦</p></li><li><p>男孩子就要多赚点钱，有空的时候就多提升打扮下自己（经济基础决定上层建筑）</p></li><li><p>不受教育的人，因为不识字上人的当，受教育的人，因为识了字，上了印刷品的当</p></li><li><p>你可以像猪一样活着，你不会向猪一样快乐</p></li><li><p>张文宏：不读书，就是别人怎么欺负你，你就怎么欺负回去。但如果你读书多了，你会选择不再跟那些人有关系</p></li><li><p>在等待的日子，刻苦读书，谦卑做人，养得深根，日后才能枝繁叶茂</p></li><li><p>低谷时期,不打扰任何人，守心自暖</p><h3 id="最后，晚安，今天先到这！"><a href="#最后，晚安，今天先到这！" class="headerlink" title="最后，晚安，今天先到这！"></a>最后，晚安，今天先到这！</h3></li></ol>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 摘抄 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>hexo发表博客常用命令</title>
-      <link href="/2020/03/23/hexo%E5%8F%91%E8%A1%A8%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-      <url>/2020/03/23/hexo%E5%8F%91%E8%A1%A8%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-      
-        <content type="html"><![CDATA[<h2 id="hexo发表博客常用命令"><a href="#hexo发表博客常用命令" class="headerlink" title="hexo发表博客常用命令"></a>hexo发表博客常用命令</h2><h3 id="以下命令需要在本地Blog路径下执行"><a href="#以下命令需要在本地Blog路径下执行" class="headerlink" title="以下命令需要在本地Blog路径下执行"></a>以下命令需要在本地Blog路径下执行</h3><p>###Step1 创建文章</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo new &quot;hexo发表博客常用命令&quot;</span><br></pre></td></tr></table></figure><p>###Step2 编辑文章</p><p>在Blog\source_posts文件夹打开对应markdown文档进行编辑</p><p>编辑md文件建议使用Typora软件 特别推荐！！！</p><p>####关于文章添加图片：<br> 1 把本地Blog文件下的配置文件（非主题下）_config.yml里的post_asset_folder:选项设置为true</p><p> 2 在本地Blog路径下执行npm install hexo-asset-image –save （用于下载安装一个可以上传本地图片的插件）</p><p> 3 运行hexo n “xxxx”来生成md博文</p><p> 会发现在/source/_posts文件夹中除了xxxx.md`文件还生成了一个同名文件夹</p><p> 4最后在xxxx.md引入图片时，先把图片复制到xxxx文件夹中 然后在xxxx.md中按照markdown的格式引入图片：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![你想输入的替代文字](xxxx&#x2F;图片名.jpg)</span><br></pre></td></tr></table></figure><p>当然你也可以选择使用图床</p><p>###Step3 清除缓存 （可省略 建议使用）<br>$ hexo clean<br>清除缓存文件 db.json 和已生成的静态文件 public</p><p>当网站显示异常时可以执行这条命令试试</p><p>Step4 生成静态文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo g &#x2F;&#x2F;简写</span><br></pre></td></tr></table></figure><p>这步骤就相当于程序的编译，如果有错误的话，在终端会有相应的提示信息</p><p>如果没有错误的话 可以继续往下执行</p><p>###Step5 启动本地服务器 （可省略）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo sever</span><br><span class="line">hexo s &#x2F;&#x2F;简写</span><br></pre></td></tr></table></figure><p>用于预览主题，默认地址： <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p><p>###Step6 部署到远程站点</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br><span class="line">hexo d &#x2F;&#x2F;简写</span><br></pre></td></tr></table></figure><p>上述步骤结束后 恭喜你 一篇博文完成啦！</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> hexo常用命令 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>实用sql语句</title>
-      <link href="/2020/03/23/%E5%AE%9E%E7%94%A8sql%E8%AF%AD%E5%8F%A5/"/>
-      <url>/2020/03/23/%E5%AE%9E%E7%94%A8sql%E8%AF%AD%E5%8F%A5/</url>
-      
-        <content type="html"><![CDATA[<p>在编写SQL时，灵活运用一些技巧，可以大大简化程序逻辑。</p><h3 id="插入或替换"><a href="#插入或替换" class="headerlink" title="插入或替换"></a>插入或替换</h3><p>如果我们希望插入一条新记录（INSERT），但如果记录已经存在，就先删除原记录，再插入新记录。此时，可以使用<code>REPLACE</code>语句，这样就不必先查询，再决定是否先删除再插入：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">REPLACE INTO students (id, class_id, name, gender, score) VALUES (1, 1, &#39;小明&#39;, &#39;F&#39;, 99);</span><br></pre></td></tr></table></figure><p>若<code>id=1</code>的记录不存在，<code>REPLACE</code>语句将插入新记录，否则，当前<code>id=1</code>的记录将被删除，然后再插入新记录。</p><h3 id="插入或更新"><a href="#插入或更新" class="headerlink" title="插入或更新"></a>插入或更新</h3><p>如果我们希望插入一条新记录（INSERT），但如果记录已经存在，就更新该记录，此时，可以使用<code>INSERT INTO ... ON DUPLICATE KEY UPDATE ...</code>语句：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO students (id, class_id, name, gender, score) VALUES (1, 1, &#39;小明&#39;, &#39;F&#39;, 99) ON DUPLICATE KEY UPDATE name&#x3D;&#39;小明&#39;, gender&#x3D;&#39;F&#39;, score&#x3D;99;</span><br></pre></td></tr></table></figure><p>若<code>id=1</code>的记录不存在，<code>INSERT</code>语句将插入新记录，否则，当前<code>id=1</code>的记录将被更新，更新的字段由<code>UPDATE</code>指定。</p><h3 id="插入或忽略"><a href="#插入或忽略" class="headerlink" title="插入或忽略"></a>插入或忽略</h3><p>如果我们希望插入一条新记录（INSERT），但如果记录已经存在，就啥事也不干直接忽略，此时，可以使用<code>INSERT IGNORE INTO ...</code>语句：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT IGNORE INTO students (id, class_id, name, gender, score) VALUES (1, 1, &#39;小明&#39;, &#39;F&#39;, 99);</span><br></pre></td></tr></table></figure><p>若<code>id=1</code>的记录不存在，<code>INSERT</code>语句将插入新记录，否则，不执行任何操作。</p><h3 id="快照"><a href="#快照" class="headerlink" title="快照"></a>快照</h3><p>如果想要对一个表进行快照，即复制一份当前表的数据到一个新表，可以结合<code>CREATE TABLE</code>和<code>SELECT</code>：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 对class_id&#x3D;1的记录进行快照，并存储为新表students_of_class1:</span><br><span class="line">CREATE TABLE students_of_class1 SELECT * FROM students WHERE class_id&#x3D;1;</span><br></pre></td></tr></table></figure><p>新创建的表结构和<code>SELECT</code>使用的表结构完全一致。</p><h3 id="写入查询结果集"><a href="#写入查询结果集" class="headerlink" title="写入查询结果集"></a>写入查询结果集</h3><p>如果查询结果集需要写入到表中，可以结合<code>INSERT</code>和<code>SELECT</code>，将<code>SELECT</code>语句的结果集直接插入到指定表中。</p><p>例如，创建一个统计成绩的表<code>statistics</code>，记录各班的平均成绩：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE statistics (</span><br><span class="line">    id BIGINT NOT NULL AUTO_INCREMENT,</span><br><span class="line">    class_id BIGINT NOT NULL,</span><br><span class="line">    average DOUBLE NOT NULL,</span><br><span class="line">    PRIMARY KEY (id)</span><br><span class="line">);</span><br></pre></td></tr></table></figure><p>然后，我们就可以用一条语句写入各班的平均成绩：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO statistics (class_id, average) SELECT class_id, AVG(score) FROM students GROUP BY class_id;</span><br></pre></td></tr></table></figure><p>确保<code>INSERT</code>语句的列和<code>SELECT</code>语句的列能一一对应，就可以在<code>statistics</code>表中直接保存查询的结果：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; SELECT * FROM statistics;</span><br><span class="line">+----+----------+--------------+</span><br><span class="line">| id | class_id | average      |</span><br><span class="line">+----+----------+--------------+</span><br><span class="line">|  1 |        1 |         86.5 |</span><br><span class="line">|  2 |        2 | 73.666666666 |</span><br><span class="line">|  3 |        3 | 88.333333333 |</span><br><span class="line">+----+----------+--------------+</span><br><span class="line">3 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure><h3 id="强制使用指定索引"><a href="#强制使用指定索引" class="headerlink" title="强制使用指定索引"></a>强制使用指定索引</h3><p>在查询的时候，数据库系统会自动分析查询语句，并选择一个最合适的索引。但是很多时候，数据库系统的查询优化器并不一定总是能使用最优索引。如果我们知道如何选择索引，可以使用<code>FORCE INDEX</code>强制查询使用指定的索引。例如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; SELECT * FROM students FORCE INDEX (idx_class_id) WHERE class_id &#x3D; 1 ORDER BY id DESC;</span><br></pre></td></tr></table></figure><p>指定索引的前提是索引<code>idx_class_id</code>必须存在。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> sql </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>环境变量的作用</title>
-      <link href="/2019/12/13/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8/"/>
-      <url>/2019/12/13/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8/</url>
-      
-        <content type="html"><![CDATA[<h2 id="一-什么是环境变量"><a href="#一-什么是环境变量" class="headerlink" title="一.什么是环境变量"></a>一.什么是环境变量</h2><p>环境变量是在操作系统中一个具有特定名字的对象，它包含了一个或者多个应用程序所将使用到的信息，例如Windows和DOS操作系统中的path环境变量，当要求系统运行一个程序而没有告诉它程序所在的完整路径时，系统除了在当前目录下面寻找此程序外，<strong>还应到path中指定的路径去找</strong>。用户通过设置环境变量，来更好的运行进程。</p><p><strong>简单来说，环境变量就是告诉电脑去哪里找命令。</strong></p><p>eg你打开dos窗口输入命令：javac<br>此时windows干了什么事呢？<br>它首先去[当前目录下找javac.exe<br>如果发现没有就去system32下找<br>如果还没有就去你电脑中配置的环境变量中找了，如果这里也没有，那么就告诉你没有这个命令</p><p>如果你装了JDK：c:\java\jdk1.6，你就可以把c:\java\jdk1.6\bin配置到环境变量中，此时重启dos，输入javac，就会成功执行该命令</p><h2 id="二-环境变量的位置"><a href="#二-环境变量的位置" class="headerlink" title="二.环境变量的位置"></a>二.环境变量的位置</h2><p>Windows中环境变量分为两类：<strong>用户变量与系统变量</strong>，在注册表中都有对应的项。</p><p>其中用户变量所在位置：</p><p>HKEY_CURRENT_USER\Environment；</p><p>系统变量所在位置为：\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Environment。</p><h2 id="三-环境变量的配置"><a href="#三-环境变量的配置" class="headerlink" title="三.环境变量的配置"></a>三.环境变量的配置</h2><p>方法如下：<br>点击我的电脑然后按右键——属性——高级——环境变量——新建——名称/路径。</p><p>添加环境变量，通过新建按钮添加环境变量；变量与值之间的关系是一对多，多个值之间用英文;（分号）隔开。</p><p>在“环境变量”里，上面为：用户环境变量，下面为：系统环境变量；不要轻易修改系统环境变量。</p><h2 id="四-环境变量的作用"><a href="#四-环境变量的作用" class="headerlink" title="四.环境变量的作用"></a>四.环境变量的作用</h2><p>我们知道用Java语言写好程序后，需要输入javac进行编译。而编译的前提是要定位到编译程序的位置也就是javac.exe的路径。可是如果我们每次编译都得手写代码跳转到javac的目录下效率就太低了。能不能让我们写好程序后，无论目录在哪，直接输入javac就编译成功呢？这就用到了环境变量。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 环境变量 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>写在前面</title>
-      <link href="/2019/12/12/%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2/"/>
-      <url>/2019/12/12/%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2/</url>
-      
-        <content type="html"><![CDATA[<h2 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a><center>写在前面的话</center></h2><hr><p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>&nbsp;半年前我用hexo+github的方式搭建了博客，但是作为一个重度拖延症患者，半年里面文章寥寥无几。</strong></p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;大学四年时光，整日无所事事，虚度光阴，浪费青春，浑浑噩噩;而今已至大学的尾声，想想自己毫无收获！今吾幡然醒悟，念往日已不可追，来日犹可期，卸下所有的焦躁和不安，珍惜当下，把握时间，做好自己该做的事。</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>养成书写博客的习惯，以此来记录自己一路的成长，同时能够借助于博客对自己的学习笔记进行有效的管理，防止笔记出现丢失和损坏的情况。</strong></p><p>​                                                        </p><p>​    </p><p>​                                                                                <strong>2019.12.12</strong></p><p>​                                                                                <strong>songstar.</strong></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 文章 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>21天养成一个好习惯</title>
-      <link href="/2019/12/11/21%E5%A4%A9%E5%85%BB%E6%88%90%E4%B8%80%E4%B8%AA%E5%A5%BD%E4%B9%A0%E6%83%AF/"/>
-      <url>/2019/12/11/21%E5%A4%A9%E5%85%BB%E6%88%90%E4%B8%80%E4%B8%AA%E5%A5%BD%E4%B9%A0%E6%83%AF/</url>
-      
-        <content type="html"><![CDATA[<h2 id="行为养成习惯，习惯塑造性格，性格决定命运。"><a href="#行为养成习惯，习惯塑造性格，性格决定命运。" class="headerlink" title="行为养成习惯，习惯塑造性格，性格决定命运。"></a>行为养成习惯，习惯塑造性格，性格决定命运。</h2><p>古希腊哲学家泰勒斯曾经说过：</p><blockquote><p><strong>“做什么事情最容易？向别人提意见最容易；</strong></p></blockquote><blockquote><p><strong>做什么事情最难？管理好自己最难。</strong></p></blockquote><p><strong>1.坚持泡脚</strong></p><p><strong>2.多喝热水</strong></p><p><strong>3.不要熬夜</strong></p><p><strong>4.戒糖、少吃油炸辛冷。每天都要吃蔬菜和水果。</strong></p><p><strong>5.戒糖、少吃油炸辛冷。每天都要吃蔬菜和水果。</strong></p><p><strong>6.多读书。</strong>不是死读书，各方面的书都可以去尝试看，只要自己感兴趣。</p><p><strong>7.练字</strong>。字好看会给你的形象加分。</p><p><strong>8.保护好头发(非常重要老哥)!!!</strong></p><p>额,为什么发这个呢,主要是这几天天天泡脚感觉biu倍爽,觉得这个泡脚贼好,决定养成好的习惯,于是乎上知乎搜了搜受益终身的好习惯,慢慢养成.哈哈.先把坚持泡脚这个技能get到.<strong>best wishes ( ^_^ )</strong> <strong>有个好梦,陌生人</strong> </p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 养成好习惯 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>vscode open-in-browser问题</title>
-      <link href="/2019/12/10/vscode-open-in-browser%E6%89%93%E4%B8%8D%E5%BC%80%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
-      <url>/2019/12/10/vscode-open-in-browser%E6%89%93%E4%B8%8D%E5%BC%80%E6%B5%8F%E8%A7%88%E5%99%A8/</url>
-      
-        <content type="html"><![CDATA[<h2 id="vscode-open-in-browser打不开浏览器"><a href="#vscode-open-in-browser打不开浏览器" class="headerlink" title="vscode open-in-browser打不开浏览器"></a>vscode open-in-browser打不开浏览器</h2><p>今天使用vs code 写代码却打不开游览器，报错代码如下</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Open browser failed!! Please check if you have installed the browser chrome correctly!</span><br></pre></td></tr></table></figure><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/Snipaste_2019-12-10_17-22-13.png" alt=""></p><p>Open in browser 已经调试默认游览器为谷歌游览器</p><p>尝试了网上很多办法都没有用，后来去了贴吧发现解决办法如下：在插件open in browser下点击设置按钮，右键——安装另一个版本，选择1.1.0版本安装</p><p>随后加载后，便能打开网页</p><p>至于什么原因导致这样，也没明白，不过问题解决了</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> vscode open-in-browser打不开浏览器 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hexo博客添加Live2D看板娘</title>
-      <link href="/2019/12/09/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98/"/>
-      <url>/2019/12/09/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98/</url>
-      
-        <content type="html"><![CDATA[<h2 id="网页添加Live2D看板娘简易教程"><a href="#网页添加Live2D看板娘简易教程" class="headerlink" title="网页添加Live2D看板娘简易教程"></a>网页添加Live2D看板娘简易教程</h2><p>看板娘是一种职业和习惯称呼，也是ACGN次文化中的萌属性之一。简而言之就是小店的女服务生，也有“吸引顾客，招揽生意，提高人气”等作用类似品牌形象代言人的含义。如果想在自己的博客上放一个呆萌的看板娘非常的简单只需要简单的几行代码就能实现。</p><p><a href="https://www.live2d.com/en/" target="_blank" rel="noopener">官网</a></p><h3 id="1-根目录下安装live2插件"><a href="#1-根目录下安装live2插件" class="headerlink" title="1.根目录下安装live2插件"></a>1.根目录下安装live2插件</h3><p>首先进入Hexo博客根目录，执行以下命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure><p>接着，修改根目录下的 <em>_config.yml</em> 文件</p><p>添加自定义配置(下面配置做参考)：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw&#x2F;</span><br><span class="line">  pluginJsPath: lib&#x2F;</span><br><span class="line">  pluginModelPath: assets&#x2F;</span><br><span class="line">  tagMode: false</span><br><span class="line">  debug: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-koharu</span><br><span class="line">  display:</span><br><span class="line">    position: left</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br></pre></td></tr></table></figure><p><code>注意</code></p><p><code>model.use</code> 后的字符串就是看板娘模型的名字</p><p>现在假设你装的看板娘也是koharu</p><p>你有几种方式让看板娘进驻你的Hexo博客，这里只提供最方便的一种(命令安装)。</p><h3 id="2-进入博客根目录输入以下命令："><a href="#2-进入博客根目录输入以下命令：" class="headerlink" title="2.进入博客根目录输入以下命令："></a>2.进入博客根目录输入以下命令：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install live2d-widget-model-koharu</span><br></pre></td></tr></table></figure><p>到此处看板娘进驻成功</p><h3 id="3-执行以下命令"><a href="#3-执行以下命令" class="headerlink" title="3.执行以下命令"></a>3.执行以下命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$hexo clean </span><br><span class="line">$hexo g</span><br><span class="line">$hexo s #本地查看</span><br><span class="line">$hexo d #上传</span><br></pre></td></tr></table></figure><p>好了，成功了，你可以在你的blog看到一个卡哇伊的妹子了</p><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/koharu.png" alt=""></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Live2D看板娘 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>用基础Markdown语法编写blog</title>
-      <link href="/2019/12/07/%E7%94%A8Markdown%E8%AF%AD%E6%B3%95%E7%BC%96%E5%86%99blog/"/>
-      <url>/2019/12/07/%E7%94%A8Markdown%E8%AF%AD%E6%B3%95%E7%BC%96%E5%86%99blog/</url>
-      
-        <content type="html"><![CDATA[<h1 id="用Markdown语法编写blog"><a href="#用Markdown语法编写blog" class="headerlink" title="用Markdown语法编写blog"></a>用Markdown语法编写blog</h1><ul><li><h2 id="一、什么是Markdown语法"><a href="#一、什么是Markdown语法" class="headerlink" title="一、什么是Markdown语法"></a>一、什么是Markdown语法</h2><p>Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p><p>用易于编写的纯文本格式进行编写,然后将其转化为结构有效的HTML或者XHTML</p><p>简单的来说就是它可以帮你编写出自带特效的文字,比如你现在所看到的就是Markdown语法编写的</p></li><li><h2 id="二、熟悉Markdown常用语法"><a href="#二、熟悉Markdown常用语法" class="headerlink" title="二、熟悉Markdown常用语法"></a>二、熟悉Markdown常用语法</h2><ul><li><h3 id="拥有Markdown编辑器"><a href="#拥有Markdown编辑器" class="headerlink" title="拥有Markdown编辑器"></a>拥有Markdown编辑器</h3></li></ul><p>1.<a href="https://www.typora.io/" target="_blank" rel="noopener">typora</a></p><p>2.<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">vs code</a>  需要安装插件 Markdown all in one   实时预览快捷键ctrl+shift+v</p><p>3.vim</p><ul><li><h3 id="开始熟悉语法"><a href="#开始熟悉语法" class="headerlink" title="开始熟悉语法"></a>开始熟悉语法</h3></li></ul></li><li><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>语法:#空格 + 你的文字</p><p>标题用  #  这个符号</p><p>用1到5个#,可以理解为HTML中的h1到h5</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 标题1</span><br><span class="line">## 标题2</span><br><span class="line">### 标题3</span><br><span class="line">#### 标题4</span><br><span class="line">##### 标题五</span><br><span class="line">效果如下</span><br></pre></td></tr></table></figure><h1 id="标题1"><a href="#标题1" class="headerlink" title="标题1"></a>标题1</h1><h2 id="标题2"><a href="#标题2" class="headerlink" title="标题2"></a>标题2</h2><h3 id="标题3"><a href="#标题3" class="headerlink" title="标题3"></a>标题3</h3><h4 id="标题4"><a href="#标题4" class="headerlink" title="标题4"></a>标题4</h4><h5 id="标题五"><a href="#标题五" class="headerlink" title="标题五"></a>标题五</h5></li><li><h3 id="菜单"><a href="#菜单" class="headerlink" title="菜单"></a>菜单</h3><p>语法: *或-号空格  +  你的文字</p><p>菜单用 -或*号都可以</p><p>通常用于列出一些必须安装的东西或其他的清单</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 2.菜单</span><br><span class="line">- 西红柿</span><br><span class="line">- 哈密瓜</span><br><span class="line">- 大白菜</span><br></pre></td></tr></table></figure><ul><li>西红柿</li></ul></li></ul><ul><li>哈密瓜</li></ul><ul><li>大白菜</li></ul><ul><li><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>语法: &gt;空格  +   你的文字</p><p>通常可以引用里面突出你的内容</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 3.引用</span><br><span class="line">&gt; 窗前明月光</span><br><span class="line">&gt; 低头思故乡</span><br></pre></td></tr></table></figure><blockquote><p>窗前明月光<br>低头思故乡</p></blockquote></li><li><h3 id="粗体或斜体"><a href="#粗体或斜体" class="headerlink" title="粗体或斜体"></a>粗体或斜体</h3><p>粗体:</p><p>语法: **你的文字**  </p><p>斜体:</p><p>语法:*你的文字*</p><p>作用是强调或者突出一个词</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 4.粗体和斜体</span><br><span class="line">  **我是粗体**</span><br><span class="line">  *我是斜体*</span><br></pre></td></tr></table></figure><p>  <strong>我是粗体</strong><br>  <em>我是斜体</em></p></li><li><h3 id="高亮强调"><a href="#高亮强调" class="headerlink" title="高亮强调"></a>高亮强调</h3><p>语法:`你的文字`</p><p>这个符号是在ESCj键下面</p><p>作用也是突出强调你的文字</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 5.亮度强调</span><br><span class="line">&#96;注意:&#96;</span><br><span class="line">&#96;卖大白菜的来了,赶紧买白菜&#96;</span><br></pre></td></tr></table></figure><p><code>注意:</code><br><code>卖大白菜的来了,赶紧买白菜</code></p></li><li><h3 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h3><p>语法:</p><p>```语法类型</p><p>你的代码</p><p>```</p><p>作用于代码,例如:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;代码高亮&quot;;</span><br></pre></td></tr></table></figure><p>​</p></li><li><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>语法:[描述](链接)</p><p><a href="https://songstars.github.io/">博客</a></p><p>可以点击这段文字后跳转到这个链接</p></li><li><h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>语法: ![]()</p><p>这个  …需要用到图床…网上有免费的sm.sm </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Songstars&#x2F;picgo&#x2F;master&#x2F;HQ%7DERW%24WFTGIV65%25%25YO%5DVJU.png)</span><br></pre></td></tr></table></figure><p>​</p><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/HQ%7DERW%24WFTGIV65%25%25YO%5DVJU.png" alt=""></p></li><li><h3 id="插入分割线"><a href="#插入分割线" class="headerlink" title="插入分割线"></a>插入分割线</h3><p>语法:***</p><hr><p>一般用于一大段就可以用一下分割线,会显得整洁一些</p></li><li><h3 id="9-插入视频"><a href="#9-插入视频" class="headerlink" title="9.插入视频"></a>9.插入视频</h3><p>额 这个可以用嵌入代码的方式或者用a标签</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src&#x3D;&quot;&#x2F;&#x2F;player.bilibili.com&#x2F;player.html?aid&#x3D;55070757&amp;cid&#x3D;96238595&amp;page&#x3D;1&quot; scrolling&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; frameborder&#x3D;&quot;no&quot; framespacing&#x3D;&quot;0&quot; allowfullscreen&#x3D;&quot;true&quot;&gt; &lt;&#x2F;iframe&gt;</span><br><span class="line">&lt;a href &#x3D; &quot;https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;av55070757&#x2F;&quot;&gt;前端学习&lt;&#x2F;a&gt;</span><br></pre></td></tr></table></figure><iframe src="//player.bilibili.com/player.html?aid=55070757&cid=96238595&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><a href = "https://www.bilibili.com/video/av55070757/">前端学习</a></li><li><h3 id="10-表格"><a href="#10-表格" class="headerlink" title="10.表格"></a>10.表格</h3><p>语法:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">col 2 iscentered$12</span><br><span class="line">| Tables        | Are           | Cool  |</span><br><span class="line">| ------------- |:-------------:| -----:|</span><br><span class="line">| col 3 is      | right-aligned | $1600 |</span><br><span class="line">| col 2 is      | centered      |   $12 |</span><br></pre></td></tr></table></figure><table><thead><tr><th align="center">姓名</th><th align="center">性别</th><th align="center">年龄</th></tr></thead><tbody><tr><td align="center">张三</td><td align="center">男</td><td align="center">16</td></tr><tr><td align="center">李四</td><td align="center">女</td><td align="center">14</td></tr><tr><td align="center">王五</td><td align="center">人妖</td><td align="center">18</td></tr></tbody></table></li></ul><ul><li><h2 id="三、用Markdown语法编写你的blog"><a href="#三、用Markdown语法编写你的blog" class="headerlink" title="三、用Markdown语法编写你的blog"></a>三、用Markdown语法编写你的blog</h2></li></ul><h3 id="1-创建一个hexo的文章"><a href="#1-创建一个hexo的文章" class="headerlink" title="1.创建一个hexo的文章"></a>1.创建一个hexo的文章</h3><p>先cd到自己的blog目录</p><p>然后执行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new title</span><br></pre></td></tr></table></figure><p>比如你想创建一个hello word 的文章</p><p>就执行 hexo new “hello word”</p><p>然后会输出一个文章目录  这个md文档就在你的blog/source/_post/文件下</p><p>额  那我们就可以在这个文档下奋笔疾书了</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Markdown语法 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>连接mysql出现2005错误的原因和解决方法</title>
-      <link href="/2019/12/06/mysql/"/>
-      <url>/2019/12/06/mysql/</url>
-      
-        <content type="html"><![CDATA[<h3 id="1-今天连接数据库报2005错误-如下图"><a href="#1-今天连接数据库报2005错误-如下图" class="headerlink" title="1.今天连接数据库报2005错误,如下图."></a>1.今天连接数据库报2005错误,如下图.</h3><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/error.png" alt=""></p><h3 id="原因-pc端没有联网"><a href="#原因-pc端没有联网" class="headerlink" title="原因: pc端没有联网"></a>原因: pc端没有联网</h3><h3 id="解决方法-连上互联网即可"><a href="#解决方法-连上互联网即可" class="headerlink" title="解决方法: 连上互联网即可!"></a>解决方法: 连上互联网即可!</h3><h3 id="2-今天连接数据库报2003错误-如下图"><a href="#2-今天连接数据库报2003错误-如下图" class="headerlink" title="2.今天连接数据库报2003错误,如下图."></a>2.今天连接数据库报2003错误,如下图.</h3><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/mysql.jpg" alt=""></p><h3 id="原因：没再服务中打开数据库"><a href="#原因：没再服务中打开数据库" class="headerlink" title="原因：没再服务中打开数据库"></a>原因：没再服务中打开数据库</h3><p>解决方案：鼠标右击“我的电脑”—–&gt;管理—-&gt;服务和应用程序—-&gt;服务—&gt;找到mysql启动程序就可以了或者在控制面版—–&gt;管理工具—–&gt;服务</p><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/jiejue.png" alt=""></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> mysql </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>B站视频链接在这!</title>
-      <link href="/2019/12/03/%E5%89%8D%E7%AB%AF%E8%A7%86%E9%A2%91%E7%9A%84%E9%93%BE%E6%8E%A5/"/>
-      <url>/2019/12/03/%E5%89%8D%E7%AB%AF%E8%A7%86%E9%A2%91%E7%9A%84%E9%93%BE%E6%8E%A5/</url>
-      
-        <content type="html"><![CDATA[<h3 id="B站链接提取"><a href="#B站链接提取" class="headerlink" title="B站链接提取"></a>B站链接提取</h3><h1 id="兄弟点我获取云盘"><a href="#兄弟点我获取云盘" class="headerlink" title="兄弟点我获取云盘"></a><a href="https://pan.baidu.com/s/1le0xMkjv54PyKAwSnu1Pyw" target="_blank" rel="noopener">兄弟点我获取云盘</a></h1><h3>提取码：hc47 </h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1le0xMkjv54PyKAwSnu1Pyw </span><br><span class="line"></span><br><span class="line">提取码：hc47 </span><br><span class="line"></span><br><span class="line">复制这段内容后打开百度网盘手机App，操作更方便哦</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> JavaScript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>“=”，“==”和“===”的区别</title>
-      <link href="/2019/06/09/=%EF%BC%8C==%E5%92%8C===%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-      <url>/2019/06/09/=%EF%BC%8C==%E5%92%8C===%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
-      
-        <content type="html"><![CDATA[<h1 id="“-”-”-”和”-”的区别"><a href="#“-”-”-”和”-”的区别" class="headerlink" title="“=”,”==”和”===”的区别"></a>“=”,”==”和”===”的区别</h1><ol><li><h2 id="是赋值运算符"><a href="#是赋值运算符" class="headerlink" title="=是赋值运算符"></a>=是赋值运算符</h2></li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let a &#x3D; 99;</span><br><span class="line">&#x2F;&#x2F;把数字字面量99赋值给a</span><br></pre></td></tr></table></figure><ol start="2"><li><h2 id="：运算符称作相等"><a href="#：运算符称作相等" class="headerlink" title="==：运算符称作相等"></a>==：运算符称作相等</h2><h4 id="用来检测两个操作数是否相等，会自动转换类型"><a href="#用来检测两个操作数是否相等，会自动转换类型" class="headerlink" title="用来检测两个操作数是否相等，会自动转换类型"></a>用来检测两个操作数是否相等，会自动转换类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;例如：输出数字类型99和字符串类型”99“</span><br><span class="line"></span><br><span class="line">console.log(99&#x3D;&#x3D;&quot;99&quot;);&#x2F;&#x2F;true</span><br></pre></td></tr></table></figure><p>​</p></li></ol><p>例如：输出数字类型99和字符串类型”99“</p><p>console.log(99==”99”);//true  </p><p><strong>说明：不同类型间比较，==之比较“转化成同一类型后的值”看“值”是否相等</strong></p><ol start="3"><li><h2 id="：先判断左右两边的数据类型，如果数据类型不一致，直接返回false"><a href="#：先判断左右两边的数据类型，如果数据类型不一致，直接返回false" class="headerlink" title="===：先判断左右两边的数据类型，如果数据类型不一致，直接返回false"></a>===：先判断左右两边的数据类型，如果数据类型不一致，直接返回false</h2><h4 id="如果是返回true之后才会进行两边值的判断"><a href="#如果是返回true之后才会进行两边值的判断" class="headerlink" title="如果是返回true之后才会进行两边值的判断"></a>如果是返回true之后才会进行两边值的判断</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;例如：输出数字类型99和字符串类型”99“</span><br><span class="line">console.log(99&#x3D;&#x3D;&#x3D;&quot;99&quot;);&#x2F;&#x2F;false</span><br></pre></td></tr></table></figure><p>​</p><p>​</p><p>​</p></li></ol>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> JavaScript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>理解JS闭包</title>
-      <link href="/2019/06/09/%E7%90%86%E8%A7%A3JS%E9%97%AD%E5%8C%85/"/>
-      <url>/2019/06/09/%E7%90%86%E8%A7%A3JS%E9%97%AD%E5%8C%85/</url>
-      
-        <content type="html"><![CDATA[<h1 id="理解JS闭包"><a href="#理解JS闭包" class="headerlink" title="理解JS闭包"></a>理解JS闭包</h1><h2 id="一-什么是闭包"><a href="#一-什么是闭包" class="headerlink" title="一.什么是闭包?"></a>一.什么是闭包?</h2><p><strong>闭包指的是：有权访问其他函数作用域的变量的函数</strong></p><p><strong>换句话来说就是:内层作用域可以访问外层作用域的变量</strong></p><p>函数模式的闭包:在一个函数中有一个函数</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function outside() &#123;</span><br><span class="line">  var num&#x3D;99;</span><br><span class="line">  &#x2F;&#x2F;函数的声明</span><br><span class="line">  function inner() &#123;</span><br><span class="line">    console.log(num);</span><br><span class="line">  &#125;</span><br><span class="line">  &#x2F;&#x2F;函数调用</span><br><span class="line">  inner();</span><br><span class="line">&#125;</span><br><span class="line">outside();</span><br></pre></td></tr></table></figure><p> 对象模式的闭包:函数中有一个对象</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function f1() &#123;</span><br><span class="line">  var num&#x3D;100;</span><br><span class="line">  var obj&#x3D;&#123;</span><br><span class="line">    age:num</span><br><span class="line">  &#125;;</span><br><span class="line">  console.log(obj.age);&#x2F;&#x2F;100</span><br><span class="line">&#125;</span><br><span class="line">f1();</span><br></pre></td></tr></table></figure><h2 id="二-普通函数和闭包函数的对比"><a href="#二-普通函数和闭包函数的对比" class="headerlink" title="二.普通函数和闭包函数的对比"></a>二.普通函数和闭包函数的对比</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;普通的函数</span><br><span class="line">function f1() &#123;</span><br><span class="line">  var num &#x3D; 10;</span><br><span class="line">  num++;</span><br><span class="line">  return num;</span><br><span class="line">&#125;</span><br><span class="line">console.log(f1());&#x2F;&#x2F;11</span><br><span class="line">console.log(f1());&#x2F;&#x2F;11</span><br><span class="line">console.log(f1());&#x2F;&#x2F;11</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;函数模式的闭包</span><br><span class="line">function f2() &#123;</span><br><span class="line">  var num &#x3D; 10;</span><br><span class="line">  return function () &#123;</span><br><span class="line">    num++;</span><br><span class="line">    return num;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var ff &#x3D; f2();</span><br><span class="line">console.log(ff());&#x2F;&#x2F;11</span><br><span class="line">console.log(ff());&#x2F;&#x2F;12</span><br><span class="line">console.log(ff());&#x2F;&#x2F;13</span><br></pre></td></tr></table></figure><h2 id="三-闭包的作用"><a href="#三-闭包的作用" class="headerlink" title="三.闭包的作用"></a>三.闭包的作用</h2><h4 id="作用-缓存数据-延长作用域链"><a href="#作用-缓存数据-延长作用域链" class="headerlink" title="作用:缓存数据,延长作用域链"></a><strong>作用:缓存数据,延长作用域链</strong></h4><p>闭包后,里面的局部变量的使用作用域链就会被延长</p><h4 id="优点"><a href="#优点" class="headerlink" title="优点:"></a><strong>优点:</strong></h4><ol><li>希望一个变量长期驻扎在内存中</li></ol><ol start="2"><li>避免全局变量的污染   </li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">  例如: window.onload &#x3D; function () &#123;</span><br><span class="line">    var aLi &#x3D; document.getElementById(&quot;li&quot;);</span><br><span class="line">    for (var i &#x3D; 0; i &lt; aLi.length; i++) &#123;</span><br><span class="line">      aLi[i].onclick &#x3D; function () &#123;</span><br><span class="line">        alert(i);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  &#x2F;&#x2F; 注意：此时点击每个li都会弹出的是3，原因是点击事件还没发生时，循环已经结束了，然而循环结束后的i &#x3D; 3，故点击每个li都会弹出3</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 现在用闭包来解决：</span><br><span class="line">  window.onload &#x3D; function () &#123;</span><br><span class="line">    var aLi &#x3D; document.getElementById(&quot;li&quot;);</span><br><span class="line">    for (var i &#x3D; 0; i &lt; aLi.length; i++) &#123;</span><br><span class="line">      aLi[i].onclick &#x3D; (function (i) &#123;</span><br><span class="line">        return function () &#123;</span><br><span class="line">          alert(i);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)(i)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点:"></a><strong>缺点:</strong></h4><ol><li>会引发内存泄漏问题</li></ol><p>滥用闭包函数会造成内存泄露，因为闭包中引用到的包裹函数中定义的变量都</p><p>永远不会被释放，所以我们应该在必要的时候，及时释放这个闭包函数</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">window.onload&#x3D;function()&#123;</span><br><span class="line">var oDiv&#x3D;document.getElementById(&quot;div1&quot;);</span><br><span class="line">oDiv.onclick&#x3D;function()&#123;</span><br><span class="line">alert(oDiv.id);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">注意：在IE下会发生内存泄漏 ，也就是说在浏览器关闭之前变量都会存在。</span><br></pre></td></tr></table></figure><p><strong>解决方法</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">window.onload&#x3D;function()&#123;</span><br><span class="line">var oDiv&#x3D;document.getElementById(&quot;div1&quot;);</span><br><span class="line">var id&#x3D;oDiv.id;</span><br><span class="line">oDiv.onclick&#x3D;function()&#123;</span><br><span class="line">alert(id);</span><br><span class="line">&#125;</span><br><span class="line">oDiv&#x3D;null;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="总结"><a href="#总结" class="headerlink" title="总结:"></a>总结:</h1><ol><li>如果想要缓存数据,就把这个数据放在外层的函数和里层的函数的中间位置   </li><li>闭包的作用:缓存数据.优点也是缺陷,没有及时的释放</li><li>局部变量是在函数中,函数使用结束后,局部变量就会被自动的释放</li></ol>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> JavaScript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>HTML总结</title>
-      <link href="/2019/06/08/HTML%E6%80%BB%E7%BB%93/"/>
-      <url>/2019/06/08/HTML%E6%80%BB%E7%BB%93/</url>
-      
-        <content type="html"><![CDATA[<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="web-标准"><a href="#web-标准" class="headerlink" title="web 标准"></a>web 标准</h2><p><strong>Web标准不是某一个标准，而是由W3C和其他标准化组织制定的一系列标准的集合。</strong></p><p><strong>主要包括结构（Structure）、表现（Presentation）和行为（Behavior）三个方面。</strong></p><p><strong>结构标准：结构用于对网页元素进行整理和分类， 最重要</strong><br><strong>表现标准：表现用于设置网页元素的版式、颜色、大小等外观样式，主要指的是CSS。</strong><br><strong>行为标准：行为是指网页模型的定义及交互的编写，主要指的是 Javascript</strong></p><p><strong>他们之间的关系就好像下面的图片</strong></p><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/web%E7%BB%93%E6%9E%84.jpg" alt=""></p><h2 id="HTML-结构"><a href="#HTML-结构" class="headerlink" title="HTML 结构"></a>HTML 结构</h2><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/html%E9%AA%A8%E6%9E%B6.jpg" alt=""></p><h2 id="常用标签"><a href="#常用标签" class="headerlink" title="常用标签"></a>常用标签</h2><h3 id="常用双标签"><a href="#常用双标签" class="headerlink" title="常用双标签"></a>常用双标签</h3><p><strong>&lt;em&gt;&lt;em&gt; &lt;i&gt;&lt;/i&gt;斜体</strong><br><strong>&lt;b&gt;&lt;/b&gt; &lt;strong&gt;&lt;/strong&gt;加粗</strong><br><strong>&lt;font&gt;&lt;/font&gt;字体</strong><br><strong>&lt;p&gt;&lt;/p&gt;段落</strong><br><strong>&lt;u&gt;&lt;/u&gt;下划线</strong><br><strong>&lt;del&gt;&lt;/del&gt;删除线</strong><br><strong>&lt;hn&gt;&lt;/hn&gt;1-6级标题</strong><br><strong>&lt;ul&gt;&lt;/ul&gt;无序列表</strong><br><strong>&lt;ol&gt;&lt;/ol&gt;有序列表</strong><br><strong>&lt;dl&gt;&lt;/dl&gt;&lt;dt&gt;&lt;/dt&gt;&lt;d&gt;&lt;/dd&gt;自定义列表</strong></p><h3 id="常用单标签"><a href="#常用单标签" class="headerlink" title="常用单标签"></a>常用单标签</h3><p>&lt;br /&gt;换行<br>&lt;hr /&gt;水平线<br>&lt;img&gt;插入图片<br>&lt;base&gt;基础标签<br>&lt;meta&gt;<br>&lt;a href=””&gt;链接标签</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> HTMl </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>主流浏览器和HTML标签</title>
-      <link href="/2019/06/07/%E4%B8%BB%E6%B5%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%92%8Chtml%E6%A0%87%E7%AD%BE/"/>
-      <url>/2019/06/07/%E4%B8%BB%E6%B5%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%92%8Chtml%E6%A0%87%E7%AD%BE/</url>
-      
-        <content type="html"><![CDATA[<h3 id="一-主流游览器"><a href="#一-主流游览器" class="headerlink" title="一.主流游览器"></a>一.主流游览器</h3><hr><ol><li>IE: trident 内核</li><li>Firefox：gecko 内核</li><li>Safari:webkit 内核</li><li>Opera:以前是presto 内核，Opera 现已改用Google Chrome 的Blink 内核</li><li>Chrome:Blink(基于webkit，Google 与Opera Software 共同开发)</li></ol><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/browser.jpg" alt=""></p><p><strong>特别说明</strong></p><p>2018年12月5日，微软宣布：放弃浏览器Edge，转而推出一款新的浏览器，而这款新浏览器将会采用谷歌的Chromium 内核</p><h3 id="二-html的基本结构"><a href="#二-html的基本结构" class="headerlink" title="二.html的基本结构"></a>二.html的基本结构</h3><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/QQ%E5%9B%BE%E7%89%8720190602225728.jpg" alt=""><br><strong>1. 常规标签</strong><br>&lt;标记 属性=“属性值” 属性=“属性值”&gt;&lt;/标记&gt;<br>标记也可叫标签或叫元素<br>例如：<head></head><br><strong>2. 空标记</strong><br>&lt;标记 属性=“属性值” /&gt;例如：<meta charset=”utf-8”><br><strong>3. 说明</strong><br>1.写在&lt;&gt;中的第一个单词叫做标记，标签，元素。</p><p>2.标记和属性用空格隔开，属性和属性值用等号连接，属性值必须放在“”号内。</p><p>3.一个标记可以没有属性也可以有多个属性，属性和属性之间不分先后顺序。</p><p>4.空标记没有结束标签，用“/”代替。</p><h3 id="三-常用标签-元素"><a href="#三-常用标签-元素" class="headerlink" title="三.常用标签(元素)"></a>三.常用标签(元素)</h3><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/QQ%E5%9B%BE%E7%89%8720190602224929.png" alt=""></p><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/QQ%E5%9B%BE%E7%89%8720190602225125.png" alt=""></p><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/QQ%E5%9B%BE%E7%89%8720190602225133.png" alt=""></p><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/QQ%E5%9B%BE%E7%89%8720190602225141.png" alt=""></p><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/QQ%E5%9B%BE%E7%89%8720190602225148.png" alt=""></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> HTML </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+<search>
+  <entry>
+    <title>21天养成一个好习惯</title>
+    <url>/2019/12/11/21%E5%A4%A9%E5%85%BB%E6%88%90%E4%B8%80%E4%B8%AA%E5%A5%BD%E4%B9%A0%E6%83%AF/</url>
+    <content><![CDATA[<h2 id="行为养成习惯，习惯塑造性格，性格决定命运。"><a href="#行为养成习惯，习惯塑造性格，性格决定命运。" class="headerlink" title="行为养成习惯，习惯塑造性格，性格决定命运。"></a>行为养成习惯，习惯塑造性格，性格决定命运。</h2><p>古希腊哲学家泰勒斯曾经说过：</p>
+<blockquote>
+<p><strong>“做什么事情最容易？向别人提意见最容易；</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>做什么事情最难？管理好自己最难。</strong></p>
+</blockquote>
+<p><strong>1.坚持泡脚</strong></p>
+<p><strong>2.多喝热水</strong></p>
+<p><strong>3.不要熬夜</strong></p>
+<p><strong>4.戒糖、少吃油炸辛冷。每天都要吃蔬菜和水果。</strong></p>
+<p><strong>5.戒糖、少吃油炸辛冷。每天都要吃蔬菜和水果。</strong></p>
+<p><strong>6.多读书。</strong>不是死读书，各方面的书都可以去尝试看，只要自己感兴趣。</p>
+<p><strong>7.练字</strong>。字好看会给你的形象加分。</p>
+<p><strong>8.保护好头发(非常重要老哥)!!!</strong></p>
+<p>额,为什么发这个呢,主要是这几天天天泡脚感觉biu倍爽,觉得这个泡脚贼好,决定养成好的习惯,于是乎上知乎搜了搜受益终身的好习惯,慢慢养成.哈哈.先把坚持泡脚这个技能get到.<strong>best wishes ( ^_^ )</strong> <strong>有个好梦,陌生人</strong> </p>
+]]></content>
+      <tags>
+        <tag>养成好习惯</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML总结</title>
+    <url>/2019/06/08/HTML%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="web-标准"><a href="#web-标准" class="headerlink" title="web 标准"></a>web 标准</h2><p><strong>Web标准不是某一个标准，而是由W3C和其他标准化组织制定的一系列标准的集合。</strong></p>
+<p><strong>主要包括结构（Structure）、表现（Presentation）和行为（Behavior）三个方面。</strong></p>
+<p><strong>结构标准：结构用于对网页元素进行整理和分类， 最重要</strong><br><strong>表现标准：表现用于设置网页元素的版式、颜色、大小等外观样式，主要指的是CSS。</strong><br><strong>行为标准：行为是指网页模型的定义及交互的编写，主要指的是 Javascript</strong></p>
+<p><strong>他们之间的关系就好像下面的图片</strong></p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/web%E7%BB%93%E6%9E%84.jpg" alt=""></p>
+<h2 id="HTML-结构"><a href="#HTML-结构" class="headerlink" title="HTML 结构"></a>HTML 结构</h2><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/html%E9%AA%A8%E6%9E%B6.jpg" alt=""></p>
+<h2 id="常用标签"><a href="#常用标签" class="headerlink" title="常用标签"></a>常用标签</h2><h3 id="常用双标签"><a href="#常用双标签" class="headerlink" title="常用双标签"></a>常用双标签</h3><p><strong>&lt;em&gt;&lt;em&gt; &lt;i&gt;&lt;/i&gt;斜体</strong><br><strong>&lt;b&gt;&lt;/b&gt; &lt;strong&gt;&lt;/strong&gt;加粗</strong><br><strong>&lt;font&gt;&lt;/font&gt;字体</strong><br><strong>&lt;p&gt;&lt;/p&gt;段落</strong><br><strong>&lt;u&gt;&lt;/u&gt;下划线</strong><br><strong>&lt;del&gt;&lt;/del&gt;删除线</strong><br><strong>&lt;hn&gt;&lt;/hn&gt;1-6级标题</strong><br><strong>&lt;ul&gt;&lt;/ul&gt;无序列表</strong><br><strong>&lt;ol&gt;&lt;/ol&gt;有序列表</strong><br><strong>&lt;dl&gt;&lt;/dl&gt;&lt;dt&gt;&lt;/dt&gt;&lt;d&gt;&lt;/dd&gt;自定义列表</strong></p>
+<h3 id="常用单标签"><a href="#常用单标签" class="headerlink" title="常用单标签"></a>常用单标签</h3><p>&lt;br /&gt;换行<br>&lt;hr /&gt;水平线<br>&lt;img&gt;插入图片<br>&lt;base&gt;基础标签<br>&lt;meta&gt;<br>&lt;a href=””&gt;链接标签</p>
+]]></content>
+      <tags>
+        <tag>HTMl</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>“=”，“==”和“===”的区别</title>
+    <url>/2019/06/09/=%EF%BC%8C==%E5%92%8C===%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+    <content><![CDATA[<h1 id="“-”-”-”和”-”的区别"><a href="#“-”-”-”和”-”的区别" class="headerlink" title="“=”,”==”和”===”的区别"></a>“=”,”==”和”===”的区别</h1><ol>
+<li><h2 id="是赋值运算符"><a href="#是赋值运算符" class="headerlink" title="=是赋值运算符"></a>=是赋值运算符</h2></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">let a &#x3D; 99;</span><br><span class="line">&#x2F;&#x2F;把数字字面量99赋值给a</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><h2 id="：运算符称作相等"><a href="#：运算符称作相等" class="headerlink" title="==：运算符称作相等"></a>==：运算符称作相等</h2><h4 id="用来检测两个操作数是否相等，会自动转换类型"><a href="#用来检测两个操作数是否相等，会自动转换类型" class="headerlink" title="用来检测两个操作数是否相等，会自动转换类型"></a>用来检测两个操作数是否相等，会自动转换类型</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;例如：输出数字类型99和字符串类型”99“</span><br><span class="line"></span><br><span class="line">console.log(99&#x3D;&#x3D;&quot;99&quot;);&#x2F;&#x2F;true</span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+</li>
+</ol>
+<p>例如：输出数字类型99和字符串类型”99“</p>
+<p>console.log(99==”99”);//true  </p>
+<p><strong>说明：不同类型间比较，==之比较“转化成同一类型后的值”看“值”是否相等</strong></p>
+<ol start="3">
+<li><h2 id="：先判断左右两边的数据类型，如果数据类型不一致，直接返回false"><a href="#：先判断左右两边的数据类型，如果数据类型不一致，直接返回false" class="headerlink" title="===：先判断左右两边的数据类型，如果数据类型不一致，直接返回false"></a>===：先判断左右两边的数据类型，如果数据类型不一致，直接返回false</h2><h4 id="如果是返回true之后才会进行两边值的判断"><a href="#如果是返回true之后才会进行两边值的判断" class="headerlink" title="如果是返回true之后才会进行两边值的判断"></a>如果是返回true之后才会进行两边值的判断</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;例如：输出数字类型99和字符串类型”99“</span><br><span class="line">console.log(99&#x3D;&#x3D;&#x3D;&quot;99&quot;);&#x2F;&#x2F;false</span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+<p>​</p>
+<p>​</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Next主题优化改造</title>
+    <url>/2020/06/12/Next%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%E6%94%B9%E9%80%A0/</url>
+    <content><![CDATA[<h2 id="Hexo-博客搭建"><a href="#Hexo-博客搭建" class="headerlink" title="Hexo 博客搭建"></a>Hexo 博客搭建</h2><h2 id="Next主题优化改造"><a href="#Next主题优化改造" class="headerlink" title="Next主题优化改造"></a>Next主题优化改造</h2><h3 id="1-Next主题启用"><a href="#1-Next主题启用" class="headerlink" title="1.Next主题启用"></a>1.Next主题启用</h3><p><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">下载主题</a>，我这里用到是nexT5的版本，如果你想用更高的版本，<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">前往</a></p>
+<p>把下载好的主题拖进themes目录下，打开站点文件夹的_config.yml,搜索theme，将后面 hexo-theme-next-5.1.4换成你的主题名字</p>
+<p>![image-20200612104456300](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\image-20200612104456300.png)</p>
+<p>在站点目录下右键Git Bash，输入命令hexo clean &amp;&amp; hexo s -d，在游览器输入localhost:4000，就能看到你的博客了</p>
+<p>![image-20200612105219396](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\image-20200612105219396.png)</p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客添加Live2D看板娘</title>
+    <url>/2019/12/09/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98/</url>
+    <content><![CDATA[<h2 id="网页添加Live2D看板娘简易教程"><a href="#网页添加Live2D看板娘简易教程" class="headerlink" title="网页添加Live2D看板娘简易教程"></a>网页添加Live2D看板娘简易教程</h2><p>看板娘是一种职业和习惯称呼，也是ACGN次文化中的萌属性之一。简而言之就是小店的女服务生，也有“吸引顾客，招揽生意，提高人气”等作用类似品牌形象代言人的含义。如果想在自己的博客上放一个呆萌的看板娘非常的简单只需要简单的几行代码就能实现。</p>
+<p><a href="https://www.live2d.com/en/" target="_blank" rel="noopener">官网</a></p>
+<h3 id="1-根目录下安装live2插件"><a href="#1-根目录下安装live2插件" class="headerlink" title="1.根目录下安装live2插件"></a>1.根目录下安装live2插件</h3><p>首先进入Hexo博客根目录，执行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<p>接着，修改根目录下的 <em>_config.yml</em> 文件</p>
+<p>添加自定义配置(下面配置做参考)：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw&#x2F;</span><br><span class="line">  pluginJsPath: lib&#x2F;</span><br><span class="line">  pluginModelPath: assets&#x2F;</span><br><span class="line">  tagMode: false</span><br><span class="line">  debug: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-koharu</span><br><span class="line">  display:</span><br><span class="line">    position: left</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br></pre></td></tr></table></figure>
+
+<p><code>注意</code></p>
+<p><code>model.use</code> 后的字符串就是看板娘模型的名字</p>
+<p>现在假设你装的看板娘也是koharu</p>
+<p>你有几种方式让看板娘进驻你的Hexo博客，这里只提供最方便的一种(命令安装)。</p>
+<h3 id="2-进入博客根目录输入以下命令："><a href="#2-进入博客根目录输入以下命令：" class="headerlink" title="2.进入博客根目录输入以下命令："></a>2.进入博客根目录输入以下命令：</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install live2d-widget-model-koharu</span><br></pre></td></tr></table></figure>
+
+<p>到此处看板娘进驻成功</p>
+<h3 id="3-执行以下命令"><a href="#3-执行以下命令" class="headerlink" title="3.执行以下命令"></a>3.执行以下命令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$hexo clean </span><br><span class="line">$hexo g</span><br><span class="line">$hexo s #本地查看</span><br><span class="line">$hexo d #上传</span><br></pre></td></tr></table></figure>
+
+<p>好了，成功了，你可以在你的blog看到一个卡哇伊的妹子了</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/koharu.png" alt=""></p>
+]]></content>
+      <tags>
+        <tag>Live2D看板娘</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>jsx原理和基本语法(一)</title>
+    <url>/2020/06/10/jsx%E5%8E%9F%E7%90%86%E5%92%8C%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95-%E4%B8%80/</url>
+    <content><![CDATA[<h2 id="1-ES6的class"><a href="#1-ES6的class" class="headerlink" title="1.ES6的class"></a>1.ES6的class</h2><ul>
+<li><p>在ES6之前，我们通过function来定义类，但是这种模式一直被很多从其他编程语言（比如Java、C++、OC等等）转到JavaScript的人所不适应。</p>
+</li>
+<li><p>原因是，大多数面向对象的语言，都是使用class关键字来定义类的。</p>
+</li>
+<li><p>ES5如何定义一个类</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    &#x2F;&#x2F; ES5定义类</span><br><span class="line">    function Person(name,age)&#123;</span><br><span class="line">        this.age &#x3D; age,</span><br><span class="line">        this.name &#x3D; name;</span><br><span class="line">    &#125;</span><br><span class="line">    Person.prototype.running &#x3D; function()&#123;</span><br><span class="line">        console.log(this.age,this.name,&quot;running&quot;);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    var p &#x3D; new Person(18,&quot;songshu&quot;);</span><br><span class="line">    console.log(p.name,p.age);</span><br><span class="line">    p.running();</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>ES6 如何定义一个类</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;ES6创建一个类</span><br><span class="line">        class Person&#123;</span><br><span class="line">            &#x2F;&#x2F;构造方法</span><br><span class="line">            constructor(name,age)&#123;</span><br><span class="line">                this.name &#x3D; name;</span><br><span class="line">                this.age &#x3D; age;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F; 定义方法 相当于ES5定义到原型上的方法</span><br><span class="line">            running() &#123;</span><br><span class="line">                console.log(this.name,this.age,&quot;running&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        const p  &#x3D; new Person(&quot;songshuai&quot;,20);</span><br><span class="line">        console.log(p.name,p.age);</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>JavaScipt类的继承</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    class Person&#123;</span><br><span class="line">  </span><br><span class="line">        constructor(name,age)&#123;</span><br><span class="line">            this.name &#x3D; name;</span><br><span class="line">            this.age &#x3D; age;</span><br><span class="line">        &#125;</span><br><span class="line">  </span><br><span class="line">        running() &#123;</span><br><span class="line">            console.log(&quot;running&quot;);</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    &#x2F;&#x2F;Student继承了Person</span><br><span class="line">    class Student extends Person&#123;</span><br><span class="line">        constructor(name,age,sno)&#123;</span><br><span class="line">            super(name,age);</span><br><span class="line">            this.sno &#x3D; sno;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    const stu &#x3D; new Student(&quot;songshuai&quot;,18,102);</span><br><span class="line">    console.log(stu.name,stu.age,stu.sno);</span><br><span class="line">    </span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="2-认识JSX"><a href="#2-认识JSX" class="headerlink" title="2. 认识JSX"></a>2. 认识JSX</h2><p>![1591796780534](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591796780534.png)</p>
+<p>■这段element变量的声明右侧赋值的标签语法是什么呢？<br>口它不是一段字符串（因为没有使用引号包裹），它看起来是一段HTML原生，但是我们能在js中直接给一个变量赋值html吗？<br>口其实是不可以的，如果我们讲type=”text/babel”去除掉，那么就会出现语法错误；口它到底是什么呢？其实它是一段jsx的语法；<br>■JSX是什么？<br>口JSX是一种JavaScript的语法扩展（extension），也在很多地方称之为JavaScriptXML，因为看起就是一段XML语法；口它用于描述我们的UI界面，并且其完成可以和JavaScript融合在一起使用；口它不同于Vue中的模块语法，你不需要专门学习模块语法中的一些指令（比如v-for、v-if、v-else、v-bind）；</p>
+<h2 id="3-为什么React选择了JSX"><a href="#3-为什么React选择了JSX" class="headerlink" title="3.为什么React选择了JSX"></a>3.为什么React选择了JSX</h2><p>React认为渲染逻辑本质上与其他UI逻辑存在内在耦合口比如UI需要绑定事件（button、a原生等等）；口比如UI中需要展示数据状态，在某些状态发生改变时，又需要改变UI；他们之间是密不可分，所以React没有讲标记分离到不同的文件中，而是将它们组合到了一起，这个地方就是组件（Component）；口当然，后面我们还是会继续学习更多组件相关的东西；</p>
+<p>在这里，我们只需要知道，JSX其实是嵌入到JavaScript中的一种结构语法；</p>
+<p>口JSX的书写规范：<br>口JSX的顶层只能有一个根元素，所以我们很多时候会在外层包裹一个div原生（或者使用后面我们学习的Fragment）；口为了方便阅读，我们通常在jsx的外层包裹一个小括号0，这样可以方便阅读，并目jsx可以进行换行书写；口JSX中的标签可以是单标签，也可以是双标签；<br>√注意：如果是单标签，必须以/&gt;结尾；</p>
+]]></content>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VM和Linux（CentOS）系统安装</title>
+    <url>/2020/06/09/VM%E5%92%8CLinux%EF%BC%88CentOS%EF%BC%89%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="1-VM和Linux（CentOS）系统安装"><a href="#1-VM和Linux（CentOS）系统安装" class="headerlink" title="1.VM和Linux（CentOS）系统安装"></a>1.VM和Linux（CentOS）系统安装</h2><h3 id="1-1安装vm和Centos"><a href="#1-1安装vm和Centos" class="headerlink" title="1.1安装vm和Centos"></a>1.1安装vm和Centos</h3><p>学习Linux需要一个环境，我们需要创建一个虚拟机，然后在虚拟机上安装一个Centos系统来学习。<br>1）先安装virtual machine，vm12</p>
+<p>2）再安装Linux（CentOS 6.8）<br>3）原理示意图，这里我们画图说明一下VM和CentOS的关系。</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152553.png" alt="1591714847875"></p>
+<h3 id="1-2-vm软件和CentOS的安装软件"><a href="#1-2-vm软件和CentOS的安装软件" class="headerlink" title="1.2 vm软件和CentOS的安装软件"></a>1.2 vm软件和CentOS的安装软件</h3><p>CentOS下载地址：</p>
+<blockquote>
+<p>网易镜像：http:/mirrors.163.com/centos/6/isos/<br>搜狐镜像：http:/mirrors.sohu.com/centos/6/isos</p>
+</blockquote>
+<h3 id="1-3-VM安装的步骤"><a href="#1-3-VM安装的步骤" class="headerlink" title="1.3 VM安装的步骤"></a>1.3 VM安装的步骤</h3><p>1）去BIOS里修改设置开启虚拟化设备支持（f2，fl0）<br>2）安装虚拟机软件（vm12）贼简单 不写了</p>
+<h3 id="1-4CentoS-安装的步骤"><a href="#1-4CentoS-安装的步骤" class="headerlink" title="1.4CentoS 安装的步骤"></a>1.4CentoS 安装的步骤</h3><p>1）创建虚拟机（空间）这里在配置网络连接时，有三种形式，需要大家伙注意：</p>
+<p>1.桥连接，Linux可以和其它的系统通信。但是可能造成ip冲突<br>2.NAT：网络地址转换方式：linux可以访问外网，不会造成ip冲突。<br>3.主机模式：你的linux是一个独立的主机，不能访问外网</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152546.png" alt="1591715113671"></p>
+<p>安装Linux系统 </p>
+<h3 id="1-5-CentOS的终端使用和联网"><a href="#1-5-CentOS的终端使用和联网" class="headerlink" title="1.5 CentOS的终端使用和联网"></a>1.5 CentOS的终端使用和联网</h3><p>1）终端的使用，点击鼠标右键，即可选择打开终端</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152537.png" alt="1591715477908"></p>
+<p>2）配置网络，可以上网。<br>点击上面右侧的；两个计算机图片，选择启用eth0，即可成功连接到网络，就可以上网。</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152527.png" alt="1591715542709"></p>
+<h3 id="1-6-vmtools安装"><a href="#1-6-vmtools安装" class="headerlink" title="1.6 vmtools安装"></a>1.6 vmtools安装</h3><h4 id="1-6-1介绍"><a href="#1-6-1介绍" class="headerlink" title="1.6.1介绍"></a>1.6.1介绍</h4><p>1）可以直接粘贴命令在windows和centos系统之间<br>2）可以设置windows和centos的共享文件夹<br>3）示意图</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152519.png" alt="1591715307182"></p>
+<h3 id="1-7-vmtools的安装和使用"><a href="#1-7-vmtools的安装和使用" class="headerlink" title="1.7 vmtools的安装和使用"></a>1.7 vmtools的安装和使用</h3><h4 id="1-7-1-安装vmtools的步骤说明"><a href="#1-7-1-安装vmtools的步骤说明" class="headerlink" title="1.7.1 安装vmtools的步骤说明"></a>1.7.1 安装vmtools的步骤说明</h4><p>1.进入centos<br>2.点击vm菜单的-&gt;install vmware tools<br>3.centos会出现一个vm的安装包<br>4.点击右键解压，得到一个安装文件<br>5.进入该vm解压的目录，该文件在/root/桌面/vmware-tools-distrib/下<br>6.安装.//mware-install.pl<br>7.全部使用默认设置即可<br>8.需要reboot重新启动即可生效</p>
+<h4 id="1-7-2-使用vmtools来设置windows和linux的共享文件夹"><a href="#1-7-2-使用vmtools来设置windows和linux的共享文件夹" class="headerlink" title="1.7.2 使用vmtools来设置windows和linux的共享文件夹"></a>1.7.2 使用vmtools来设置windows和linux的共享文件夹</h4><p>1）菜单-&gt;vm-&gt;setting，如图设置即可注意：设置选项为always enable，这样可以读写了</p>
+<p>2）windows和centos可共享d:/share目录可以读写文件了</p>
+<p>3）共享的文件是在centos的/mnt/hgfs/下</p>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo发表博客常用命令</title>
+    <url>/2020/03/23/hexo%E5%8F%91%E8%A1%A8%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="hexo发表博客常用命令"><a href="#hexo发表博客常用命令" class="headerlink" title="hexo发表博客常用命令"></a>hexo发表博客常用命令</h2><h3 id="以下命令需要在本地Blog路径下执行"><a href="#以下命令需要在本地Blog路径下执行" class="headerlink" title="以下命令需要在本地Blog路径下执行"></a>以下命令需要在本地Blog路径下执行</h3><p>###Step1 创建文章</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$hexo new &quot;hexo发表博客常用命令&quot;</span><br></pre></td></tr></table></figure>
+
+<p>###Step2 编辑文章</p>
+<p>在Blog\source_posts文件夹打开对应markdown文档进行编辑</p>
+<p>编辑md文件建议使用Typora软件 特别推荐！！！</p>
+<p>####关于文章添加图片：<br> 1 把本地Blog文件下的配置文件（非主题下）_config.yml里的post_asset_folder:选项设置为true</p>
+<p> 2 在本地Blog路径下执行npm install hexo-asset-image –save （用于下载安装一个可以上传本地图片的插件）</p>
+<p> 3 运行hexo n “xxxx”来生成md博文</p>
+<p> 会发现在/source/_posts文件夹中除了xxxx.md`文件还生成了一个同名文件夹</p>
+<p> 4最后在xxxx.md引入图片时，先把图片复制到xxxx文件夹中 然后在xxxx.md中按照markdown的格式引入图片：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![你想输入的替代文字](xxxx&#x2F;图片名.jpg)</span><br></pre></td></tr></table></figure>
+
+<p>当然你也可以选择使用图床</p>
+<p>###Step3 清除缓存 （可省略 建议使用）<br>$ hexo clean<br>清除缓存文件 db.json 和已生成的静态文件 public</p>
+<p>当网站显示异常时可以执行这条命令试试</p>
+<p>Step4 生成静态文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo g &#x2F;&#x2F;简写</span><br></pre></td></tr></table></figure>
+
+<p>这步骤就相当于程序的编译，如果有错误的话，在终端会有相应的提示信息</p>
+<p>如果没有错误的话 可以继续往下执行</p>
+<p>###Step5 启动本地服务器 （可省略）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo sever</span><br><span class="line">hexo s &#x2F;&#x2F;简写</span><br></pre></td></tr></table></figure>
+
+<p>用于预览主题，默认地址： <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
+<p>###Step6 部署到远程站点</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br><span class="line">hexo d &#x2F;&#x2F;简写</span><br></pre></td></tr></table></figure>
+
+<p>上述步骤结束后 恭喜你 一篇博文完成啦！</p>
+]]></content>
+      <tags>
+        <tag>hexo常用命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>主流浏览器和HTML标签</title>
+    <url>/2019/06/07/%E4%B8%BB%E6%B5%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%92%8Chtml%E6%A0%87%E7%AD%BE/</url>
+    <content><![CDATA[<h3 id="一-主流游览器"><a href="#一-主流游览器" class="headerlink" title="一.主流游览器"></a>一.主流游览器</h3><hr>
+<ol>
+<li>IE: trident 内核</li>
+<li>Firefox：gecko 内核</li>
+<li>Safari:webkit 内核</li>
+<li>Opera:以前是presto 内核，Opera 现已改用Google Chrome 的Blink 内核</li>
+<li>Chrome:Blink(基于webkit，Google 与Opera Software 共同开发)</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/browser.jpg" alt=""></p>
+<p><strong>特别说明</strong></p>
+<p>2018年12月5日，微软宣布：放弃浏览器Edge，转而推出一款新的浏览器，而这款新浏览器将会采用谷歌的Chromium 内核</p>
+<h3 id="二-html的基本结构"><a href="#二-html的基本结构" class="headerlink" title="二.html的基本结构"></a>二.html的基本结构</h3><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/QQ%E5%9B%BE%E7%89%8720190602225728.jpg" alt=""><br><strong>1. 常规标签</strong><br>&lt;标记 属性=“属性值” 属性=“属性值”&gt;&lt;/标记&gt;<br>标记也可叫标签或叫元素<br>例如：<head></head><br><strong>2. 空标记</strong><br>&lt;标记 属性=“属性值” /&gt;例如：<meta charset=”utf-8”><br><strong>3. 说明</strong><br>1.写在&lt;&gt;中的第一个单词叫做标记，标签，元素。</p>
+<p>2.标记和属性用空格隔开，属性和属性值用等号连接，属性值必须放在“”号内。</p>
+<p>3.一个标记可以没有属性也可以有多个属性，属性和属性之间不分先后顺序。</p>
+<p>4.空标记没有结束标签，用“/”代替。</p>
+<h3 id="三-常用标签-元素"><a href="#三-常用标签-元素" class="headerlink" title="三.常用标签(元素)"></a>三.常用标签(元素)</h3><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/QQ%E5%9B%BE%E7%89%8720190602224929.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/QQ%E5%9B%BE%E7%89%8720190602225125.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/QQ%E5%9B%BE%E7%89%8720190602225133.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/QQ%E5%9B%BE%E7%89%8720190602225141.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/QQ%E5%9B%BE%E7%89%8720190602225148.png" alt=""></p>
+]]></content>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>连接mysql出现2005错误的原因和解决方法</title>
+    <url>/2019/12/06/mysql/</url>
+    <content><![CDATA[<h3 id="1-今天连接数据库报2005错误-如下图"><a href="#1-今天连接数据库报2005错误-如下图" class="headerlink" title="1.今天连接数据库报2005错误,如下图."></a>1.今天连接数据库报2005错误,如下图.</h3><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/error.png" alt=""></p>
+<h3 id="原因-pc端没有联网"><a href="#原因-pc端没有联网" class="headerlink" title="原因: pc端没有联网"></a>原因: pc端没有联网</h3><h3 id="解决方法-连上互联网即可"><a href="#解决方法-连上互联网即可" class="headerlink" title="解决方法: 连上互联网即可!"></a>解决方法: 连上互联网即可!</h3><h3 id="2-今天连接数据库报2003错误-如下图"><a href="#2-今天连接数据库报2003错误-如下图" class="headerlink" title="2.今天连接数据库报2003错误,如下图."></a>2.今天连接数据库报2003错误,如下图.</h3><p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/mysql.jpg" alt=""></p>
+<h3 id="原因：没再服务中打开数据库"><a href="#原因：没再服务中打开数据库" class="headerlink" title="原因：没再服务中打开数据库"></a>原因：没再服务中打开数据库</h3><p>解决方案：鼠标右击“我的电脑”—–&gt;管理—-&gt;服务和应用程序—-&gt;服务—&gt;找到mysql启动程序就可以了或者在控制面版—–&gt;管理工具—–&gt;服务</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/jiejue.png" alt=""></p>
+]]></content>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>写在前面</title>
+    <url>/2019/12/12/%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2/</url>
+    <content><![CDATA[<h2 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a><center>写在前面的话</center></h2><hr>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>&nbsp;半年前我用hexo+github的方式搭建了博客，但是作为一个重度拖延症患者，半年里面文章寥寥无几。</strong></p>
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;大学四年时光，整日无所事事，虚度光阴，浪费青春，浑浑噩噩;而今已至大学的尾声，想想自己毫无收获！今吾幡然醒悟，念往日已不可追，来日犹可期，卸下所有的焦躁和不安，珍惜当下，把握时间，做好自己该做的事。</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>养成书写博客的习惯，以此来记录自己一路的成长，同时能够借助于博客对自己的学习笔记进行有效的管理，防止笔记出现丢失和损坏的情况。</strong></p>
+<p>​                                                        </p>
+<p>​    </p>
+<p>​                                                                                <strong>2019.12.12</strong></p>
+<p>​                                                                                <strong>songstar.</strong></p>
+]]></content>
+      <tags>
+        <tag>文章</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vscode open-in-browser问题</title>
+    <url>/2019/12/10/vscode-open-in-browser%E6%89%93%E4%B8%8D%E5%BC%80%E6%B5%8F%E8%A7%88%E5%99%A8/</url>
+    <content><![CDATA[<h2 id="vscode-open-in-browser打不开浏览器"><a href="#vscode-open-in-browser打不开浏览器" class="headerlink" title="vscode open-in-browser打不开浏览器"></a>vscode open-in-browser打不开浏览器</h2><p>今天使用vs code 写代码却打不开游览器，报错代码如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Open browser failed!! Please check if you have installed the browser chrome correctly!</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/Snipaste_2019-12-10_17-22-13.png" alt=""></p>
+<p>Open in browser 已经调试默认游览器为谷歌游览器</p>
+<p>尝试了网上很多办法都没有用，后来去了贴吧发现解决办法如下：在插件open in browser下点击设置按钮，右键——安装另一个版本，选择1.1.0版本安装</p>
+<p>随后加载后，便能打开网页</p>
+<p>至于什么原因导致这样，也没明白，不过问题解决了</p>
+]]></content>
+      <tags>
+        <tag>vscode open-in-browser打不开浏览器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>B站视频链接在这!</title>
+    <url>/2019/12/03/%E5%89%8D%E7%AB%AF%E8%A7%86%E9%A2%91%E7%9A%84%E9%93%BE%E6%8E%A5/</url>
+    <content><![CDATA[<h3 id="B站链接提取"><a href="#B站链接提取" class="headerlink" title="B站链接提取"></a>B站链接提取</h3><h1 id="兄弟点我获取云盘"><a href="#兄弟点我获取云盘" class="headerlink" title="兄弟点我获取云盘"></a><a href="https://pan.baidu.com/s/1le0xMkjv54PyKAwSnu1Pyw" target="_blank" rel="noopener">兄弟点我获取云盘</a></h1><h3>提取码：hc47 </h3>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1le0xMkjv54PyKAwSnu1Pyw </span><br><span class="line"></span><br><span class="line">提取码：hc47 </span><br><span class="line"></span><br><span class="line">复制这段内容后打开百度网盘手机App，操作更方便哦</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>熟悉Linux的目录结构</title>
+    <url>/2020/06/09/%E7%86%9F%E6%82%89Linux%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[<h2 id="1-Linux的目录结构"><a href="#1-Linux的目录结构" class="headerlink" title="1.Linux的目录结构"></a>1.Linux的目录结构</h2><h3 id="1-1基本介绍"><a href="#1-1基本介绍" class="headerlink" title="1.1基本介绍"></a>1.1基本介绍</h3><p>linux的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“/”，然后在此目录下再创建其他的目录。<br>深刻理解linux树状文件目录是非常重要的，这里我给大家说明一下。<br>记住一句经典的话：<strong>在Linux世界里，一切皆文件</strong>。</p>
+<p>![1591716031302](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591716031302.png)</p>
+<p>1.2 目录结构的具体介绍</p>
+<ul>
+<li>/bin[重点]（/usr/bin、/usr/local/bin）<br>是Binary的缩写，这个目录存放着最经常使用的命令</li>
+<li>/sbin（/usr/sbin、/usr/local/sbin）<br>s就是Super User的意思，这里存放的是系统管理员使用的系统管理程序。</li>
+<li>/home[重点]<br>存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的。</li>
+<li>/root[重点]<br>该目录为系统管理员，也称作超级权限者的用户主目录。</li>
+<li>/boot[重点]<br>存放的是启动Linux时使用的一些核心文件，包括一些连接文件以及镜像文件</li>
+<li>/proc<br>这个目录是一个虚拟的目录，它是系统内存的映射，访间这个目录来获取系统信息。</li>
+<li>/srv<br>service缩写，该目录存放一些服务启动之后需要提取的数据。</li>
+<li>/sys<br>这是linux2.6内核的一个很大的变化。该目录下安装了2.6内核中新出现的一个文件系统</li>
+<li>/tmp<br>这个目录是用来存放一些临时文件的。</li>
+<li>/dev<br>类似于winthows的设备管理器，把所有的硬件用文件的形式存储。</li>
+<li>/media[重点]<br>linux系统会自动识别一些设备，例如U盘、光驱等等，当识别后，linux会把识别的设备挂载到这个目录下。</li>
+<li>/mnt[重点]<br>系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以将外部的存储挂载在/mnt/上，然后进入该目录就可以查看里的内容了。比如d:/share</li>
+<li>/opt<br>这是给主机额外安装软件所摆放的目录。如安装ORACLE数据库就可放到该目录下，默认为空。</li>
+<li>/usr/local[重点]<br>这是别一个给主机额外安装软件所安装的目录。一般是通过编译源码方式安装的程序。</li>
+<li>/var[重点]<br>这个目录中存放着在不断扩充着的东西，习惯将经常被修改的目录放在这个目录下。包括各种日志文件。</li>
+<li>/selinux[security-enhanced linux]360<br>SELinux是一种安全子系统，它能控制程序只能访间特定文件。</li>
+</ul>
+<h3 id="4-3Linux目录总结一下"><a href="#4-3Linux目录总结一下" class="headerlink" title="4.3Linux目录总结一下"></a>4.3Linux目录总结一下</h3><p>1）linux的目录中有且只要一个根目录/<br>2）linux的各个目录存放的内容是规划好，不用乱放文件。<br>3）linux是以文件的形式管理我们的设备，因此linux系统，一切皆为文件。</p>
+<p>4）linux的各个文件目录下存放什么内容，大家必须有一个认识。<br>5）学习后，你脑海中应该有一颗linux目录树</p>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>摘抄【1】</title>
+    <url>/2020/05/16/%E6%91%98%E6%8A%84/</url>
+    <content><![CDATA[<h2 id="关于摘抄"><a href="#关于摘抄" class="headerlink" title="关于摘抄"></a>关于摘抄</h2><h4 id="初中的时候喜欢看疯狂阅读系列，每当看见美好的句子-其实是毒鸡汤-，都会被其惊艳-打打鸡血-，然后摘抄下来。大学摘抄了好几个本子，再后来我就找不到，呜呜呜……"><a href="#初中的时候喜欢看疯狂阅读系列，每当看见美好的句子-其实是毒鸡汤-，都会被其惊艳-打打鸡血-，然后摘抄下来。大学摘抄了好几个本子，再后来我就找不到，呜呜呜……" class="headerlink" title="初中的时候喜欢看疯狂阅读系列，每当看见美好的句子(其实是毒鸡汤)，都会被其惊艳(打打鸡血)，然后摘抄下来。大学摘抄了好几个本子，再后来我就找不到，呜呜呜……"></a>初中的时候喜欢看疯狂阅读系列，每当看见美好的句子(其实是毒鸡汤)，都会被其惊艳(打打鸡血)，然后摘抄下来。大学摘抄了好几个本子，再后来我就找不到，呜呜呜……</h4><ol>
+<li><p>守得云开见月明（很喜欢的一句）</p>
+</li>
+<li><p>莫听穿林打叶声，何妨吟啸且徐行</p>
+</li>
+</ol>
+<p>3.这个世界真的很公平，你想要最好的，就要承受最痛的 </p>
+<p>4.不满现状，向上奋发是赚钱发财的前提</p>
+<p>5.人才都是熬出来的，本事都是逼出来的</p>
+<p>6.贪财有道，好色有品，博学有识，读书有瘾，喝酒有量，玩笑有度</p>
+<p>7.人这一辈子改变命运的机会能有几次？出生，高考，考研</p>
+<p>8.有句话之前不在意，后来坚信不疑：知识改变命运</p>
+<p>9.真正的读书源于内心的热爱，这份爱纯粹天热，就像向阳花追寻太阳，不为名利，听从的是心的召唤、</p>
+<p>10.留三分贪财好色，以防与世俗格格不入：剩下七分一本正经，以图安守己谋此生</p>
+<p>11.遇见你啊，是晨曦见微光，朝露其芳草，初见心上，瞬间满时光</p>
+<p>12.你要悄悄拔尖，然后惊艳所有人</p>
+<ol start="13">
+<li><p>当你应该努力的时候，请不要用你的年轻还小这些来做借口了</p>
+</li>
+<li><p>最怕你一生碌碌无为，却自命不凡</p>
+</li>
+<li><p>天无百日雨，人无一世苦</p>
+</li>
+<li><p>男孩子就要多赚点钱，有空的时候就多提升打扮下自己（经济基础决定上层建筑）</p>
+</li>
+<li><p>不受教育的人，因为不识字上人的当，受教育的人，因为识了字，上了印刷品的当</p>
+</li>
+<li><p>你可以像猪一样活着，你不会向猪一样快乐</p>
+</li>
+<li><p>张文宏：不读书，就是别人怎么欺负你，你就怎么欺负回去。但如果你读书多了，你会选择不再跟那些人有关系</p>
+</li>
+<li><p>在等待的日子，刻苦读书，谦卑做人，养得深根，日后才能枝繁叶茂</p>
+</li>
+<li><p>低谷时期,不打扰任何人，守心自暖</p>
+<h3 id="最后，晚安，今天先到这！"><a href="#最后，晚安，今天先到这！" class="headerlink" title="最后，晚安，今天先到这！"></a>最后，晚安，今天先到这！</h3></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>摘抄</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>环境变量的作用</title>
+    <url>/2019/12/13/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="一-什么是环境变量"><a href="#一-什么是环境变量" class="headerlink" title="一.什么是环境变量"></a>一.什么是环境变量</h2><p>环境变量是在操作系统中一个具有特定名字的对象，它包含了一个或者多个应用程序所将使用到的信息，例如Windows和DOS操作系统中的path环境变量，当要求系统运行一个程序而没有告诉它程序所在的完整路径时，系统除了在当前目录下面寻找此程序外，<strong>还应到path中指定的路径去找</strong>。用户通过设置环境变量，来更好的运行进程。</p>
+<p><strong>简单来说，环境变量就是告诉电脑去哪里找命令。</strong></p>
+<p>eg你打开dos窗口输入命令：javac<br>此时windows干了什么事呢？<br>它首先去[当前目录下找javac.exe<br>如果发现没有就去system32下找<br>如果还没有就去你电脑中配置的环境变量中找了，如果这里也没有，那么就告诉你没有这个命令</p>
+<p>如果你装了JDK：c:\java\jdk1.6，你就可以把c:\java\jdk1.6\bin配置到环境变量中，此时重启dos，输入javac，就会成功执行该命令</p>
+<h2 id="二-环境变量的位置"><a href="#二-环境变量的位置" class="headerlink" title="二.环境变量的位置"></a>二.环境变量的位置</h2><p>Windows中环境变量分为两类：<strong>用户变量与系统变量</strong>，在注册表中都有对应的项。</p>
+<p>其中用户变量所在位置：</p>
+<p>HKEY_CURRENT_USER\Environment；</p>
+<p>系统变量所在位置为：\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Environment。</p>
+<h2 id="三-环境变量的配置"><a href="#三-环境变量的配置" class="headerlink" title="三.环境变量的配置"></a>三.环境变量的配置</h2><p>方法如下：<br>点击我的电脑然后按右键——属性——高级——环境变量——新建——名称/路径。</p>
+<p>添加环境变量，通过新建按钮添加环境变量；变量与值之间的关系是一对多，多个值之间用英文;（分号）隔开。</p>
+<p>在“环境变量”里，上面为：用户环境变量，下面为：系统环境变量；不要轻易修改系统环境变量。</p>
+<h2 id="四-环境变量的作用"><a href="#四-环境变量的作用" class="headerlink" title="四.环境变量的作用"></a>四.环境变量的作用</h2><p>我们知道用Java语言写好程序后，需要输入javac进行编译。而编译的前提是要定位到编译程序的位置也就是javac.exe的路径。可是如果我们每次编译都得手写代码跳转到javac的目录下效率就太低了。能不能让我们写好程序后，无论目录在哪，直接输入javac就编译成功呢？这就用到了环境变量。</p>
+]]></content>
+      <tags>
+        <tag>环境变量</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>理解JS闭包</title>
+    <url>/2019/06/09/%E7%90%86%E8%A7%A3JS%E9%97%AD%E5%8C%85/</url>
+    <content><![CDATA[<h1 id="理解JS闭包"><a href="#理解JS闭包" class="headerlink" title="理解JS闭包"></a>理解JS闭包</h1><h2 id="一-什么是闭包"><a href="#一-什么是闭包" class="headerlink" title="一.什么是闭包?"></a>一.什么是闭包?</h2><p><strong>闭包指的是：有权访问其他函数作用域的变量的函数</strong></p>
+<p><strong>换句话来说就是:内层作用域可以访问外层作用域的变量</strong></p>
+<p>函数模式的闭包:在一个函数中有一个函数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function outside() &#123;</span><br><span class="line">  var num&#x3D;99;</span><br><span class="line">  &#x2F;&#x2F;函数的声明</span><br><span class="line">  function inner() &#123;</span><br><span class="line">    console.log(num);</span><br><span class="line">  &#125;</span><br><span class="line">  &#x2F;&#x2F;函数调用</span><br><span class="line">  inner();</span><br><span class="line">&#125;</span><br><span class="line">outside();</span><br></pre></td></tr></table></figure>
+
+<p> 对象模式的闭包:函数中有一个对象</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function f1() &#123;</span><br><span class="line">  var num&#x3D;100;</span><br><span class="line">  var obj&#x3D;&#123;</span><br><span class="line">    age:num</span><br><span class="line">  &#125;;</span><br><span class="line">  console.log(obj.age);&#x2F;&#x2F;100</span><br><span class="line">&#125;</span><br><span class="line">f1();</span><br></pre></td></tr></table></figure>
+
+<h2 id="二-普通函数和闭包函数的对比"><a href="#二-普通函数和闭包函数的对比" class="headerlink" title="二.普通函数和闭包函数的对比"></a>二.普通函数和闭包函数的对比</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;普通的函数</span><br><span class="line">function f1() &#123;</span><br><span class="line">  var num &#x3D; 10;</span><br><span class="line">  num++;</span><br><span class="line">  return num;</span><br><span class="line">&#125;</span><br><span class="line">console.log(f1());&#x2F;&#x2F;11</span><br><span class="line">console.log(f1());&#x2F;&#x2F;11</span><br><span class="line">console.log(f1());&#x2F;&#x2F;11</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;函数模式的闭包</span><br><span class="line">function f2() &#123;</span><br><span class="line">  var num &#x3D; 10;</span><br><span class="line">  return function () &#123;</span><br><span class="line">    num++;</span><br><span class="line">    return num;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var ff &#x3D; f2();</span><br><span class="line">console.log(ff());&#x2F;&#x2F;11</span><br><span class="line">console.log(ff());&#x2F;&#x2F;12</span><br><span class="line">console.log(ff());&#x2F;&#x2F;13</span><br></pre></td></tr></table></figure>
+
+<h2 id="三-闭包的作用"><a href="#三-闭包的作用" class="headerlink" title="三.闭包的作用"></a>三.闭包的作用</h2><h4 id="作用-缓存数据-延长作用域链"><a href="#作用-缓存数据-延长作用域链" class="headerlink" title="作用:缓存数据,延长作用域链"></a><strong>作用:缓存数据,延长作用域链</strong></h4><p>闭包后,里面的局部变量的使用作用域链就会被延长</p>
+<h4 id="优点"><a href="#优点" class="headerlink" title="优点:"></a><strong>优点:</strong></h4><ol>
+<li>希望一个变量长期驻扎在内存中</li>
+</ol>
+<ol start="2">
+<li>避免全局变量的污染   </li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">  例如: window.onload &#x3D; function () &#123;</span><br><span class="line">    var aLi &#x3D; document.getElementById(&quot;li&quot;);</span><br><span class="line">    for (var i &#x3D; 0; i &lt; aLi.length; i++) &#123;</span><br><span class="line">      aLi[i].onclick &#x3D; function () &#123;</span><br><span class="line">        alert(i);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  &#x2F;&#x2F; 注意：此时点击每个li都会弹出的是3，原因是点击事件还没发生时，循环已经结束了，然而循环结束后的i &#x3D; 3，故点击每个li都会弹出3</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 现在用闭包来解决：</span><br><span class="line">  window.onload &#x3D; function () &#123;</span><br><span class="line">    var aLi &#x3D; document.getElementById(&quot;li&quot;);</span><br><span class="line">    for (var i &#x3D; 0; i &lt; aLi.length; i++) &#123;</span><br><span class="line">      aLi[i].onclick &#x3D; (function (i) &#123;</span><br><span class="line">        return function () &#123;</span><br><span class="line">          alert(i);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)(i)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点:"></a><strong>缺点:</strong></h4><ol>
+<li>会引发内存泄漏问题</li>
+</ol>
+<p>滥用闭包函数会造成内存泄露，因为闭包中引用到的包裹函数中定义的变量都</p>
+<p>永远不会被释放，所以我们应该在必要的时候，及时释放这个闭包函数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">window.onload&#x3D;function()&#123;</span><br><span class="line">	var oDiv&#x3D;document.getElementById(&quot;div1&quot;);</span><br><span class="line">	oDiv.onclick&#x3D;function()&#123;</span><br><span class="line">		alert(oDiv.id);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">注意：在IE下会发生内存泄漏 ，也就是说在浏览器关闭之前变量都会存在。</span><br></pre></td></tr></table></figure>
+
+<p><strong>解决方法</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">window.onload&#x3D;function()&#123;</span><br><span class="line">	var oDiv&#x3D;document.getElementById(&quot;div1&quot;);</span><br><span class="line">	var id&#x3D;oDiv.id;</span><br><span class="line">	oDiv.onclick&#x3D;function()&#123;</span><br><span class="line">		alert(id);</span><br><span class="line">		&#125;</span><br><span class="line">	oDiv&#x3D;null;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结:"></a>总结:</h1><ol>
+<li>如果想要缓存数据,就把这个数据放在外层的函数和里层的函数的中间位置   </li>
+<li>闭包的作用:缓存数据.优点也是缺陷,没有及时的释放</li>
+<li>局部变量是在函数中,函数使用结束后,局部变量就会被自动的释放</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用基础Markdown语法编写blog</title>
+    <url>/2019/12/07/%E7%94%A8Markdown%E8%AF%AD%E6%B3%95%E7%BC%96%E5%86%99blog/</url>
+    <content><![CDATA[<h1 id="用Markdown语法编写blog"><a href="#用Markdown语法编写blog" class="headerlink" title="用Markdown语法编写blog"></a>用Markdown语法编写blog</h1><ul>
+<li><h2 id="一、什么是Markdown语法"><a href="#一、什么是Markdown语法" class="headerlink" title="一、什么是Markdown语法"></a>一、什么是Markdown语法</h2><p>Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
+<p>用易于编写的纯文本格式进行编写,然后将其转化为结构有效的HTML或者XHTML</p>
+<p>简单的来说就是它可以帮你编写出自带特效的文字,比如你现在所看到的就是Markdown语法编写的</p>
+</li>
+<li><h2 id="二、熟悉Markdown常用语法"><a href="#二、熟悉Markdown常用语法" class="headerlink" title="二、熟悉Markdown常用语法"></a>二、熟悉Markdown常用语法</h2><ul>
+<li><h3 id="拥有Markdown编辑器"><a href="#拥有Markdown编辑器" class="headerlink" title="拥有Markdown编辑器"></a>拥有Markdown编辑器</h3></li>
+</ul>
+<p>1.<a href="https://www.typora.io/" target="_blank" rel="noopener">typora</a></p>
+<p>2.<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">vs code</a>  需要安装插件 Markdown all in one   实时预览快捷键ctrl+shift+v</p>
+<p>3.vim</p>
+<ul>
+<li><h3 id="开始熟悉语法"><a href="#开始熟悉语法" class="headerlink" title="开始熟悉语法"></a>开始熟悉语法</h3></li>
+</ul>
+</li>
+<li><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>语法:#空格 + 你的文字</p>
+<p>标题用  #  这个符号</p>
+<p>用1到5个#,可以理解为HTML中的h1到h5</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 标题1</span><br><span class="line">## 标题2</span><br><span class="line">### 标题3</span><br><span class="line">#### 标题4</span><br><span class="line">##### 标题五</span><br><span class="line">效果如下</span><br></pre></td></tr></table></figure>
+
+<h1 id="标题1"><a href="#标题1" class="headerlink" title="标题1"></a>标题1</h1><h2 id="标题2"><a href="#标题2" class="headerlink" title="标题2"></a>标题2</h2><h3 id="标题3"><a href="#标题3" class="headerlink" title="标题3"></a>标题3</h3><h4 id="标题4"><a href="#标题4" class="headerlink" title="标题4"></a>标题4</h4><h5 id="标题五"><a href="#标题五" class="headerlink" title="标题五"></a>标题五</h5></li>
+<li><h3 id="菜单"><a href="#菜单" class="headerlink" title="菜单"></a>菜单</h3><p>语法: *或-号空格  +  你的文字</p>
+<p>菜单用 -或*号都可以</p>
+<p>通常用于列出一些必须安装的东西或其他的清单</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 2.菜单</span><br><span class="line">- 西红柿</span><br><span class="line">- 哈密瓜</span><br><span class="line">- 大白菜</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>西红柿</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>哈密瓜</li>
+</ul>
+<ul>
+<li>大白菜</li>
+</ul>
+<ul>
+<li><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>语法: &gt;空格  +   你的文字</p>
+<p>通常可以引用里面突出你的内容</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 3.引用</span><br><span class="line">&gt; 窗前明月光</span><br><span class="line">&gt; 低头思故乡</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>窗前明月光<br>低头思故乡</p>
+</blockquote>
+</li>
+<li><h3 id="粗体或斜体"><a href="#粗体或斜体" class="headerlink" title="粗体或斜体"></a>粗体或斜体</h3><p>粗体:</p>
+<p>语法: **你的文字**  </p>
+<p>斜体:</p>
+<p>语法:*你的文字*</p>
+<p>作用是强调或者突出一个词</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 4.粗体和斜体</span><br><span class="line">  **我是粗体**</span><br><span class="line">  *我是斜体*</span><br></pre></td></tr></table></figure>
+
+<p>  <strong>我是粗体</strong><br>  <em>我是斜体</em></p>
+</li>
+<li><h3 id="高亮强调"><a href="#高亮强调" class="headerlink" title="高亮强调"></a>高亮强调</h3><p>语法:`你的文字`</p>
+<p>这个符号是在ESCj键下面</p>
+<p>作用也是突出强调你的文字</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 5.亮度强调</span><br><span class="line">&#96;注意:&#96;</span><br><span class="line">&#96;卖大白菜的来了,赶紧买白菜&#96;</span><br></pre></td></tr></table></figure>
+
+<p><code>注意:</code><br><code>卖大白菜的来了,赶紧买白菜</code></p>
+</li>
+<li><h3 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h3><p>语法:</p>
+<p>```语法类型</p>
+<p>你的代码</p>
+<p>```</p>
+<p>作用于代码,例如:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo &quot;代码高亮&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+</li>
+<li><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>语法:[描述](链接)</p>
+<p><a href="https://songstars.github.io/">博客</a></p>
+<p>可以点击这段文字后跳转到这个链接</p>
+</li>
+<li><h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>语法: ![]()</p>
+<p>这个  …需要用到图床…网上有免费的sm.sm </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![](https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Songstars&#x2F;picgo&#x2F;master&#x2F;HQ%7DERW%24WFTGIV65%25%25YO%5DVJU.png)</span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picgo/master/HQ%7DERW%24WFTGIV65%25%25YO%5DVJU.png" alt=""></p>
+</li>
+<li><h3 id="插入分割线"><a href="#插入分割线" class="headerlink" title="插入分割线"></a>插入分割线</h3><p>语法:***</p>
+<hr>
+<p>一般用于一大段就可以用一下分割线,会显得整洁一些</p>
+</li>
+<li><h3 id="9-插入视频"><a href="#9-插入视频" class="headerlink" title="9.插入视频"></a>9.插入视频</h3><p>额 这个可以用嵌入代码的方式或者用a标签</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe src&#x3D;&quot;&#x2F;&#x2F;player.bilibili.com&#x2F;player.html?aid&#x3D;55070757&amp;cid&#x3D;96238595&amp;page&#x3D;1&quot; scrolling&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; frameborder&#x3D;&quot;no&quot; framespacing&#x3D;&quot;0&quot; allowfullscreen&#x3D;&quot;true&quot;&gt; &lt;&#x2F;iframe&gt;</span><br><span class="line">&lt;a href &#x3D; &quot;https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;av55070757&#x2F;&quot;&gt;前端学习&lt;&#x2F;a&gt;</span><br></pre></td></tr></table></figure>
+
+<iframe src="//player.bilibili.com/player.html?aid=55070757&cid=96238595&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<a href = "https://www.bilibili.com/video/av55070757/">前端学习</a>
+</li>
+<li><h3 id="10-表格"><a href="#10-表格" class="headerlink" title="10.表格"></a>10.表格</h3><p>语法:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">col 2 is	centered	$12</span><br><span class="line">| Tables        | Are           | Cool  |</span><br><span class="line">| ------------- |:-------------:| -----:|</span><br><span class="line">| col 3 is      | right-aligned | $1600 |</span><br><span class="line">| col 2 is      | centered      |   $12 |</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">姓名</th>
+<th align="center">性别</th>
+<th align="center">年龄</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">张三</td>
+<td align="center">男</td>
+<td align="center">16</td>
+</tr>
+<tr>
+<td align="center">李四</td>
+<td align="center">女</td>
+<td align="center">14</td>
+</tr>
+<tr>
+<td align="center">王五</td>
+<td align="center">人妖</td>
+<td align="center">18</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<ul>
+<li><h2 id="三、用Markdown语法编写你的blog"><a href="#三、用Markdown语法编写你的blog" class="headerlink" title="三、用Markdown语法编写你的blog"></a>三、用Markdown语法编写你的blog</h2></li>
+</ul>
+<h3 id="1-创建一个hexo的文章"><a href="#1-创建一个hexo的文章" class="headerlink" title="1.创建一个hexo的文章"></a>1.创建一个hexo的文章</h3><p>先cd到自己的blog目录</p>
+<p>然后执行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new title</span><br></pre></td></tr></table></figure>
+
+<p>比如你想创建一个hello word 的文章</p>
+<p>就执行 hexo new “hello word”</p>
+<p>然后会输出一个文章目录  这个md文档就在你的blog/source/_post/文件下</p>
+<p>额  那我们就可以在这个文档下奋笔疾书了</p>
+]]></content>
+      <tags>
+        <tag>Markdown语法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>认识Photoshop:图层处理</title>
+    <url>/2020/06/09/%E8%AE%A4%E8%AF%86Photoshop-%E5%9B%BE%E5%B1%82%E5%A4%84%E7%90%86/</url>
+    <content><![CDATA[<h2 id="图片调色处理"><a href="#图片调色处理" class="headerlink" title="图片调色处理"></a>图片调色处理</h2><h3 id="1-主要运用的工具功能"><a href="#1-主要运用的工具功能" class="headerlink" title="1.主要运用的工具功能"></a>1.主要运用的工具功能</h3><h4 id="1-1明暗-颜色常用工具"><a href="#1-1明暗-颜色常用工具" class="headerlink" title="1.1明暗,颜色常用工具"></a>1.1明暗,颜色常用工具</h4><p>曲线  快捷键：ctrl+m</p>
+<p>色阶  快捷键：ctrl+L</p>
+<p>色相饱和度  快捷键：ctrl+u </p>
+<p>ACR-Adobe Camera Raw e 快捷键：ctrl+shfit+a</p>
+<p>短期非常用：<strong>色彩平衡     可选颜色</strong></p>
+<h3 id="2-图像调色功能系统运用"><a href="#2-图像调色功能系统运用" class="headerlink" title="2.图像调色功能系统运用"></a>2.图像调色功能系统运用</h3><h4 id="2-1图层调整"><a href="#2-1图层调整" class="headerlink" title="2.1图层调整"></a>2.1图层调整</h4><p>菜单栏图像—&gt;调整—&gt;曝光度<br>对原图层直接进行操作，会造成破坏性的，不可逆的问题后期不可调整</p>
+<p>![1591712548497](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591712548497.png)</p>
+<p>独立独特的图层，仅对画面进行调整，对图层不破坏，可逆可修改可开关后期好调整</p>
+<h3 id="3-调色工具"><a href="#3-调色工具" class="headerlink" title="3.调色工具"></a>3.调色工具</h3><h4 id="3-1色彩工具"><a href="#3-1色彩工具" class="headerlink" title="3.1色彩工具"></a>3.1色彩工具</h4><h4 id="3-2曲线工具"><a href="#3-2曲线工具" class="headerlink" title="3.2曲线工具"></a>3.2曲线工具</h4><p>在RGB面板调整中去灰提高对比+不变色</p>
+<p>![1591712684613](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591712684613.png)</p>
+<h4 id="3-3色相饱和度"><a href="#3-3色相饱和度" class="headerlink" title="3.3色相饱和度"></a>3.3色相饱和度</h4><h5 id="3-3-1色彩三要素"><a href="#3-3-1色彩三要素" class="headerlink" title="3.3.1色彩三要素"></a>3.3.1色彩三要素</h5><p>色相：</p>
+<p>![1591712734879](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591712734879.png)</p>
+<p>饱和度：</p>
+<p>![1591712753480](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591712753480.png)</p>
+<p>明度：</p>
+<p>![1591712773899](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591712773899.png)</p>
+<p>可以直接改变颜色相貌 颜色鲜艳度 颜色的亮度</p>
+<h5 id="3-3-2在直接改变-颜色相貌-时最常用"><a href="#3-3-2在直接改变-颜色相貌-时最常用" class="headerlink" title="3.3.2在直接改变-颜色相貌-时最常用"></a>3.3.2在直接改变-颜色相貌-时最常用</h5><p>作用：把一个颜色改变成另外一个颜色    效果：最直观，最快速</p>
+<h3 id="4-照片偏色纠正"><a href="#4-照片偏色纠正" class="headerlink" title="4.照片偏色纠正"></a>4.照片偏色纠正</h3><h4 id="4-1菜单-滤德-Adobe-Camera-Raw"><a href="#4-1菜单-滤德-Adobe-Camera-Raw" class="headerlink" title="4.1菜单-滤德-Adobe-Camera Raw"></a>4.1菜单-滤德-Adobe-Camera Raw</h4><p>专业的调色滤 可操作调色中的70%颜色问题，剩下30%需要PS完成（点睛之笔）</p>
+<p>注意：CS6之前没有此功能</p>
+<p>用法：点击画面中一个点：在现实中是白色的，在当前片子照片中却不是白色的</p>
+<h4 id="4-2什么是中性色"><a href="#4-2什么是中性色" class="headerlink" title="4.2什么是中性色"></a>4.2什么是中性色</h4><p>阴影–中间调-高光<br>光影关系</p>
+<h4 id="4-3核心知识点"><a href="#4-3核心知识点" class="headerlink" title="4.3核心知识点"></a>4.3核心知识点</h4><p>对颜色的认知：色相环</p>
+<p>![1591713191051](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591713191051.png)</p>
+<h3 id="5-经验分享"><a href="#5-经验分享" class="headerlink" title="5.经验分享"></a>5.经验分享</h3><h4 id="5-1线性光高反差"><a href="#5-1线性光高反差" class="headerlink" title="5.1线性光高反差"></a>5.1线性光高反差</h4><p>ctrl+J 复制图层<br>混合模式-线性光<br>菜单栏滤镜其它-高反差（适当数值）<br>ctrl+e合成两个图层<br>实战一增加纹理质感均可如照片变清晰</p>
+]]></content>
+      <tags>
+        <tag>Photoshop</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>认识Photoshop</title>
+    <url>/2020/06/05/%E8%AE%A4%E8%AF%86Photoshop/</url>
+    <content><![CDATA[<h3 id="Ps界面工具认知"><a href="#Ps界面工具认知" class="headerlink" title="Ps界面工具认知"></a>Ps界面工具认知</h3><h4 id="区域位置"><a href="#区域位置" class="headerlink" title="区域位置"></a>区域位置</h4><p><img src="D:%5CBlog%5Csource_posts%5C%E8%AE%A4%E8%AF%86Photoshop%5C1591349469383.png" alt="1591349469383"></p>
+<h3 id="一-菜单栏"><a href="#一-菜单栏" class="headerlink" title="一. 菜单栏"></a>一. 菜单栏</h3><h5 id="1-所有功能选项集合，只需了解掌握50-，满足日常操作即可"><a href="#1-所有功能选项集合，只需了解掌握50-，满足日常操作即可" class="headerlink" title="1. 所有功能选项集合，只需了解掌握50%，满足日常操作即可"></a>1. 所有功能选项集合，只需了解掌握50%，满足日常操作即可</h5><h5 id="2-ps常见存储格式："><a href="#2-ps常见存储格式：" class="headerlink" title="2. ps常见存储格式："></a>2. ps常见存储格式：</h5><h6 id="⑴-jpg-最常用图片格式"><a href="#⑴-jpg-最常用图片格式" class="headerlink" title="⑴  jpg(最常用图片格式"></a>⑴  jpg(最常用图片格式</h6><p>日常作图存储格式*  作品展示 * 作业保存格式</p>
+<p>只有单一图层</p>
+<p>通用图片格式</p>
+<p>内存小，画质高</p>
+<h6 id="⑵-png-透明图片格式"><a href="#⑵-png-透明图片格式" class="headerlink" title="⑵.png(透明图片格式)"></a>⑵.png(透明图片格式)</h6><p>通常用于抠图后的素材保存格式</p>
+<p>可以是透明底</p>
+<p>素材最常用的格式</p>
+<p>合成/精修/作图必备</p>
+<h6 id="⑶-GIF"><a href="#⑶-GIF" class="headerlink" title="⑶ .GIF"></a>⑶ .GIF</h6><p>通常为点动图</p>
+<p>主要是为了作品展示</p>
+<h6 id="⑷-PSD（ps专用格式，分层格式）"><a href="#⑷-PSD（ps专用格式，分层格式）" class="headerlink" title="⑷ .PSD（ps专用格式，分层格式）"></a>⑷ .PSD（ps专用格式，分层格式）</h6><p>保存所有信息，预留备份（防止被骗 原创证据，投诉追款必备，防止被骗稿）</p>
+<p>接单方法（兼职接单注意）</p>
+<h4 id="二-工具栏"><a href="#二-工具栏" class="headerlink" title="二 .工具栏"></a>二 .工具栏</h4><h5 id="日常用的所有工具集合"><a href="#日常用的所有工具集合" class="headerlink" title="日常用的所有工具集合"></a>日常用的所有工具集合</h5><h5 id="右键单击某一个工具，可打开扩展工具"><a href="#右键单击某一个工具，可打开扩展工具" class="headerlink" title="右键单击某一个工具，可打开扩展工具"></a>右键单击某一个工具，可打开扩展工具</h5><h5 id="前景色-背景色"><a href="#前景色-背景色" class="headerlink" title="前景色/背景色"></a>前景色/背景色</h5><p>前景色是当前使用的颜色(填充前景色ALT+DEL），背景色是我们准备使用的颜色(填充前景色CTRL+DEL)</p>
+<p>按x键可以切换前景色和背景色位置（注意输入法要在英文的状态下）</p>
+<p>如果有选区，填充选区内，无选区的话就填充到图层</p>
+<h4 id="三-工具属性栏"><a href="#三-工具属性栏" class="headerlink" title="三 .工具属性栏"></a>三 .工具属性栏</h4><h5 id="对工具的详细设置"><a href="#对工具的详细设置" class="headerlink" title="对工具的详细设置"></a>对工具的详细设置</h5><h4 id="四-操作预选区"><a href="#四-操作预选区" class="headerlink" title="四.操作预选区"></a>四.操作预选区</h4><h5 id="日常操作，处理图片区域"><a href="#日常操作，处理图片区域" class="headerlink" title="日常操作，处理图片区域"></a>日常操作，处理图片区域</h5><h5 id="放大图片：ctrl-加-减号-；移动图片：空格＋鼠标左键；放大移动图片：ctrl放大-alt缩小-左键"><a href="#放大图片：ctrl-加-减号-；移动图片：空格＋鼠标左键；放大移动图片：ctrl放大-alt缩小-左键" class="headerlink" title="放大图片：ctrl+(加/减号)；移动图片：空格＋鼠标左键；放大移动图片：ctrl放大/alt缩小=左键"></a>放大图片：ctrl+(加/减号)；移动图片：空格＋鼠标左键；放大移动图片：ctrl放大/alt缩小=左键</h5><h4 id="五-图层"><a href="#五-图层" class="headerlink" title="五 .图层"></a>五 .图层</h4><p>图层是一个很重要的工具，ps所有的操作都是基于图层的，图层就好比一层层物体层叠放在一起，就像汉堡，上层遮盖下层</p>
+<h5 id="多选-连选快捷键"><a href="#多选-连选快捷键" class="headerlink" title="多选/连选快捷键"></a>多选/连选快捷键</h5><p>多选: ctrl+ 鼠标左键单击需要的图层</p>
+<p>连选: shift+左键点选头尾两图层</p>
+<h5 id="自由变换"><a href="#自由变换" class="headerlink" title="自由变换"></a>自由变换</h5><p>快捷方式CTRL+T</p>
+<p>ALT+左键–中心点缩放(非等比例)</p>
+<p>shift+左键- -对角点缩放(等比例)</p>
+<p>alt+shift +左键–中心点缩放(等比例)</p>
+<p>以上快捷键适用于ps2018以下的版本</p>
+<h5 id="果汁旋转重点"><a href="#果汁旋转重点" class="headerlink" title="果汁旋转重点:"></a>果汁旋转重点:</h5><p>移动工具的设置</p>
+<p>图像的旋转，大小变换控制</p>
+<p>移动且复制:按alt+ 鼠标左键拖动</p>
+<h5 id="选区应用"><a href="#选区应用" class="headerlink" title="选区应用"></a>选区应用</h5><p>椭圆选区图层建立</p>
+<p>正圆选区建立按SHIFT +鼠标左键</p>
+<p>特殊选区建</p>
+<h5 id="特殊变换"><a href="#特殊变换" class="headerlink" title="特殊变换"></a>特殊变换</h5><p>菜单栏编辑操控变形</p>
+<p>固定不需要操作的位置 鼠标左键单击即可锁定</p>
+<p>删除锚点日点按选中的锚点按delete.</p>
+<h5 id="遇到问题如何发现问题所在"><a href="#遇到问题如何发现问题所在" class="headerlink" title="遇到问题如何发现问题所在"></a>遇到问题如何发现问题所在</h5><p>1.看工具选的是否正确</p>
+<p>2.看图层选的是否正确</p>
+<p>3.看工具属性是否正确</p>
+<h4 id="六-组合操作"><a href="#六-组合操作" class="headerlink" title="六 .组合操作"></a>六 .组合操作</h4><p>操作三键客CTRL  ALT   SHIFT；取消选区CTRL+D；撤销操作  CTRL+Z撤销一次；CTRL+ALT+Z撤销多次；复制图层CTRL+J 注意当有选区–复制选区，没有选区 的时候是复制图层</p>
+<p>理解：什么是抠图：用合适的工具—做出合适选—-把选区里的图像复制出来。</p>
+<p>1.套索工具：大范围不精确，极小范围</p>
+<p>2.多边形套索：直线选区 特别好用有弧度不太好用</p>
+<p>3.磁性套索：选区边缘清晰自动吸附边缘</p>
+<p>4.选择主体 魔棒 快速选择：背景清晰 边缘清晰 颜色比较单一</p>
+<h5 id="小知识："><a href="#小知识：" class="headerlink" title="小知识："></a>小知识：</h5><p>闪烁的虚线就叫选区  也叫蚂蚁线</p>
+<p>alt+滚轮  放大缩小图片</p>
+<p>任何状态下  按住空格键 会变成抓手工具</p>
+<p>任何状态下 按住ctrl键  会变成选区</p>
+<p>额 <del>~</del>打点鸡血：</p>
+<p>成人的学习不是为了考试，而是为了成为出色的大人</p>
+<p>互联网时代重要的不是学历，而是能力</p>
+<p>作业是快速提升的唯一途径，没有之一</p>
+<p>听课千遍，不如上手练一练</p>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4>]]></content>
+      <tags>
+        <tag>Photoshop</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>移动web开发_flex布局</title>
+    <url>/2020/06/11/%E7%A7%BB%E5%8A%A8web%E5%BC%80%E5%8F%91_flex%E5%B8%83%E5%B1%80/</url>
+    <content><![CDATA[<h1 id="移动web开发——flex布局"><a href="#移动web开发——flex布局" class="headerlink" title="移动web开发——flex布局"></a>移动web开发——flex布局</h1><h2 id="1-0传统布局和flex布局对比"><a href="#1-0传统布局和flex布局对比" class="headerlink" title="1.0传统布局和flex布局对比"></a>1.0传统布局和flex布局对比</h2><h3 id="1-1传统布局"><a href="#1-1传统布局" class="headerlink" title="1.1传统布局"></a>1.1传统布局</h3><ul>
+<li>兼容性好</li>
+<li>布局繁琐</li>
+<li>局限性，不能再移动端很好的布局</li>
+</ul>
+<h3 id="1-2-flex布局"><a href="#1-2-flex布局" class="headerlink" title="1.2 flex布局"></a>1.2 flex布局</h3><ul>
+<li>操作方便，布局极其简单，移动端使用比较广泛</li>
+<li>pc端浏览器支持情况比较差</li>
+<li>IE11或更低版本不支持flex或仅支持部分</li>
+</ul>
+<h3 id="1-3-建议"><a href="#1-3-建议" class="headerlink" title="1.3 建议"></a>1.3 建议</h3><ul>
+<li>如果是pc端页面布局，还是采用传统方式</li>
+<li>如果是移动端或者是不考虑兼容的pc则采用flex</li>
+</ul>
+<h2 id="2-0-flex布局原理"><a href="#2-0-flex布局原理" class="headerlink" title="2.0 flex布局原理"></a>2.0 flex布局原理</h2><ul>
+<li>flex 是 flexible Box 的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性，任何一个容器都可以指定为 flex 布局。</li>
+<li>当我们为父盒子设为 flex 布局以后，子元素的 float、clear 和 vertical-align 属性将失效。</li>
+<li>flex布局又叫伸缩布局 、弹性布局 、伸缩盒布局 、弹性盒布局 </li>
+<li>采用 Flex 布局的元素，称为 Flex 容器（flex</li>
+</ul>
+<p>container），简称”容器”。它的所有子元素自动成为容器成员，称为 Flex 项目（flex<br>item），简称”项目”。</p>
+<p><strong>总结</strong>：就是通过给父盒子添加flex属性，来控制子盒子的位置和排列方式</p>
+<h2 id="3-0-父项常见属性"><a href="#3-0-父项常见属性" class="headerlink" title="3.0 父项常见属性"></a>3.0 父项常见属性</h2><ul>
+<li>flex-direction：设置主轴的方向</li>
+<li>justify-content：设置主轴上的子元素排列方式</li>
+<li>flex-wrap：设置子元素是否换行  </li>
+<li>align-content：设置侧轴上的子元素的排列方式（多行）</li>
+<li>align-items：设置侧轴上的子元素排列方式（单行）</li>
+<li>flex-flow：复合属性，相当于同时设置了 flex-direction 和 flex-wrap</li>
+</ul>
+<h3 id="3-1-flex-direction设置主轴的方向"><a href="#3-1-flex-direction设置主轴的方向" class="headerlink" title="3.1 flex-direction设置主轴的方向"></a>3.1 flex-direction设置主轴的方向</h3><ul>
+<li>在 flex 布局中，是分为主轴和侧轴两个方向，同样的叫法有 ： 行和列、x 轴和y 轴</li>
+<li>默认主轴方向就是 x 轴方向，水平向右</li>
+<li>默认侧轴方向就是 y 轴方向，水平向下</li>
+</ul>
+<img src="./images/1.jpg">
+
+<ul>
+<li><p>注意： 主轴和侧轴是会变化的，就看 flex-direction 设置谁为主轴，剩下的就是侧轴。而我们的子元素是跟着主轴来排列的</p>
+<img src="./images/2.jpg">
+
+<p>​</p>
+</li>
+</ul>
+<h3 id="3-2-justify-content-设置主轴上的子元素排列方式"><a href="#3-2-justify-content-设置主轴上的子元素排列方式" class="headerlink" title="3.2 justify-content 设置主轴上的子元素排列方式"></a>3.2 justify-content 设置主轴上的子元素排列方式</h3><img src="./images/3.jpg">
+
+<h3 id="3-3-flex-wrap设置是否换行"><a href="#3-3-flex-wrap设置是否换行" class="headerlink" title="3.3 flex-wrap设置是否换行"></a>3.3 flex-wrap设置是否换行</h3><ul>
+<li>默认情况下，项目都排在一条线（又称”轴线”）上。flex-wrap属性定义，flex布局中默认是不换行的。</li>
+<li>nowrap 不换行</li>
+<li>wrap 换行</li>
+</ul>
+<h3 id="3-4-align-items-设置侧轴上的子元素排列方式（单行-）"><a href="#3-4-align-items-设置侧轴上的子元素排列方式（单行-）" class="headerlink" title="3.4 align-items 设置侧轴上的子元素排列方式（单行 ）"></a>3.4 align-items 设置侧轴上的子元素排列方式（单行 ）</h3><ul>
+<li>该属性是控制子项在侧轴（默认是y轴）上的排列方式  在子项为单项（单行）的时候使用</li>
+<li>flex-start 从头部开始</li>
+<li>flex-end 从尾部开始</li>
+<li>center 居中显示</li>
+<li>stretch 拉伸</li>
+</ul>
+<h3 id="3-5-align-content-设置侧轴上的子元素的排列方式（多行）"><a href="#3-5-align-content-设置侧轴上的子元素的排列方式（多行）" class="headerlink" title="3.5 align-content  设置侧轴上的子元素的排列方式（多行）"></a>3.5 align-content  设置侧轴上的子元素的排列方式（多行）</h3><p>设置子项在侧轴上的排列方式 并且只能用于子项出现 换行 的情况（多行），在单行下是没有效果的。</p>
+<img src="./images/4.jpg">
+
+
+
+<h3 id="3-6-align-content-和align-items区别"><a href="#3-6-align-content-和align-items区别" class="headerlink" title="3.6 align-content 和align-items区别"></a>3.6 align-content 和align-items区别</h3><ul>
+<li>align-items  适用于单行情况下， 只有上对齐、下对齐、居中和 拉伸</li>
+<li>align-content适应于换行（多行）的情况下（单行情况下无效）， 可以设置 上对齐、下对齐、居中、拉伸以及平均分配剩余空间等属性值。 </li>
+<li>总结就是单行找align-items  多行找 align-content</li>
+</ul>
+<h3 id="3-7-flex-flow-属性是-flex-direction-和-flex-wrap-属性的复合属性"><a href="#3-7-flex-flow-属性是-flex-direction-和-flex-wrap-属性的复合属性" class="headerlink" title="3.7 flex-flow 属性是 flex-direction 和 flex-wrap 属性的复合属性"></a>3.7 flex-flow 属性是 flex-direction 和 flex-wrap 属性的复合属性</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">flex-flow:row wrap;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-0-flex布局子项常见属性"><a href="#4-0-flex布局子项常见属性" class="headerlink" title="4.0 flex布局子项常见属性"></a>4.0 flex布局子项常见属性</h2><ul>
+<li>flex子项目占的份数</li>
+<li>align-self控制子项自己在侧轴的排列方式</li>
+<li>order属性定义子项的排列顺序（前后顺序）</li>
+</ul>
+<h3 id="4-1-flex-属性"><a href="#4-1-flex-属性" class="headerlink" title="4.1  flex 属性"></a>4.1  flex 属性</h3><p>flex 属性定义子项目分配剩余空间，用flex来表示占多少份数。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.item &#123;</span><br><span class="line">    flex: &lt;number&gt;; &#x2F;* 默认值 0 *&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-align-self控制子项自己在侧轴上的排列方式"><a href="#4-2-align-self控制子项自己在侧轴上的排列方式" class="headerlink" title="4.2 align-self控制子项自己在侧轴上的排列方式"></a>4.2 align-self控制子项自己在侧轴上的排列方式</h3><p>align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。</p>
+<p>默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">span:nth-child(2) &#123;</span><br><span class="line">      &#x2F;* 设置自己在侧轴上的排列方式 *&#x2F;</span><br><span class="line">      align-self: flex-end;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-3-order-属性定义项目的排列顺序"><a href="#4-3-order-属性定义项目的排列顺序" class="headerlink" title="4.3 order 属性定义项目的排列顺序"></a>4.3 order 属性定义项目的排列顺序</h3><p>数值越小，排列越靠前，默认为0。</p>
+<p>注意：和 z-index 不一样。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.item &#123;</span><br><span class="line">    order: &lt;number&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-0-携程网首页案例制作"><a href="#5-0-携程网首页案例制作" class="headerlink" title="5.0 携程网首页案例制作"></a>5.0 携程网首页案例制作</h2><p>携程网链接：<a href="http://m.ctrip.com" target="_blank" rel="noopener">http://m.ctrip.com</a></p>
+<p>1.技术选型</p>
+<p>方案：我们采取单独制作移动页面方案</p>
+<p>技术：布局采取flex布局</p>
+<p>2.搭建相关文件夹</p>
+<img src="./images/5.jpg">
+
+<p>3.设置视口标签以及引入初始化样式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, user-scalable&#x3D;no,initial-scale&#x3D;1.0, maximum-scale&#x3D;1.0, minimum-scale&#x3D;1.0&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;css&#x2F;normalize.css&quot;&gt;</span><br><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;css&#x2F;index.css&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>4.常用初始化样式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  max-width: 540px;</span><br><span class="line">  min-width: 320px;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">  font: normal 14px&#x2F;1.5 Tahoma,&quot;Lucida Grande&quot;,Verdana,&quot;Microsoft Yahei&quot;,STXihei,hei;</span><br><span class="line">  color: #000;</span><br><span class="line">  background: #f2f2f2;</span><br><span class="line">  overflow-x: hidden;</span><br><span class="line">  -webkit-tap-highlight-color: transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>5.模块名字划分</p>
+<img src="./images/6.jpg">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>实用sql语句</title>
+    <url>/2020/03/23/%E5%AE%9E%E7%94%A8sql%E8%AF%AD%E5%8F%A5/</url>
+    <content><![CDATA[<p>在编写SQL时，灵活运用一些技巧，可以大大简化程序逻辑。</p>
+<h3 id="插入或替换"><a href="#插入或替换" class="headerlink" title="插入或替换"></a>插入或替换</h3><p>如果我们希望插入一条新记录（INSERT），但如果记录已经存在，就先删除原记录，再插入新记录。此时，可以使用<code>REPLACE</code>语句，这样就不必先查询，再决定是否先删除再插入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">REPLACE INTO students (id, class_id, name, gender, score) VALUES (1, 1, &#39;小明&#39;, &#39;F&#39;, 99);</span><br></pre></td></tr></table></figure>
+
+<p>若<code>id=1</code>的记录不存在，<code>REPLACE</code>语句将插入新记录，否则，当前<code>id=1</code>的记录将被删除，然后再插入新记录。</p>
+<h3 id="插入或更新"><a href="#插入或更新" class="headerlink" title="插入或更新"></a>插入或更新</h3><p>如果我们希望插入一条新记录（INSERT），但如果记录已经存在，就更新该记录，此时，可以使用<code>INSERT INTO ... ON DUPLICATE KEY UPDATE ...</code>语句：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">INSERT INTO students (id, class_id, name, gender, score) VALUES (1, 1, &#39;小明&#39;, &#39;F&#39;, 99) ON DUPLICATE KEY UPDATE name&#x3D;&#39;小明&#39;, gender&#x3D;&#39;F&#39;, score&#x3D;99;</span><br></pre></td></tr></table></figure>
+
+<p>若<code>id=1</code>的记录不存在，<code>INSERT</code>语句将插入新记录，否则，当前<code>id=1</code>的记录将被更新，更新的字段由<code>UPDATE</code>指定。</p>
+<h3 id="插入或忽略"><a href="#插入或忽略" class="headerlink" title="插入或忽略"></a>插入或忽略</h3><p>如果我们希望插入一条新记录（INSERT），但如果记录已经存在，就啥事也不干直接忽略，此时，可以使用<code>INSERT IGNORE INTO ...</code>语句：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">INSERT IGNORE INTO students (id, class_id, name, gender, score) VALUES (1, 1, &#39;小明&#39;, &#39;F&#39;, 99);</span><br></pre></td></tr></table></figure>
+
+<p>若<code>id=1</code>的记录不存在，<code>INSERT</code>语句将插入新记录，否则，不执行任何操作。</p>
+<h3 id="快照"><a href="#快照" class="headerlink" title="快照"></a>快照</h3><p>如果想要对一个表进行快照，即复制一份当前表的数据到一个新表，可以结合<code>CREATE TABLE</code>和<code>SELECT</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- 对class_id&#x3D;1的记录进行快照，并存储为新表students_of_class1:</span><br><span class="line">CREATE TABLE students_of_class1 SELECT * FROM students WHERE class_id&#x3D;1;</span><br></pre></td></tr></table></figure>
+
+<p>新创建的表结构和<code>SELECT</code>使用的表结构完全一致。</p>
+<h3 id="写入查询结果集"><a href="#写入查询结果集" class="headerlink" title="写入查询结果集"></a>写入查询结果集</h3><p>如果查询结果集需要写入到表中，可以结合<code>INSERT</code>和<code>SELECT</code>，将<code>SELECT</code>语句的结果集直接插入到指定表中。</p>
+<p>例如，创建一个统计成绩的表<code>statistics</code>，记录各班的平均成绩：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CREATE TABLE statistics (</span><br><span class="line">    id BIGINT NOT NULL AUTO_INCREMENT,</span><br><span class="line">    class_id BIGINT NOT NULL,</span><br><span class="line">    average DOUBLE NOT NULL,</span><br><span class="line">    PRIMARY KEY (id)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>然后，我们就可以用一条语句写入各班的平均成绩：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">INSERT INTO statistics (class_id, average) SELECT class_id, AVG(score) FROM students GROUP BY class_id;</span><br></pre></td></tr></table></figure>
+
+<p>确保<code>INSERT</code>语句的列和<code>SELECT</code>语句的列能一一对应，就可以在<code>statistics</code>表中直接保存查询的结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; SELECT * FROM statistics;</span><br><span class="line">+----+----------+--------------+</span><br><span class="line">| id | class_id | average      |</span><br><span class="line">+----+----------+--------------+</span><br><span class="line">|  1 |        1 |         86.5 |</span><br><span class="line">|  2 |        2 | 73.666666666 |</span><br><span class="line">|  3 |        3 | 88.333333333 |</span><br><span class="line">+----+----------+--------------+</span><br><span class="line">3 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<h3 id="强制使用指定索引"><a href="#强制使用指定索引" class="headerlink" title="强制使用指定索引"></a>强制使用指定索引</h3><p>在查询的时候，数据库系统会自动分析查询语句，并选择一个最合适的索引。但是很多时候，数据库系统的查询优化器并不一定总是能使用最优索引。如果我们知道如何选择索引，可以使用<code>FORCE INDEX</code>强制查询使用指定的索引。例如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; SELECT * FROM students FORCE INDEX (idx_class_id) WHERE class_id &#x3D; 1 ORDER BY id DESC;</span><br></pre></td></tr></table></figure>
+
+<p>指定索引的前提是索引<code>idx_class_id</code>必须存在。</p>
+]]></content>
+      <tags>
+        <tag>sql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>邂逅linux</title>
+    <url>/2020/06/09/%E9%82%82%E9%80%85linux/</url>
+    <content><![CDATA[<h2 id="1-Linux开山篇"><a href="#1-Linux开山篇" class="headerlink" title="1.Linux开山篇"></a>1.Linux开山篇</h2><h3 id="1-11Linux课程的内容介绍"><a href="#1-11Linux课程的内容介绍" class="headerlink" title="1.11Linux课程的内容介绍"></a>1.11Linux课程的内容介绍</h3><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152744.png" alt="1591713876861"></p>
+<h3 id="1-2Linux的学习方向"><a href="#1-2Linux的学习方向" class="headerlink" title="1.2Linux的学习方向"></a>1.2Linux的学习方向</h3><h4 id="1-2-1Linux运维工程师"><a href="#1-2-1Linux运维工程师" class="headerlink" title="1.2.1Linux运维工程师"></a>1.2.1Linux运维工程师</h4><h4 id="1-2-2Linux嵌入式开发工程师"><a href="#1-2-2Linux嵌入式开发工程师" class="headerlink" title="1.2.2Linux嵌入式开发工程师"></a>1.2.2Linux嵌入式开发工程师</h4><h4 id="1-2-3在linux下做各种程序开发"><a href="#1-2-3在linux下做各种程序开发" class="headerlink" title="1.2.3在linux下做各种程序开发"></a>1.2.3在linux下做各种程序开发</h4><h4 id="1-2-4示意图"><a href="#1-2-4示意图" class="headerlink" title="1.2.4示意图"></a>1.2.4示意图</h4><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152800.png" alt="1591714041599"></p>
+<h3 id="1-3Linux的应用领域"><a href="#1-3Linux的应用领域" class="headerlink" title="1.3Linux的应用领域"></a>1.3Linux的应用领域</h3><h4 id="1-3-1个人桌面应用领域"><a href="#1-3-1个人桌面应用领域" class="headerlink" title="1.3.1个人桌面应用领域"></a>1.3.1个人桌面应用领域</h4><p>此领域是传统linux应用最薄弱的环节，传统linux由于界面简单、操作复杂、应用软件少的缺点，一直被windows所压制，但近些年来随着ubuntu、fedora[fi’do:re]等优秀桌面环境的兴起，同时各大硬件厂商对其支持的加大，linux在个人桌面领域的占有率在逐渐的提高。</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152809.png" alt="1591714103920"></p>
+<h4 id="1-3-2服务器应用领域"><a href="#1-3-2服务器应用领域" class="headerlink" title="1.3.2服务器应用领域"></a>1.3.2服务器应用领域</h4><p>linux在服务器领域的应用是最强的。<br>linux免费、稳定、高效等特点在这里得到了很好的体现，近些年来linux服务器市场得到了飞速的提升，尤其在一些高端领域尤为广泛。</p>
+<h4 id="1-3-3嵌入式应用领域"><a href="#1-3-3嵌入式应用领域" class="headerlink" title="1.3.3嵌入式应用领域"></a>1.3.3嵌入式应用领域</h4><p>近些年来linux在嵌入式领域的应用得到了飞速的提高</p>
+<p>linux运行稳定、对网络的良好支持性、低成本，且可以根据需要进行软件裁剪，内核最小可以达到几百KB等特点，使其近些年来在嵌入式领域的应用得到非常大的提高</p>
+<p>主要应用：机顶盒、数字电视、网络电话、程控交换机、手机、PDA、智能家居、智能硬件等都是其应用领域。以后再物联网中应用会更加广泛</p>
+<h3 id="1-4学习Linux的阶段（高手进阶过程）"><a href="#1-4学习Linux的阶段（高手进阶过程）" class="headerlink" title="1.4学习Linux的阶段（高手进阶过程）"></a>1.4学习Linux的阶段（高手进阶过程）</h3><p>linux是一个开源、免费的操作系统，其稳定性、安全性、处理多并发已经得到业界的认可，目前很多中型，大型甚至是集群项目都在使用linux，很多软件公司考虑到开发成本都首选linux，在中国软件公司得到广泛的使用。</p>
+<p>学习linux流程为：<br>第1阶段：linux环境下的基本操作命令，包括文件操作命令（rm mkdir chmod，chown）编辑工具吏用（vivim）linux用户管理（useradd userdel usermod）等</p>
+<p>第2阶段：linux的各种配置（环境变量配置，网络配置，服务配置）</p>
+<p>第3阶段：linux下如何搭建对应语言的开发环境（大数据，JavaEE，Python等）</p>
+<p>第4阶段：能编写shell脚本，对Linux服务器进行维护。</p>
+<p>第5阶段：能进行安全设置，防止攻击，保障服务器正常运行，能对系统调优。</p>
+<p>第6阶段：深入理解Linux系统（对内核有研究），熟练掌握大型网站应用架构组成、并熟悉各个环节的部署和维护方法。</p>
+<h3 id="1-5Linux的学习方法和建议"><a href="#1-5Linux的学习方法和建议" class="headerlink" title="1.5Linux的学习方法和建议"></a>1.5Linux的学习方法和建议</h3><p>1）高效而愉快的学习<br>2）先建立一个整体框架，然后细节<br>3）不需要掌握所有的Linux指令，要学会查询手册和百度</p>
+<p>4）先know how，再know why<br>5）计算机是一门”做中学”的学科，不是会了再做，而是做了才会.<br>6）适当的囫图吞枣</p>
+<p>7）Linux不是编程，重点是实际操作，各种常用指令要玩的溜</p>
+<h2 id="2-基础篇Linux入门"><a href="#2-基础篇Linux入门" class="headerlink" title="2.基础篇Linux入门"></a>2.基础篇Linux入门</h2><h3 id="2-1Linux介绍"><a href="#2-1Linux介绍" class="headerlink" title="2.1Linux介绍"></a>2.1Linux介绍</h3><p>1）Linux怎么读【里纽克斯，利尼克斯，里纳克斯】<br>2）Linux是一款操作系统，免费，开源，安全，高效，稳定，处理高并发非常强悍，现在很多的企业级的项目都部署到Linux/unix服务器运行。<br>3）Linux创始人-linux林纳斯 linux的吉祥物是一只企鹅</p>
+<p>4）linux的发行版本</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152816.png" alt="1591714433482"></p>
+<h3 id="2-2-unix是怎么来的"><a href="#2-2-unix是怎么来的" class="headerlink" title="2.2 unix是怎么来的"></a>2.2 unix是怎么来的</h3><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152824.png" alt="1591714469247"></p>
+<h3 id="2-3-Linux是怎么来的"><a href="#2-3-Linux是怎么来的" class="headerlink" title="2.3 Linux是怎么来的"></a>2.3 Linux是怎么来的</h3><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152832.png" alt="1591714516485"></p>
+<h3 id="2-4-linux和unix关系一览图"><a href="#2-4-linux和unix关系一览图" class="headerlink" title="2.4 linux和unix关系一览图"></a>2.4 linux和unix关系一览图</h3><p>![1591714568321](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591714568321.png)</p>
+<h3 id="2-5-linux和Windows比较"><a href="#2-5-linux和Windows比较" class="headerlink" title="2.5 linux和Windows比较"></a>2.5 linux和Windows比较</h3><p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611153054.png" alt="1591714596799"></p>
+]]></content>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>邂逅React和React开发体验</title>
+    <url>/2020/06/09/%E9%82%82%E9%80%85React%E5%92%8CReact%E5%BC%80%E5%8F%91%E4%BD%93%E9%AA%8C/</url>
+    <content><![CDATA[<h2 id="邂逅React开发"><a href="#邂逅React开发" class="headerlink" title="邂逅React开发"></a>邂逅React开发</h2><h3 id="1-React是什么？"><a href="#1-React是什么？" class="headerlink" title="1.React是什么？"></a>1.React是什么？</h3><p>■React是什么呢？相信每个做开发的人对它都或多或少有一些印象。<br>口这里我们来看一下官方对它的解释：用于构建用户界面的JavaScript库。</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152336.png" alt="1591669220149"></p>
+<p>■我们知道对于前端来说，主要的任务就是构建用于界面，而构建用于界面离不开三个技术：<br>口HTML：构建页面的结构<br>口CSS：构建页面的样式<br>口JavaScript：页面动态内容和交互<br>■那么使用最原生的HTML、CSS、JavaScript可以构建完整的用户界面吗？当然可以，但是会存在很多问题口比如操作DOM兼容性的问题；口比如过多兼容性代码的冗余问题；口比如代码组织和规范的问题：</p>
+<h3 id="2-常见的JavaScript库"><a href="#2-常见的JavaScript库" class="headerlink" title="2.常见的JavaScript库"></a>2.常见的JavaScript库</h3><p>所以，一直以来前端开发人员都在需求可以让自己开发更方便的JavaScript库：<br>口在过去的很长时间内，jQuery是被使用最多的JavaScript库；口在过去的一份调查中显示，全球前10，000个访问最高的网站中，有65%使用了jQuery，是当时最受欢迎的JavaScript库；口但是越来越多的公司开始慢慢不再使用jQuery，包括程序员使用最多的GitHub；</p>
+<p>■现在前端领域最为流行的是三大框架：<br>口Vue<br>口React<br>口Angular</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152345.png" alt="1591669358323"></p>
+<p>■而Angular在国内并不是特别受欢迎，尤其是Angular目前的版本对TypeScript还有要求的情况下。<br>口Vue和React是国内最为流行的两个框架，而他们都是帮助我们来构建用户界面的JavaScript库。<br>口关于它们的对比，我会另外再写一篇文章</p>
+<h3 id="3-React的起源"><a href="#3-React的起源" class="headerlink" title="3.React的起源"></a>3.React的起源</h3><p>■React是2013年，Facebook开源的JavaScript框架，那么当时为什么Facebook要推出这样一款框架呢？<br>■这个源于一个需求，所产生的bug：<br>口该功能上线之后，总是出现bug；</p>
+<p>口三个消息的数字在发生变化时，过多的操作很容易产生bug；abug是否可以修复呢？当然可以修复，但是Facebook的工程师并不满足于此；口他们开始思考为什么会产生这样的问题；口在传统的开发模式中，我们过多的去操作界面的细节；（前端、iOS、Android）<br>√并且需要掌握和使用大量DOM的API，当然我们可以通过jQuery来简化和适配一些API的使用；口另外关于数据（状态），往往会分散到各个地方，不方便管理和维护；</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152352.png" alt="1591669540027"></p>
+<p>■他们就去思考，是否有一种新的模式来解决上面的问题：<br>口1.以组件的方式去划分一个个功能模块<br>口2.组件内以jsx来描述UI的样子，以state来存储组件内的状态口3.当应用的状态发生改变时，通过setState来修改状态，状态发生变化时，UI会自动发生更新</p>
+<h3 id="4-React的特点"><a href="#4-React的特点" class="headerlink" title="4.React的特点"></a>4.React的特点</h3><p>■声明式编程：<br>口声明式编程是目前整个大前端开发的模式：Vue、React、Flutter、SwiftUI；口它允许我们只需要维护自己的状态，当状态改变时，React可以根据最新的状态去渲染我们的UI界面；</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152357.png" alt="1591669657519"></p>
+<p>口组件化开发：</p>
+<p>页面目前前端的流行趋势，我们会讲复杂的界面拆分成一个个小的组件；口如何合理的进行组件的划分和设计也是后面我会讲到的一个重点；</p>
+<p>![1591669794398](C:\Users\Song Shuai\AppData\Roaming\Typora\typora-user-images\1591669794398.png)</p>
+<p>■多平台适配：<br>口2013年，React发布之初主要是开发Web页面；口2015年，Facebook推出了ReactNative，用于开发移动端跨平台；（虽然目前Flutter非常火爆，但是还是有很多公司在使用ReactNative）；口2017年，Facebook推出ReactVR，用于开发虚拟现实Web应用程序；（随着5G的普及，VR也会是一个火爆的应用场景）；</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152404.png" alt="1591669872384"></p>
+<h3 id="5-掌握最先进的思想和技术"><a href="#5-掌握最先进的思想和技术" class="headerlink" title="5.掌握最先进的思想和技术"></a>5.掌握最先进的思想和技术</h3><p>■React由Facebook来更新和维护，它是大量优秀程序员的思想结晶：<br>口React的流行不仅仅局限于普通开发工程师对它的认可，大量流行的其他框架借鉴React的思想：<br>■Vue.js框架设计之初，有很多的灵感来自Angular和React。<br>■包括Vue3很多新的特性，也是借鉴和学习了React口比如React Hooks是开创性的新功能（也是我们课程的重点）口Vue Function Based API学习了React Hooks的思想</p>
+<p>■Flutter的很多灵感都来自React，来自官网的一段话：（SwiftU呢）口事实上Flutter中的Widget-Element-RenderObject，对应的就是JSX-虚拟DOM-真实DOM Flutter widgets are buit using a modern framework that takes inspiration from React.■所以React可以说是前端的先驱者，它总是会引领整个前端的潮流。</p>
+<p>■所以React可以说是前端的先驱者，它总是会引领整个前端的潮流。</p>
+<h3 id="6-React-现状"><a href="#6-React-现状" class="headerlink" title="6.React 现状"></a>6.React 现状</h3><p>HackerRank调查显示</p>
+<p>在HackerRank中，2020年有一份调查，你更想要学习的framework（框架）：</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152418.png" alt="1591670128748"></p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152431.png" alt="1591670155667"></p>
+<h3 id="7-Hello-React案例"><a href="#7-Hello-React案例" class="headerlink" title="7.Hello React案例"></a>7.Hello React案例</h3><p>■为了演练React，我们可以提出一个小的需求：<br>口在界面显示一个文本：Hello World口点击下方的一个按钮，点击后文本改变为Hello React</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152431.png" alt="1591670317295"></p>
+<p>■但是，我们使用React实现之前，先使用原生代码来实现，这样更加方便大家对比React和原生：<br>口当然，你也可以使用jQuery和Vue来实现，对它们分别进行对比学习</p>
+<p>推荐使用VS code编辑器</p>
+<p>vs code 推荐插件</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152436.png" alt="1591670418549"></p>
+<h3 id="8-React开发依赖"><a href="#8-React开发依赖" class="headerlink" title="8.React开发依赖"></a>8.React开发依赖</h3><p>开发React必须依赖三个库：口react：包含react所必须的核心代码<br>口 react-dom：react渲染在不同平台所需要的核心代码<br>口 babel：将isx转换成React代码的工具<br>·第一次接触React会被它繁琐的依赖搞蒙，对于Vue来说，我们只是依赖一个vue.js文件即可，但是react居然要依赖三个库。<br>口其实呢，这三个库是各司其职的，目的就是让每一个库只单纯做自己的事情：口在React的0.14版本之前是没有react-dom这个概念的，所有功能都包含在react里口为什么要进行据分呢？原因就是react-native.<br>Dreact包中包含了react和react-native所共同拥有的核心代码。<br>a react-dom针对web和native所完成的事情不同：口web端：react-dom会讲jsx最终渲染成真实的DOM，显示在浏览器中口 native端：react-dom会讲jsx最终渲染成原生的控件（比如Android中的Button，ios中的U1Button）.</p>
+<h3 id="9-认识Babel"><a href="#9-认识Babel" class="headerlink" title="9.认识Babel"></a>9.认识Babel</h3><p>babel是什么呢？<br>口 Babel，又名Babel.js.<br>口是目前前端使用非常广泛的编辑器、转移器。<br>口比如当下很多浏览器并不支持ES6的语法，但是确实ES6的语法非常的简洁和方便，我们开发时希望使用它.<br>口那么编写源码时我们就可以使用ES6来编写，之后通过Babel工具，将ES6转成大多数浏览器都支持的ES5的语法。</p>
+<p><img src="https://raw.githubusercontent.com/Songstars/picbed/master/img/20200611152446.png" alt="1591683629800"></p>
+<p>React和Babel的关系：口默认情况下开发React其实可以不使用babel.<br>口但是前提是我们自己使用React.createElement来编写源代码，它编写的代码非常的繁琐和可读性差。<br>口那么我们就可以直接编写jsx（JavaScript XML）的语法，并且让babel帮助我们转换成React.createflement.<br>口后续还会讲到；</p>
+<h3 id="10-引入React依赖"><a href="#10-引入React依赖" class="headerlink" title="10.引入React依赖"></a>10.引入React依赖</h3><p>·所以，我们在编写React代码时，这三个依赖都是必不可少的。<br>·那么，如何添加这三个依赖：</p>
+<p>口方式一：直接CDN引入<br>口方式二：下载后，添加本地依赖<br>口方式三：通过npm管理（后续脚手架再使用）</p>
+<p>暂时我们直接通过CDN引入，来演练下面的示例程序：口这里有一个crossorigin的属性，这个属性的目的是为了拿到跨域脚本的错误信息</p>
+<p>React添加三个依赖</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 加载 React。--&gt;</span><br><span class="line">&lt;!-- 注意: 部署时，将 &quot;development.js&quot; 替换为 &quot;production.min.js&quot;。--&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;react@16&#x2F;umd&#x2F;react.development.js&quot; crossorigin&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;react-dom@16&#x2F;umd&#x2F;react-dom.development.js&quot; crossorigin&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;babel-standalone@6&#x2F;babel.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>1</p>
+]]></content>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
 </search>
